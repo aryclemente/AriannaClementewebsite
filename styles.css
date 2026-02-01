@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+:root {
+  --brand-main: #141414;
+  --brand-beige: #edece7;
+  --brand-pink: #f55481;
+  --brand-teal: #27a397;
+  --brand-lavender: #9fa5c8;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--brand-beige);
+}
+
+/* Patrón de Fondo Hero */
+.hero-pattern {
+  background-color: var(--brand-main);
+  background-image:
+    radial-gradient(#504382 0.8px, transparent 0.8px),
+    radial-gradient(#504382 0.8px, var(--brand-main) 0.8px);
+  background-size: 24px 24px;
+  background-position:
+    0 0,
+    12px 12px;
+}
+
+/* Efecto Shimmer de Carga */
+.loading-shimmer {
+  background: linear-gradient(90deg, #141414 25%, #1a1a1a 50%, #141414 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* Navegación de Pestañas */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ventana de Código Estilo Glassmorphism */
+.code-window {
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Configuraciones de Tailwind extendidas vía CSS si es necesario */
+.nav-link:hover {
+  color: var(--brand-pink);
+}
