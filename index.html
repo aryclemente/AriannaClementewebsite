@@ -60,7 +60,7 @@
             </button>
           </div>
           <button
-            onclick="I18n.toggleLanguage()"
+            onclick="toggleLanguage()"
             class="flex items-center space-x-2 bg-brand-beige px-3 py-1.5 rounded-full border border-brand-lavender/30 hover:border-brand-pink transition"
           >
             <i class="fa-solid fa-globe text-brand-pink text-sm"></i>
@@ -132,6 +132,146 @@
           </div>
         </div>
       </section>
+
+      <!-- Sección de Proyectos -->
+      <section id="proyectos" class="py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="mb-20">
+            <h2
+              data-i18n="exp-tag"
+              class="text-brand-pink font-bold uppercase tracking-[0.4em] text-xs mb-4"
+            >
+              Experiencia Profesional
+            </h2>
+            <h3
+              data-i18n="exp-title"
+              class="text-5xl font-black text-brand-black leading-tight max-w-2xl"
+            >
+              Proyectos de alto impacto y arquitectura de datos.
+            </h3>
+          </div>
+
+          <div
+            id="projectGrid"
+            class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <!-- Se genera vía JS para soportar idiomas -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal Dinámico -->
+      <div
+        id="projectModal"
+        class="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10"
+      >
+        <div
+          class="absolute inset-0 bg-brand-black/95 backdrop-blur-sm"
+          onclick="closeModal()"
+        ></div>
+        <div
+          class="bg-white rounded-[2rem] w-full max-w-4xl max-h-[90vh] relative z-10 overflow-hidden shadow-2xl flex flex-col modal-animate-in"
+        >
+          <div class="flex flex-col lg:row overflow-y-auto custom-scroll">
+            <!-- Galería de Imágenes -->
+            <div
+              class="relative w-full aspect-video bg-brand-beige group shrink-0"
+            >
+              <div
+                id="galleryContainer"
+                class="flex h-full w-full transition-transform duration-500"
+              >
+                <!-- Imágenes dinámicas -->
+              </div>
+
+              <!-- Controles Galería -->
+              <button
+                onclick="prevSlide()"
+                class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-md hover:bg-brand-pink hover:text-white transition opacity-0 group-hover:opacity-100"
+              >
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button
+                onclick="nextSlide()"
+                class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-md hover:bg-brand-pink hover:text-white transition opacity-0 group-hover:opacity-100"
+              >
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+
+              <!-- Botón Cerrar -->
+              <button
+                onclick="closeModal()"
+                class="absolute top-6 right-6 w-10 h-10 bg-brand-black text-white rounded-full flex items-center justify-center hover:bg-brand-pink transition z-20"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <!-- Contenido -->
+            <div class="p-8 md:p-12">
+              <div class="mb-10">
+                <span
+                  id="modalCategory"
+                  class="text-brand-pink font-bold text-[10px] uppercase tracking-widest mb-3 block"
+                ></span>
+                <h3
+                  id="modalTitle"
+                  class="text-4xl font-black text-brand-black italic mb-4"
+                ></h3>
+                <p
+                  id="modalIntro"
+                  class="text-brand-gray text-lg italic leading-relaxed border-l-4 border-brand-lavender pl-6"
+                ></p>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                  <h4
+                    data-i18n="modal-role"
+                    class="text-xs font-black uppercase tracking-widest text-brand-gray mb-4"
+                  >
+                    Mi Rol
+                  </h4>
+                  <p
+                    id="modalRole"
+                    class="text-brand-black font-semibold text-xl mb-6"
+                  ></p>
+
+                  <h4
+                    data-i18n="modal-act"
+                    class="text-xs font-black uppercase tracking-widest text-brand-gray mb-4"
+                  >
+                    Actividades
+                  </h4>
+                  <ul
+                    id="modalActivities"
+                    class="space-y-3 text-sm text-brand-black"
+                  ></ul>
+                </div>
+
+                <div class="space-y-8">
+                  <div
+                    class="bg-brand-lightTeal/30 p-8 rounded-3xl border border-brand-teal/20"
+                  >
+                    <h4
+                      data-i18n="modal-res"
+                      class="text-xs font-black uppercase tracking-widest text-brand-teal mb-4"
+                    >
+                      Logros
+                    </h4>
+                    <p
+                      id="modalResults"
+                      class="text-brand-black text-sm leading-relaxed"
+                    ></p>
+                  </div>
+
+                  <div id="modalLinks" class="flex flex-col gap-4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section class="py-32 bg-brand-black text-white">
         <div class="max-w-6xl mx-auto px-6">
