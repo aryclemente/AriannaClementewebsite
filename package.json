@@ -5,6 +5,7 @@
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./dist/styles.css --minify",
     "watch:css": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch",
+    "diagnose:tailwind": "node scripts/tailwind-diagnose.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,7 +13,7 @@
     "url": "git+https://github.com/aryclemente/AriannaClementewebsite.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Arianna Clemente",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/aryclemente/AriannaClementewebsite/issues"

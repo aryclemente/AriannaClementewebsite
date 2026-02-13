@@ -4,27 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arianna Clemente | Portafolio</title>
-
-    <!-- Librerías Externas -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.15.0/devicon.min.css"
-      integrity="sha384-mTX5j/NIzlehkuOql3BYfNpkDrnvRHS5S7V3ctncUhJjtlL1+85q8lCKi8A5sUb+"
-      crossorigin="anonymous"
-    />
-
+    <footer
+      id="contacto"
+      class="bg-brand-black text-white py-20 border-t border-brand-purple/20"
+    >
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-5xl font-black mb-12 tracking-tighter">
+          Construyamos <span class="text-brand-pink italic">algo</span> grande.
+        </h2>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12"
+        >
+          <a
+            href="mailto:hello.ary.code@gmail.com"
+            class="text-xl font-bold hover:text-brand-pink transition border-b border-brand-gray pb-2"
+            >hello.ary.code@gmail.com</a
+          >
+          <span class="text-brand-gray hidden md:block">|</span>
+          <span class="font-mono text-brand-teal">+58 424 168 5298</span>
+        </div>
+      </div>
+    </footer>
     <link rel="stylesheet" href="dist/styles.css" />
   </head>
   <body class="bg-white text-black antialiased noise">
@@ -83,41 +83,45 @@
         >
           <div class="text-white z-10">
             <div
-              class="inline-flex items-center space-x-4 bg-brand-teal/10 text-brand-teal border border-brand-teal/30 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest mb-8"
+              class="inline-flex items-center space-x-2 bg-brand-teal/10 text-brand-teal border border-brand-teal/30 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest mb-8"
             >
-              <span id="hero-tag">Técnico Superior en Informática</span>
-              <span class="w-1 h-1 bg-brand-teal rounded-full"></span>
-              <span>English B1</span>
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-teal opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-2 w-2 bg-brand-teal"
+                ></span>
+              </span>
+              <span id="hero-tag"
+                >Full Stack Developer & Solution Architect</span
+              >
             </div>
+
             <h1
-              class="text-6xl lg:text-8xl font-black leading-[0.9] mb-6 tracking-tighter italic"
+              id="heroTitle"
+              class="text-6xl lg:text-8xl font-black leading-[0.9] mb-8 tracking-tighter"
             >
-              Hola, soy <br /><span class="text-brand-pink"
-                >Arianna Clemente.</span
-              >
+              Diseñando <br /><span class="text-brand-pink">Soluciones</span
+              ><br />Escalables.
             </h1>
-            <div class="mb-10">
-              <h2
-                id="heroSubtitle"
-                class="text-xl md:text-3xl font-bold text-brand-lightTeal tracking-tight mb-3 italic"
-              >
-                Solution Architect & Full Stack Dev
-              </h2>
-              <p
-                id="heroKeywords"
-                class="text-brand-lavender font-mono text-sm uppercase tracking-[0.4em] opacity-80"
-              >
-                Scalable • Secure • Efficient
-              </p>
-            </div>
+
             <p
               id="heroDescription"
-              class="text-brand-lavender/80 text-lg mb-10 leading-relaxed max-w-lg font-light italic"
+              class="text-brand-lavender text-xl mb-10 leading-relaxed max-w-lg font-light"
             >
-              "Arquitecta de soluciones con 3+ años de experiencia transformando
-              requerimientos complejos en plataformas digitales de alto
-              rendimiento."
+              Técnico Medio en Informática con más de 3 años de experiencia
+              desarrollando ecosistemas digitales para ONGs e instituciones
+              educativas.
             </p>
+
+            <div class="flex flex-wrap gap-6">
+              <a
+                href="#proyectos"
+                class="bg-brand-pink text-white px-10 py-5 rounded-2xl font-bold text-sm uppercase tracking-widest hover:translate-y-[-2px] transition shadow-lg shadow-brand-pink/20"
+                >Explorar Proyectos</a
+              >
+            </div>
           </div>
           <div class="relative lg:block hidden">
             <div
