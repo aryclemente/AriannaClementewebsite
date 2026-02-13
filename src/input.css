@@ -1,22 +1,67 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
-
+/* Fonts are loaded in index.html to ensure correct preconnect ordering */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Custom styles (migrated from styles.css) */
 :root {
-  --brand-main: #141414;
-  --brand-beige: #edece7;
+  --brand-main: #000000; /* Primary typography color */
+  --brand-bg: #ffffff; /* Page background - minimal, clean */
   --brand-pink: #f55481;
   --brand-teal: #27a397;
   --brand-lavender: #9fa5c8;
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family:
+    "Rubik",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
   scroll-behavior: smooth;
-  background-color: var(--brand-beige);
+  background-color: var(--brand-bg);
+  color: var(--brand-main);
+}
+
+/* Wordmark (use Rubik for a rounded, technical sans) */
+.brand-wordmark {
+  font-family:
+    Rubik,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.brand-wordmark .ac-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--brand-pink);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 800;
+}
+
+/* Subtle paper/noise overlay for texture */
+.noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("/assets/noise.svg");
+  opacity: 0.06;
+  mix-blend-mode: multiply;
 }
 
 /* Patrón de Fondo Hero */

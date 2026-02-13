@@ -6,6 +6,12 @@
     <title>Arianna Clemente | Portafolio</title>
 
     <!-- Librerías Externas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -21,7 +27,7 @@
 
     <link rel="stylesheet" href="dist/styles.css" />
   </head>
-  <body class="bg-brand-beige text-brand-black font-light">
+  <body class="bg-white text-black antialiased noise">
     <!-- Navegación -->
     <nav
       class="fixed w-full z-50 bg-white/80 border-b border-brand-lavender/20 backdrop-blur-md"
@@ -30,16 +36,10 @@
         class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
       >
         <div class="flex items-center space-x-2">
-          <div
-            class="w-8 h-8 bg-brand-pink rounded-lg flex items-center justify-center text-white font-bold italic"
-          >
-            AC
-          </div>
-          <span class="text-xl font-bold tracking-tight"
-            >Ary<span class="text-brand-pink font-extrabold"
-              >Clemente</span
-            ></span
-          >
+          <a href="/" class="brand-wordmark">
+            <div class="ac-badge">AC</div>
+            <span class="text-xl font-bold tracking-tight">AryCode</span>
+          </a>
         </div>
 
         <div class="flex items-center space-x-6">
@@ -76,7 +76,7 @@
     <!-- Pestaña: HOME -->
     <main id="home-tab" class="tab-content active block">
       <section
-        class="hero-pattern bg-[#141414] min-h-[95vh] flex items-center pt-20 overflow-hidden"
+        class="hero-pattern bg-brand-black min-h-[95vh] flex items-center pt-20 overflow-hidden"
       >
         <div
           class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center"
@@ -121,7 +121,7 @@
           </div>
           <div class="relative lg:block hidden">
             <div
-              class="code-window rounded-3xl p-8 shadow-2xl relative overflow-hidden bg-[#141414]/80 backdrop-blur-md border border-white/10"
+              class="code-window rounded-3xl p-8 shadow-2xl relative overflow-hidden bg-brand-black/80 backdrop-blur-md border border-white/10"
             >
               <pre
                 id="codeSnippet"
@@ -359,10 +359,10 @@
               </div>
               <div class="space-y-3">
                 <div
-                  class="h-4 w-3/4 loading-shimmer rounded bg-gradient-to-r from-[#141414] via-[#1a1a1a] to-[#141414] bg-[length:200%_100%] animate-pulse"
+                  class="h-4 w-3/4 loading-shimmer rounded bg-gradient-to-r from-brand-black via-brand-black to-brand-black bg-[length:200%_100%] animate-pulse"
                 ></div>
                 <div
-                  class="h-20 w-full loading-shimmer rounded-xl bg-gradient-to-r from-[#141414] via-[#1a1a1a] to-[#141414] bg-[length:200%_100%] animate-pulse"
+                  class="h-20 w-full loading-shimmer rounded-xl bg-gradient-to-r from-brand-black via-brand-black to-brand-black bg-[length:200%_100%] animate-pulse"
                 ></div>
               </div>
             </div>
