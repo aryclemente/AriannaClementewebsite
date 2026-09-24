@@ -423,15 +423,21 @@ function renderProjects() {
   Object.keys(projectData).forEach((key) => {
     const p = projectData[key][AppState.currentLang || "es"];
     grid.innerHTML += `
-      <div class="project-card bg-brand-beige/50 border border-brand-lavender/20 rounded-[2.5rem] p-8 flex flex-col cursor-pointer" onclick="openModal('${key}')">
+      <div class="card-turquesa p-8 flex flex-col cursor-pointer group" onclick="openModal('${key}')">
           <div class="flex justify-between items-start mb-6">
-              <span class="bg-brand-pink text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">${p.category}</span>
+              <span class="badge-turquesa text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">${p.category}</span>
+              <span class="text-brand-teal group-hover:translate-x-1 transition-transform">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </span>
           </div>
-          <h4 class="text-2xl font-bold mb-4 text-brand-purple italic">${p.title}</h4>
-          <p class="text-brand-gray text-sm mb-8 flex-grow line-clamp-3">${p.intro}</p>
-          <button class="text-brand-teal font-black text-[10px] uppercase tracking-widest flex items-center">
-              + Info <i class="fa-solid fa-arrow-right ml-2"></i>
-          </button>
+          <h4 class="text-2xl font-black mb-3 text-brand-black group-hover:text-brand-teal transition-colors italic">${p.title}</h4>
+          <p class="text-brand-gray text-sm mb-8 flex-grow line-clamp-3 leading-relaxed font-light">${p.intro}</p>
+          <div class="pt-4 border-t border-brand-teal/15 flex items-center justify-between">
+              <span class="text-brand-teal font-extrabold text-[10px] uppercase tracking-widest flex items-center gap-2">
+                  Ver Caso de Estudio <i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+              </span>
+              <span class="text-[10px] font-mono text-brand-lavender">${p.role}</span>
+          </div>
       </div>
     `;
   });

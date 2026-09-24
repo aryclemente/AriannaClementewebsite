@@ -1,14 +1,27 @@
-/* Fonts are loaded in index.html to ensure correct preconnect ordering */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Custom styles (migrated from styles.css) */
+@theme {
+  --color-brand-black: #141414;
+  --color-brand-gray: #808080;
+  --color-brand-beige: #edece7;
+  --color-brand-pink: #f55481;
+  --color-brand-teal: #27a397;
+  --color-brand-purple: #504382;
+  --color-brand-lightPink: #fbbec6;
+  --color-brand-lightTeal: #ddfaf8;
+  --color-brand-lavender: #9fa5c8;
+
+  --font-rubik: "Rubik", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Custom styles */
 :root {
-  --brand-main: #000000; /* Primary typography color */
-  --brand-bg: #ffffff; /* Page background - minimal, clean */
+  --brand-main: #141414;
+  --brand-bg: #ffffff;
   --brand-pink: #f55481;
   --brand-teal: #27a397;
+  --brand-purple: #504382;
   --brand-lavender: #9fa5c8;
 }
 
@@ -20,21 +33,19 @@ body {
     "Segoe UI",
     Roboto,
     "Helvetica Neue",
-    Arial;
+    Arial,
+    sans-serif;
   scroll-behavior: smooth;
   background-color: var(--brand-bg);
   color: var(--brand-main);
 }
 
-/* Wordmark (use Rubik for a rounded, technical sans) */
+/* Wordmark */
 .brand-wordmark {
   font-family:
     Rubik,
     system-ui,
     -apple-system,
-    "Segoe UI",
-    Roboto,
-    Arial,
     sans-serif;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -42,6 +53,7 @@ body {
   align-items: center;
   gap: 0.5rem;
 }
+
 .brand-wordmark .ac-badge {
   display: inline-grid;
   place-items: center;
@@ -53,30 +65,53 @@ body {
   font-weight: 800;
 }
 
-/* Subtle paper/noise overlay for texture */
-.noise::after {
+/* Franja Morada Amplia con Borde Curvo */
+.hero-purple-banner {
+  background: linear-gradient(135deg, #36295e 0%, #504382 50%, #291f4a 100%);
+  border-bottom-left-radius: 3.5rem;
+  border-bottom-right-radius: 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero-purple-banner {
+    border-bottom-left-radius: 6rem;
+    border-bottom-right-radius: 6rem;
+  }
+}
+
+.hero-purple-banner::before {
   content: "";
   position: absolute;
   inset: 0;
+  background-image: radial-gradient(rgba(221, 250, 248, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
   pointer-events: none;
-  background-image: url("/assets/noise.svg");
-  opacity: 0.06;
-  mix-blend-mode: multiply;
 }
 
-/* Patrón de Fondo Hero */
-.hero-pattern {
-  background-color: var(--brand-main);
-  background-image:
-    radial-gradient(#504382 0.8px, transparent 0.8px),
-    radial-gradient(#504382 0.8px, var(--brand-main) 0.8px);
-  background-size: 24px 24px;
-  background-position:
-    0 0,
-    12px 12px;
+/* Tarjetas de Casos de Estudio en Turquesa */
+.card-turquesa {
+  background: #ffffff;
+  border: 2px solid rgba(39, 163, 151, 0.25);
+  border-radius: 2rem;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px -10px rgba(80, 67, 130, 0.05);
 }
 
-/* Efecto Shimmer de Carga */
+.card-turquesa:hover {
+  border-color: #27a397;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -10px rgba(39, 163, 151, 0.25);
+}
+
+.badge-turquesa {
+  background-color: #ddfaf8;
+  color: #1a7a71;
+  border: 1px solid rgba(39, 163, 151, 0.35);
+}
+
+/* Shimmer */
 .loading-shimmer {
   background: linear-gradient(90deg, #141414 25%, #1a1a1a 50%, #141414 75%);
   background-size: 200% 100%;
@@ -89,7 +124,7 @@ body {
   }
 }
 
-/* Navegación de Pestañas */
+/* Tab Content */
 .tab-content {
   display: none;
 }
@@ -110,31 +145,21 @@ body {
   }
 }
 
-/* Ventana de Código Estilo Glassmorphism */
+/* Code Window */
 .code-window {
-  background: rgba(20, 20, 20, 0.8);
+  background: rgba(20, 20, 20, 0.9);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Configuraciones de Tailwind extendidas vía CSS si es necesario */
-.nav-link:hover {
-  color: var(--brand-pink);
-}
-
-.project-card {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.project-card:hover {
-  transform: translateY(-5px);
 }
 
 #projectModal {
   display: none;
 }
+
 .modal-animate-in {
   animation: slideUp 0.4s ease-out forwards;
 }
+
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -146,7 +171,6 @@ body {
   }
 }
 
-/* Custom Scrollbar */
 .custom-scroll::-webkit-scrollbar {
   width: 6px;
 }
