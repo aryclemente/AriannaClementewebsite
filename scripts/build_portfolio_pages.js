@@ -57,12 +57,15 @@ function processHtml(rawJsonFile, pageKey) {
   <meta property="og:title" content="${meta.title}">
   <meta property="og:description" content="${meta.desc}">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%234d17d6'/><text x='50' y='65' font-size='48' font-weight='900' font-family='sans-serif' fill='white' text-anchor='middle'>AC</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%234d17d6'/><text x='50' y='65' font-size='48' font-weight='900' font-family='sans-serif' fill='%23FF2E93' text-anchor='middle'>♥</text></svg>">
   `;
 
   // Remove existing title if any
   html = html.replace(/<title>[\s\S]*?<\/title>/i, '');
   html = html.replace('<meta content="web_standard" name="shell-type">', `<meta content="web_standard" name="shell-type">\n${seoBlock}`);
+
+  // Ensure clean-white is defined in tailwind.config
+  html = html.replace('"colors": {', '"colors": { "clean-white": "#FFFFFF", ');
 
   // 4. Update WhatsApp & Email links
   html = html.split('hello@aryclement.dev').join('hello.ary.code@gmail.com');
