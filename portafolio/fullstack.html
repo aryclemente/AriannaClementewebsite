@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type">
+
+  <title>Portafolio Desarrollo Full-Stack & Microservicios // Arianna Clemente</title>
+  <meta name="description" content="Arquitectura de software de alto impacto, pasarelas transaccionales bancarias (C2P Mercantil, Pago Móvil), APIs RESTful y sistemas escalables en Laravel, PostgreSQL y Docker.">
+  <meta property="og:title" content="Portafolio Desarrollo Full-Stack & Microservicios // Arianna Clemente">
+  <meta property="og:description" content="Arquitectura de software de alto impacto, pasarelas transaccionales bancarias (C2P Mercantil, Pago Móvil), APIs RESTful y sistemas escalables en Laravel, PostgreSQL y Docker.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%234d17d6'/><text x='50' y='65' font-size='48' font-weight='900' font-family='sans-serif' fill='white' text-anchor='middle'>AC</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c9c3d8", "on-error-container": "#93000a", "error-container": "#ffdad6", "primary-container": "#4d17d6", "surface-container-low": "#f2f3f7", "deep-purple": "#4d17d6", "secondary": "#006875", "text-dark-primary": "#0F172A", "inverse-surface": "#2e3134", "surface-container-high": "#e7e8ec", "on-tertiary-fixed": "#3e001e", "surface-tint": "#6138e9", "surface-dim": "#d9dade", "error": "#ba1a1a", "deep-teal-dark": "#004f58", "outline": "#797487", "text-dark-secondary": "#475569", "on-tertiary": "#ffffff", "on-surface-variant": "#484455", "secondary-fixed": "#9cefff", "on-error": "#ffffff", "primary-fixed": "#e6deff", "hot-pink-vibrant": "#FF2E93", "secondary-fixed-dim": "#00daf3", "surface-container": "#edeef2", "surface-bright": "#f8f9fd", "darkest-violet": "#19022c", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "surface": "#f8f9fd", "tertiary-fixed-dim": "#ffb0c9", "tertiary-fixed": "#ffd9e3", "primary": "#3600a5", "on-primary-container": "#bfb1ff", "on-secondary-fixed-variant": "#004f58", "on-background": "#191c1f", "surface-container-highest": "#e1e2e6", "mint-turquoise": "#00D2B4", "dark-violet": "#2A0845", "surface-variant": "#e1e2e6", "on-secondary-container": "#00616d", "on-primary-fixed-variant": "#4809d2", "inverse-primary": "#cabeff", "deep-teal": "#006875", "on-secondary-fixed": "#001f24", "tertiary-container": "#960051", "on-primary": "#ffffff", "inverse-on-surface": "#eff1f5", "tertiary": "#6c0039", "on-primary-fixed": "#1c0062", "border-slate": "#E2E8F0", "background": "#f8f9fd", "primary-fixed-dim": "#cabeff", "on-tertiary-fixed-variant": "#8e004c", "hot-pink-hover": "#E00070", "on-surface": "#191c1f", "on-tertiary-container": "#ff9fbf", "secondary-container": "#01e3fd" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "section-y-lg": "7rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-lg": "2rem", "margin-md": "2rem", "section-y": "5rem", "space-xl": "2.5rem", "margin": "1.25rem", "space-md": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem" }, "fontFamily": { "body-lg": [ "Inter" ], "label-pill": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "display-hero-mobile": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "label-code-micro": [ "Inter" ], "body-md": [ "Inter" ], "display-hero": [ "Plus Jakarta Sans" ], "label-code": [ "Inter" ], "body-xl": [ "Inter" ] }, "fontSize": { "body-lg": [ "1.125rem", { "lineHeight": "1.6", "fontWeight": "400" } ], "label-pill": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.05em", "fontWeight": "800" } ], "headline-xl": [ "2.25rem", { "lineHeight": "1.25", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-sm": [ "1.25rem", { "lineHeight": "1.4", "fontWeight": "700" } ], "body-sm": [ "0.875rem", { "lineHeight": "1.5", "fontWeight": "400" } ], "display-hero-mobile": [ "2rem", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-lg": [ "1.5rem", { "lineHeight": "1.35", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "label-code-micro": [ "0.6875rem", { "lineHeight": "0.875rem", "fontWeight": "500" } ], "body-md": [ "1rem", { "lineHeight": "1.6", "fontWeight": "400" } ], "display-hero": [ "3.375rem", { "lineHeight": "1.15", "letterSpacing": "-0.025em", "fontWeight": "800" } ], "label-code": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "500" } ], "body-xl": [ "1.25rem", { "lineHeight": "1.6", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-hot-pink-vibrant selection:text-on-primary">
+<!-- HEADER / NAVBAR -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-clean-white/95 backdrop-blur-md border-b border-border-slate/60 shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
+  <div class="h-20 max-w-[1280px] mx-auto px-5 lg:px-8 flex items-center justify-between gap-4">
+    <!-- Brand ID -->
+    <a class="flex items-center gap-3 text-decoration-none group" href="../index.html#inicio">
+      <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-clean-white font-bold shadow-md shadow-primary-container/30 group-hover:scale-105 transition-transform">
+        AC
+      </div>
+      <div class="flex flex-col">
+        <div class="flex items-center gap-2">
+          <span class="font-headline-sm font-extrabold text-lg text-primary-container uppercase tracking-tight">ARYCLEMENT</span>
+          <span class="hidden sm:inline font-label-code text-xs text-text-dark-secondary font-medium">// Arianna Clemente</span>
+        </div>
+      </div>
+    </a>
+    
+    <!-- Navigation Links -->
+    <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+      <a class="px-3.5 py-2 font-body-sm text-sm font-medium text-text-dark-secondary hover:text-primary-container transition-colors" href="../index.html#inicio">Inicio</a>
+      <a class="px-3.5 py-2 font-body-sm text-sm font-medium text-text-dark-secondary hover:text-primary-container transition-colors" href="../index.html#servicios">Servicios</a>
+      <a class="px-3.5 py-2 font-body-sm text-sm font-medium text-text-dark-secondary hover:text-primary-container transition-colors" href="../index.html#proyectos">Proyectos</a>
+      <a class="px-3.5 py-2 font-headline-sm text-sm font-semibold text-clean-white rounded-lg bg-primary-container shadow-sm transition-colors" href="index.html">Portafolio</a>
+      <a class="px-3.5 py-2 font-body-sm text-sm font-medium text-text-dark-secondary hover:text-primary-container transition-colors" href="../index.html#metodologia">Metodología</a>
+      <a class="px-3.5 py-2 font-body-sm text-sm font-medium text-text-dark-secondary hover:text-primary-container transition-colors" href="../index.html#blog">Blog</a>
+    </nav>
+    
+    <!-- Right CTA & Mobile Toggle -->
+    <div class="flex items-center gap-3">
+      <a class="inline-flex items-center justify-center bg-hot-pink-vibrant hover:bg-hot-pink-hover text-clean-white font-headline-sm text-sm md:text-base font-bold px-4 md:px-6 py-2 md:py-2.5 rounded-xl transition-all shadow-[0_8px_18px_-4px_rgba(255,46,147,0.4)] transform hover:-translate-y-0.5" href="../index.html#contacto">
+        <span>¡Hablemos!</span>
+      </a>
+      <button id="mobileMenuBtn" aria-label="Abrir menú" class="lg:hidden p-2.5 rounded-xl bg-surface-container-low border border-border-slate text-text-dark-primary hover:text-primary-container transition">
+        <span class="material-symbols-outlined text-2xl" id="menuIcon">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobileMenu" class="fixed inset-0 z-40 bg-dark-violet/80 backdrop-blur-md hidden transition-opacity duration-300">
+  <div class="fixed top-20 left-0 right-0 bg-clean-white border-b border-border-slate p-6 shadow-2xl flex flex-col gap-4">
+    <nav class="flex flex-col gap-2">
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition" href="../index.html#inicio">Inicio</a>
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition" href="../index.html#servicios">Servicios</a>
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition" href="../index.html#proyectos">Proyectos S.T.A.R</a>
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-clean-white bg-primary-container hover:bg-primary text-center transition" href="index.html">Explorar Portafolio Completo</a>
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition" href="../index.html#metodologia">Metodología</a>
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition" href="../index.html#blog">Blog & Recursos</a>
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-clean-white bg-hot-pink-vibrant hover:bg-hot-pink-hover text-center mt-2 shadow-md transition" href="../index.html#contacto">¡Agendar Diagnóstico!</a>
+    </nav>
+  </div>
+</div>
+<main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION 1: HEADER & BREADCRUMBS -->
+<section class="relative w-full overflow-hidden bg-surface py-space-xl">
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-margin lg:px-margin-md relative z-10 flex flex-col gap-space-lg">
+<!-- Breadcrumb & Status Pill -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2">
+<a class="font-label-pill text-label-pill text-text-dark-secondary hover:text-deep-purple transition-colors uppercase tracking-wider" href="index.html">Portafolio</a>
+<span class="text-outline text-label-code">/</span>
+<span class="font-label-pill text-label-pill text-deep-purple font-extrabold uppercase tracking-wider">Desarrollo Full-Stack</span>
+</nav>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-dark-violet text-on-primary shadow-md shadow-dark-violet/20">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-mint-turquoise opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-mint-turquoise"></span>
+</span>
+<span class="font-label-code-micro text-label-code-micro tracking-widest text-mint-turquoise uppercase font-bold">⚡ INGENIERÍA DE SOFTWARE &amp; APIS TRANSACCIONALES</span>
+</div>
+</div>
+<!-- Hero Title & Architecture Subtitle -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<h1 class="font-display-hero text-display-hero text-text-dark-primary font-extrabold tracking-tight">
+            Desarrollo Full-Stack &amp; <br class="hidden sm:inline">
+<span class="text-deep-purple">Pasarelas Transaccionales</span>
+</h1>
+<p class="font-body-xl text-body-xl text-text-dark-secondary max-w-2xl leading-relaxed">
+            Arquitecturas backend sólidas en PHP/Laravel combinadas con interfaces frontend intuitivas, seguras y de alta conversión preparadas para tolerancia cero a fallos contables.
+          </p>
+</div>
+<!-- Telemetry Stats Strip -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-md rounded-2xl shadow-xl shadow-surface-dim/40 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-code-micro text-label-code-micro font-bold uppercase tracking-wider text-deep-purple">Protocolos Auditados</span>
+<span class="font-label-code-micro text-label-code-micro text-mint-turquoise font-semibold">ONLINE</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs text-center">
+<div class="p-2 rounded-xl bg-surface-container-low flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-text-dark-primary font-black">99.9%</span>
+<span class="font-label-code-micro text-label-code-micro text-text-dark-secondary">Disponibilidad</span>
+</div>
+<div class="p-2 rounded-xl bg-surface-container-low flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-hot-pink-vibrant font-black">&lt;280ms</span>
+<span class="font-label-code-micro text-label-code-micro text-text-dark-secondary">Webhook Latency</span>
+</div>
+<div class="p-2 rounded-xl bg-surface-container-low flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-deep-teal font-black">PCI/C2P</span>
+<span class="font-label-code-micro text-label-code-micro text-text-dark-secondary">Security Compliance</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: CASOS DE ESTUDIO TÉCNICOS DETALLADOS -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-margin lg:px-margin-md flex flex-col gap-section-y">
+<!-- PROYECTO 1: GONZAGA ADMIN -->
+<article class="bg-surface-container-lowest rounded-3xl shadow-xl shadow-surface-dim/30 overflow-hidden transition-all duration-300 hover:shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+<!-- Narrative & Architecture Specs (Col 7) -->
+<div class="lg:col-span-7 p-space-lg lg:p-space-xl flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<!-- Eyebrow + Pill Tags -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-3 py-1 rounded-full bg-deep-purple text-on-primary font-label-pill text-label-pill uppercase">
+                  BACKEND + FRONTEND + DEV + API
+                </span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-deep-teal font-label-code-micro text-label-code-micro font-bold uppercase">
+                  Fintech • Multicuenta C2P
+                </span>
+</div>
+<!-- Title -->
+<div>
+<h2 class="font-headline-xl text-headline-xl text-text-dark-primary font-extrabold tracking-tight">
+                  Pasarela Multicuenta Gonzaga Admin
+                </h2>
+<p class="font-headline-sm text-headline-sm text-deep-purple font-semibold">
+                  Colegio Gonzaga • Sistema Centralizado de Recaudación y Conciliación
+                </p>
+</div>
+<!-- Detail Paragraph -->
+<p class="font-body-md text-body-md text-text-dark-secondary leading-relaxed">
+                Desarrollo e integración integral del sistema administrativo y pasarela multicuenta para procesar pagos institucionales. Enlace de comunicación síncrona con el Banco Mercantil (protocolo C2P nativo), recepción estructurada de Pago Móvil interbancario, transferencias locales en Bolívares y soporte internacional en Zinli USD.
+              </p>
+<!-- Architecture Breakdown: Back + Front + API -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center gap-2 text-deep-purple font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">dns</span>
+<span class="font-label-pill text-label-pill uppercase text-text-dark-primary">Backend &amp; Core Data</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-dark-secondary">
+                    Laravel MVC robusto con colas de procesamiento asíncrono, hashing criptográfico de recibos, re-consulta automática con API Mercantil ante timeouts y triggers en PostgreSQL.
+                  </p>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center gap-2 text-hot-pink-vibrant font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-label-pill text-label-pill uppercase text-text-dark-primary">Frontend Administrativo</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-dark-secondary">
+                    Tablero responsivo optimizado para auditores: conciliación bancaria instantánea en 1 clic, exportación a libros contables y portal de autogestión de solvencias familiares.
+                  </p>
+</div>
+</div>
+<!-- Metrics -->
+<div class="p-space-md rounded-2xl bg-mint-turquoise/10 flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-mint-turquoise flex items-center justify-center text-dark-violet font-bold">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-text-dark-primary font-black">100% Autonomía • +900 transacciones/mes</span>
+<span class="font-label-code text-label-code text-text-dark-secondary">Zero discrepancias contables mensuales y validación desatendida.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tech Stack Badges -->
+<div class="flex flex-wrap items-center gap-1.5 pt-space-xs">
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">Laravel 10.x</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">PHP 8.2</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">Mercantil C2P REST</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">PostgreSQL / MySQL</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">Tailwind CSS</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">Zinli Merchant API</span>
+</div>
+</div>
+<!-- Interactive Visual Terminal / UI Simulation (Col 5) -->
+<div class="lg:col-span-5 bg-dark-violet text-on-primary p-space-lg lg:p-space-xl flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-deep-purple/30 blur-2xl"></div>
+<div class="flex flex-col gap-space-md relative z-10">
+<!-- Window Chrome -->
+<div class="flex items-center justify-between pb-space-sm border-b border-white/10">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="w-3 h-3 rounded-full bg-mint-turquoise"></span>
+<span class="font-label-code-micro text-label-code-micro text-white/50 ml-2">mercantil-c2p-worker.php</span>
+</div>
+<span class="font-label-code-micro text-label-code-micro px-2 py-0.5 rounded bg-mint-turquoise/20 text-mint-turquoise font-mono font-bold">HTTP 200 OK</span>
+</div>
+<!-- Code Payload Inspector -->
+<div class="p-space-sm rounded-xl bg-darkest-violet/80 font-mono text-xs text-secondary-fixed flex flex-col gap-1 overflow-x-auto">
+<p class="text-white/40">// Orquestador Transaccional C2P • Mercantil Banco</p>
+<p class=""><span class="text-hot-pink-vibrant">$payload</span> = [</p>
+<p class="pl-4"><span class="text-mint-turquoise">'merchant_id'</span> =&gt; config('c2p.gonzaga_id'),</p>
+<p class="pl-4"><span class="text-mint-turquoise">'customer_phone'</span> =&gt; <span class="text-primary-fixed">Hash::mask($request-&gt;phone)</span>,</p>
+<p class="pl-4"><span class="text-mint-turquoise">'currency'</span> =&gt; <span class="text-secondary-fixed-dim">'VES'</span>,</p>
+<p class="pl-4"><span class="text-mint-turquoise">'amount'</span> =&gt; $invoice-&gt;getCalculatedTotal(),</p>
+<p class="pl-4"><span class="text-mint-turquoise">'token_otp'</span> =&gt; $request-&gt;c2p_token,</p>
+<p class="">];</p>
+<p class=""><span class="text-hot-pink-vibrant">$response</span> = <span class="text-on-primary-container">MercantilGateway</span>::charge($payload);</p>
+<p class="text-mint-turquoise">// Reconciliation callback queued ✓</p>
+</div>
+<!-- Graphic Image of Mock Dashboard -->
+<div class="relative rounded-2xl overflow-hidden shadow-lg mt-2 group">
+<img class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A clean, sophisticated user interface mock for a school administrative tuition dashboard with interactive payment reconciliation tables, status chips showing successful C2P transactions, deep purple graphs, and clean white data cards on dark glass." src="../assets/images/portfolio/fs_gonzaga_admin.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBA0eMuSwM6mbnObiPr5LnMBuNKIEuFa_wCfoatyZi5dJCCcp9FLmnJQN9pR0hJML6HvfrWf_fKemwkMYMI_YMgfhKqFIyctEX_n1wOAhIHt3gnqv7h-KNMx5WmRbDp7I_o9HSKylQeZuLC6Gky2dca_9j1_Oy4UW-nfxIvU91nUnKCRmpEqYSJ2O9X89CiocydJpZTqpD1TzG8ubnZxhVeZUtVGexv12eqSVSUDVE1HIE4KX3oH9qn'">
+<div class="absolute inset-0 bg-gradient-to-t from-dark-violet via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+<span class="font-label-code-micro text-label-code-micro text-on-primary bg-black/40 px-2 py-1 rounded backdrop-blur-md">Gonzaga Core Gateway v2.4</span>
+<span class="font-label-code-micro text-label-code-micro text-mint-turquoise bg-mint-turquoise/10 px-2 py-1 rounded backdrop-blur-md font-bold">Auto-Sync On</span>
+</div>
+</div>
+</div>
+<!-- Terminal Footnote -->
+<div class="pt-space-md mt-space-md border-t border-white/10 flex items-center justify-between text-white/60">
+<span class="font-label-code text-label-code">Engine: PHP 8.2 + Laravel Queues</span>
+<div class="flex items-center gap-1 text-mint-turquoise font-label-code text-label-code">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="">PCI-DSS Tokenized</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- PROYECTO 2: BECA A UN ESTUDIANTE (FE Y ALEGRÍA) -->
+<article class="bg-surface-container-lowest rounded-3xl shadow-xl shadow-surface-dim/30 overflow-hidden transition-all duration-300 hover:shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+<!-- Interactive Visual Experience Simulation (Col 5) -->
+<div class="lg:col-span-5 bg-gradient-to-br from-darkest-violet via-dark-violet to-deep-purple text-on-primary p-space-lg lg:p-space-xl flex flex-col justify-between relative order-2 lg:order-1">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded-full bg-hot-pink-vibrant text-on-primary font-label-pill text-label-pill uppercase font-bold tracking-wider">
+                  UX Checkout Reactivo
+                </span>
+<span class="font-label-code-micro text-label-code-micro text-secondary-fixed">app.donarfeyalegriavzla.org</span>
+</div>
+<!-- Visual of Student / Classroom Impact -->
+<div class="relative rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-52 object-cover" data-alt="A touching documentary photograph of Venezuelan students in a well-lit Fe y Alegría school classroom smiling while studying, with subtle neon cyan and warm light highlights, displaying optimism and educational empowerment." src="../assets/images/portfolio/fs_donaciones_feyalegria.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDTYcUkVuseWMgSkpHiobHWuwqhk5YQimB18HoMac_rvC3x2JgjBrOomd-cUlqAj4MWklH0zc0TTT7PiNPVUZJ4522qWOk1heM0tHHzgV8-Yhzg0lRrsW0gkLRvHJZmaxvd3mcAla3_lGsDAue3wqOxtgFDs3n-9wNiZgTH6hyygxPiCdtfusk09h_SYTXlv_t7ygBLK1BwoCg9dlaZ0YEC_3VH1USRimVh8wkQ8EjeJjtaErGkPMAs'">
+<div class="absolute inset-0 bg-gradient-to-t from-darkest-violet/90 via-darkest-violet/20 to-transparent"></div>
+<div class="absolute bottom-3 left-4 right-4">
+<span class="font-label-code text-label-code text-white/90">Campaña Activa: Red Nacional de Colegios</span>
+<p class="font-headline-sm text-headline-sm text-on-primary font-bold">1 Beca = 1 Año de Acceso Escolar</p>
+</div>
+</div>
+<!-- Multi-Step Interactive UX Diagram -->
+<div class="p-space-md rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 flex flex-col gap-space-xs">
+<span class="font-label-code-micro text-label-code-micro text-mint-turquoise uppercase font-bold">Embudo Transaccional Zero-Friction</span>
+<!-- Step 1 -->
+<div class="flex items-center justify-between py-1.5 border-b border-white/10">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-mint-turquoise text-dark-violet font-bold text-xs flex items-center justify-center">1</span>
+<span class="font-body-sm text-body-sm text-white/90">Selección de Beca (USD / Bs)</span>
+</div>
+<span class="font-label-code-micro text-label-code-micro text-mint-turquoise">Completado</span>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center justify-between py-1.5 border-b border-white/10">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-mint-turquoise text-dark-violet font-bold text-xs flex items-center justify-center">2</span>
+<span class="font-body-sm text-body-sm text-white/90">Datos Mínimos de Donante</span>
+</div>
+<span class="font-label-code-micro text-label-code-micro text-mint-turquoise">Validado Instantáneo</span>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center justify-between py-1.5">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-hot-pink-vibrant text-on-primary font-bold text-xs flex items-center justify-center animate-pulse">3</span>
+<span class="font-body-sm text-body-sm text-white font-semibold">Procesamiento Multi-Gateway</span>
+</div>
+<span class="font-label-code-micro text-label-code-micro text-hot-pink-vibrant font-bold">99.8% Success Rate</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-white/10 flex items-center justify-between text-white/70">
+<span class="font-label-code text-label-code">Frontend: Blade + Modern JS Flow</span>
+<span class="font-label-code text-label-code text-secondary-fixed">GA4 Conversion Linked</span>
+</div>
+</div>
+<!-- Narrative & Full-Stack Description (Col 7) -->
+<div class="lg:col-span-7 p-space-lg lg:p-space-xl flex flex-col justify-between gap-space-lg order-1 lg:order-2">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-3 py-1 rounded-full bg-hot-pink-vibrant text-on-primary font-label-pill text-label-pill uppercase">
+                  FRONTEND REACTIVO &amp; EXPERIENCIA DE PAGO
+                </span>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-primary font-label-code-micro text-label-code-micro font-bold uppercase">
+                  Impacto Social • High Conversion
+                </span>
+</div>
+<div>
+<h2 class="font-headline-xl text-headline-xl text-text-dark-primary font-extrabold tracking-tight">
+                  Pasarela de Donaciones Beca a un Estudiante
+                </h2>
+<p class="font-headline-sm text-headline-sm text-deep-purple font-semibold">
+                  Fe y Alegría Venezuela • Plataforma Oficial de Recaudación Humanitaria
+                </p>
+</div>
+<p class="font-body-md text-body-md text-text-dark-secondary leading-relaxed">
+                Sistema a medida para la gestión de donaciones online con especial enfoque en el frontend para maximizar la tasa de conversión. Flujo de checkout escalonado sin fricción, feedback transaccional en tiempo real, soporte nativo multidivisa (USD / VES) y validación instantánea de formulario para evitar el abandono del donante.
+              </p>
+<!-- Technical pillars -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center gap-2 text-hot-pink-vibrant font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">touch_app</span>
+<span class="font-label-pill text-label-pill uppercase text-text-dark-primary">UI / UX de Donación</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-dark-secondary">
+                    Arquitectura de componentes ligeros con renderizado optimizado en dispositivos móviles de gama baja y conexiones inestables habituales en la región.
+                  </p>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center gap-2 text-deep-purple font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">cloud_sync</span>
+<span class="font-label-pill text-label-pill uppercase text-text-dark-primary">Backend Resiliente</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-dark-secondary">
+                    Gestión de flujos seguros en Laravel, orquestación de hosting para tolerar spikes de visitas en telemaratones benéficos y migraciones SQL controladas.
+                  </p>
+</div>
+</div>
+<!-- Impact metric banner -->
+<div class="p-space-md rounded-2xl bg-deep-purple/10 flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-deep-purple flex items-center justify-center text-on-primary font-bold">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-text-dark-primary font-black">&gt;85% Tasa de Finalización de Checkout</span>
+<span class="font-label-code text-label-code text-text-dark-secondary">Tolerancia comprobada durante picos masivos de difusión institucional.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stack tags -->
+<div class="flex flex-wrap items-center gap-1.5 pt-space-xs">
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">Laravel</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">Blade Components</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">Vanilla JS ES6+</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">SQL Migrations</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">GA4 Funnel Tracking</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">SSL &amp; Webhook Guard</span>
+</div>
+</div>
+</div>
+</article>
+<!-- PROYECTO 3: SISTEMA DE VACANTES - TESIS IUJO -->
+<article class="bg-surface-container-lowest rounded-3xl shadow-xl shadow-surface-dim/30 overflow-hidden transition-all duration-300 hover:shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+<!-- Narrative & Technical Architecture (Col 7) -->
+<div class="lg:col-span-7 p-space-lg lg:p-space-xl flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-3 py-1 rounded-full bg-deep-teal-dark text-on-secondary font-label-pill text-label-pill uppercase">
+                  ARQUITECTURA DE SOFTWARE &amp; MODELADO RELACIONAL
+                </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-text-dark-secondary font-label-code-micro text-label-code-micro font-bold uppercase">
+                  Tesis de Grado Académica IUJO
+                </span>
+</div>
+<div>
+<h2 class="font-headline-xl text-headline-xl text-text-dark-primary font-extrabold tracking-tight">
+                  Sistema Integral de Gestión de Vacantes
+                </h2>
+<p class="font-headline-sm text-headline-sm text-deep-purple font-semibold">
+                  Instituto Universitario Jesús Obrero (IUJO) • Tesis TSU en Informática
+                </p>
+</div>
+<p class="font-body-md text-body-md text-text-dark-secondary leading-relaxed">
+                Proyecto de grado enfocado en la solución de la intermediación laboral universitaria. Plataforma completa para la publicación, filtrado algorítmico de perfiles, postulación automatizada y seguimiento en tiempo real de pasantías y vacantes profesionales entre estudiantes y empresas aliadas.
+              </p>
+<!-- Relational & Architectural highlights -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-1">
+<span class="material-symbols-outlined text-deep-purple text-[22px]">admin_panel_settings</span>
+<span class="font-label-pill text-label-pill uppercase text-text-dark-primary">Control RBAC</span>
+<p class="font-body-sm text-body-sm text-text-dark-secondary">
+                    3 Niveles de acceso aislados: Administradores IUJO, Empresas verificadas y Estudiantes.
+                  </p>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-1">
+<span class="material-symbols-outlined text-mint-turquoise text-[22px]">upload_file</span>
+<span class="font-label-pill text-label-pill uppercase text-text-dark-primary">Módulo CV</span>
+<p class="font-body-sm text-body-sm text-text-dark-secondary">
+                    Carga protegida, sanitización de archivos y normalización estructurada de experiencias previas.
+                  </p>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-1">
+<span class="material-symbols-outlined text-hot-pink-vibrant text-[22px]">filter_alt</span>
+<span class="font-label-pill text-label-pill uppercase text-text-dark-primary">Matching Motor</span>
+<p class="font-body-sm text-body-sm text-text-dark-secondary">
+                    Filtros dinámicos por mención académica, habilidades técnicas y estado del proceso de selección.
+                  </p>
+</div>
+</div>
+<!-- Academic Impact -->
+<div class="p-space-md rounded-2xl bg-secondary-fixed/30 flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-deep-teal flex items-center justify-center text-on-secondary font-bold">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-text-dark-primary font-black">Mención Publicación • Excelencia Técnica</span>
+<span class="font-label-code text-label-code text-text-dark-secondary">Aprobado con honores en el IUJO por arquitectura limpia y rigor relacional.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tech Stack Tags -->
+<div class="flex flex-wrap items-center gap-1.5 pt-space-xs">
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">PHP 8</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">Laravel MVC</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">MySQL Relational DB</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">RBAC Middleware</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">Tailwind / Bootstrap</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-text-dark-primary font-label-code-micro text-label-code-micro font-bold">Git &amp; GitHub Flow</span>
+</div>
+</div>
+<!-- Relational Diagram Visual (Col 5) -->
+<div class="lg:col-span-5 bg-dark-violet text-on-primary p-space-lg lg:p-space-xl flex flex-col justify-between relative overflow-hidden">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-white/10">
+<span class="font-label-code-micro text-label-code-micro text-mint-turquoise uppercase font-mono font-bold">Schema Relacional ERD • 3NF</span>
+<span class="font-label-code-micro text-label-code-micro text-white/50">iujo_vacantes_db</span>
+</div>
+<!-- Database Schema Diagram Component -->
+<div class="p-space-md rounded-2xl bg-darkest-violet/90 flex flex-col gap-space-sm">
+<!-- Entity: Vacante -->
+<div class="p-3 rounded-xl bg-white/5 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-mint-turquoise font-bold uppercase font-mono">TABLE: vacantes</span>
+<span class="text-xs text-white/40 font-mono">1 ••• N</span>
+</div>
+<div class="text-xs font-mono text-white/70 space-y-0.5">
+<p class=""><span class="text-hot-pink-vibrant">id</span>: BIGINT [PK]</p>
+<p class=""><span class="text-secondary-fixed">empresa_id</span>: BIGINT [FK]</p>
+<p class="">titulo: VARCHAR(150)</p>
+<p class="">status: ENUM('draft', 'published', 'closed')</p>
+</div>
+</div>
+<!-- Entity: Postulaciones Junction -->
+<div class="p-3 rounded-xl bg-white/5 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-hot-pink-vibrant font-bold uppercase font-mono">TABLE: postulaciones</span>
+<span class="text-xs text-mint-turquoise font-mono">Junction Match</span>
+</div>
+<div class="text-xs font-mono text-white/70 space-y-0.5">
+<p class=""><span class="text-hot-pink-vibrant">id</span>: BIGINT [PK]</p>
+<p class=""><span class="text-secondary-fixed">estudiante_id</span>: BIGINT [FK]</p>
+<p class=""><span class="text-secondary-fixed">vacante_id</span>: BIGINT [FK]</p>
+<p class="">score_afinidad: DECIMAL(5,2)</p>
+</div>
+</div>
+</div>
+<!-- Real Academic Photographic Anchor -->
+<div class="relative rounded-2xl overflow-hidden shadow-lg mt-2">
+<img class="w-full h-44 object-cover" data-alt="A tech university software testing laboratory with a software engineer debugging database schemas on high resolution dual monitors, showing clean code and ER diagrams under ambient purple and cyan studio lights." src="../assets/images/portfolio/fs_vacantes_iujo.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuAX3J0SxvApvSSJPMmMwuZrQiNxq9XPBwi2q2Sln202wUJRvQ1x_mQjhGI3RyZ3uU5gmGV3yyvAmtU-7aqqWYuYktilpHGJR47gTzrbY_jSjf1BEfWMLtqUJejuVLCEEbW8ZQDNGuRKURIi4lJG89xlu26DkSx8V6NwxW1XlnjLCROZuog2ixE0YJsgR5KF8Yvr4ONIv9RR3pyOrBG5dnF9bExNxKaZTl2Cgv5airBaOKFSzw6sK-xc'">
+<div class="absolute inset-0 bg-gradient-to-t from-dark-violet via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-3">
+<span class="font-label-code-micro text-label-code-micro text-white/80">Modelado y pruebas de carga concurrente</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-white/10 flex items-center justify-between text-white/60">
+<span class="font-label-code text-label-code">Engine: MySQL InnoDB Storage</span>
+<span class="font-label-code text-label-code text-mint-turquoise">ACID Compliant</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION 3: CALL TO ACTION DE COTIZACIÓN PARA DESARROLLO A MEDIDA -->
+<section class="w-full py-section-y-lg bg-surface relative overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-r from-deep-purple/15 via-hot-pink-vibrant/10 to-secondary-container/15 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-margin lg:px-margin-md relative z-10">
+<div class="bg-darkest-violet rounded-3xl p-space-lg lg:p-space-xl text-on-primary shadow-2xl relative overflow-hidden">
+<!-- Ambient accents -->
+<div class="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-deep-purple/40 blur-3xl pointer-events-none"></div>
+<div class="absolute top-0 right-1/3 w-64 h-64 rounded-full bg-hot-pink-vibrant/20 blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 w-fit">
+<span class="material-symbols-outlined text-mint-turquoise text-[18px]">code_blocks</span>
+<span class="font-label-code-micro text-label-code-micro text-mint-turquoise font-bold uppercase tracking-wider">
+                Desarrollo de Pasarelas &amp; Backend Custom
+              </span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-primary font-black tracking-tight leading-tight">
+              ¿Tu organización necesita una <br class="hidden sm:inline">
+<span class="text-hot-pink-vibrant">pasarela transaccional</span> sin fallos?
+            </h2>
+<p class="font-body-lg text-body-lg text-white/80 max-w-xl leading-relaxed">
+              Diseño arquitecturas seguras en Laravel, conecto APIs bancarias complejas (Mercantil, Banesco, C2P, Stripe, Zinli) y construyo tableros de control con auditoría en tiempo real.
+            </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs text-white/70 font-label-code text-label-code">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-mint-turquoise text-[18px]">verified_user</span>
+                Sin intermediarios opacos
+              </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-mint-turquoise text-[18px]">bolt</span>
+                Deploy en semanas, no meses
+              </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-mint-turquoise text-[18px]">receipt_long</span>
+                Facturación &amp; NDA
+              </span>
+</div>
+</div>
+<!-- Dual CTA Buttons & Contact Card -->
+<div class="lg:col-span-5 flex flex-col gap-space-md bg-white/5 p-space-lg rounded-2xl border border-white/10 backdrop-blur-md">
+<div class="flex flex-col gap-1 pb-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-primary font-bold">Inicia tu cotización técnica</span>
+<span class="font-body-sm text-body-sm text-white/70">Respuesta directa en menos de 24 horas por Arianna Clemente.</span>
+</div>
+<!-- WhatsApp Direct Action -->
+<a class="w-full inline-flex items-center justify-between px-space-lg py-3.5 rounded-xl bg-hot-pink-vibrant text-on-primary font-headline-sm text-label-pill uppercase font-extrabold shadow-[0_8px_18px_-4px_rgba(255,46,147,0.4)] hover:bg-hot-pink-hover hover:-translate-y-0.5 active:translate-y-0 transition-all group" href="https://wa.me/584241685298584241685298?text=Hola%20Arianna,%20vi%20tu%20portafolio%20full-stack%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span class="">Cotizar por WhatsApp</span>
+</div>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<!-- Email Action -->
+<a class="w-full inline-flex items-center justify-between px-space-lg py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-on-primary font-headline-sm text-label-pill uppercase font-extrabold border border-white/20 transition-all group" href="mailto:hello.ary.code@gmail.com?subject=Cotizacion%20Desarrollo%20Full%20Stack%20-%20Proyecto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-mint-turquoise">mail</span>
+<span class="">hello.ary.code@gmail.com</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-white/50 group-hover:text-white transition-colors">send</span>
+</a>
+<div class="flex items-center justify-center gap-2 pt-space-xs">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-mint-turquoise opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-mint-turquoise"></span>
+</span>
+<span class="font-label-code-micro text-label-code-micro text-mint-turquoise font-bold uppercase tracking-wider">
+                Slot actual disponible para Q2 / Q3
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+
+<!-- Cross Portfolio Navigation Strip -->
+<section class="w-full py-16 bg-surface-container-low/70 border-t border-border-slate">
+  <div class="max-w-[1280px] mx-auto px-5 lg:px-8 flex flex-col gap-8">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+      <div>
+        <span class="font-label-code text-xs font-bold uppercase text-primary-container tracking-wider flex items-center gap-1.5 mb-1">
+          <span class="material-symbols-outlined text-[16px]">explore</span> Explorar Más Especialidades
+        </span>
+        <h3 class="font-headline-lg text-2xl font-extrabold text-text-dark-primary">
+          Otras Áreas del Portafolio Profesional
+        </h3>
+      </div>
+      <a href="index.html" class="inline-flex items-center gap-2 font-headline-sm text-sm font-bold text-primary-container hover:text-hot-pink-vibrant transition-colors">
+        <span>Ver Todas las 4 Áreas</span>
+        <span class="material-symbols-outlined text-base">arrow_forward</span>
+      </a>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+        <a href="wordpress.html" class="group p-6 rounded-2xl bg-clean-white border border-border-slate hover:border-primary-container/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center justify-between">
+              <div class="w-10 h-10 rounded-xl bg-primary-container/10 text-primary-container group-hover:bg-primary-container group-hover:text-clean-white transition-colors flex items-center justify-center">
+                <span class="material-symbols-outlined text-xl">web</span>
+              </div>
+              <span class="text-xs font-label-code font-bold px-2.5 py-1 rounded-full bg-surface-container text-text-dark-secondary">
+                4 Proyectos
+              </span>
+            </div>
+            <h4 class="font-headline-sm text-lg font-bold text-text-dark-primary group-hover:text-primary-container transition-colors">
+              WordPress & Web
+            </h4>
+            <p class="font-body-sm text-xs text-text-dark-secondary">
+              Portales Institucionales WPO
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-border-slate/50 flex items-center justify-between text-xs font-bold text-primary-container group-hover:text-hot-pink-vibrant transition-colors">
+            <span>Ver Casos de Estudio</span>
+            <span class="material-symbols-outlined text-base transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
+        </a>
+      
+        <a href="marketing.html" class="group p-6 rounded-2xl bg-clean-white border border-border-slate hover:border-primary-container/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center justify-between">
+              <div class="w-10 h-10 rounded-xl bg-primary-container/10 text-primary-container group-hover:bg-primary-container group-hover:text-clean-white transition-colors flex items-center justify-center">
+                <span class="material-symbols-outlined text-xl">query_stats</span>
+              </div>
+              <span class="text-xs font-label-code font-bold px-2.5 py-1 rounded-full bg-surface-container text-text-dark-secondary">
+                4 Proyectos
+              </span>
+            </div>
+            <h4 class="font-headline-sm text-lg font-bold text-text-dark-primary group-hover:text-primary-container transition-colors">
+              Marketing & Analytics
+            </h4>
+            <p class="font-body-sm text-xs text-text-dark-secondary">
+              GA4, Meta Ads & Fintech Growth
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-border-slate/50 flex items-center justify-between text-xs font-bold text-primary-container group-hover:text-hot-pink-vibrant transition-colors">
+            <span>Ver Casos de Estudio</span>
+            <span class="material-symbols-outlined text-base transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
+        </a>
+      
+        <a href="soporte.html" class="group p-6 rounded-2xl bg-clean-white border border-border-slate hover:border-primary-container/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center justify-between">
+              <div class="w-10 h-10 rounded-xl bg-primary-container/10 text-primary-container group-hover:bg-primary-container group-hover:text-clean-white transition-colors flex items-center justify-center">
+                <span class="material-symbols-outlined text-xl">dns</span>
+              </div>
+              <span class="text-xs font-label-code font-bold px-2.5 py-1 rounded-full bg-surface-container text-text-dark-secondary">
+                3 Proyectos
+              </span>
+            </div>
+            <h4 class="font-headline-sm text-lg font-bold text-text-dark-primary group-hover:text-primary-container transition-colors">
+              Sistemas Académicos
+            </h4>
+            <p class="font-body-sm text-xs text-text-dark-secondary">
+              Revistas OJS, DSpace & LMS
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-border-slate/50 flex items-center justify-between text-xs font-bold text-primary-container group-hover:text-hot-pink-vibrant transition-colors">
+            <span>Ver Casos de Estudio</span>
+            <span class="material-symbols-outlined text-base transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-lowest border-t border-border-slate py-12">
+  <div class="max-w-[1280px] mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pb-8 border-b border-border-slate">
+      <div class="md:col-span-5 flex flex-col gap-3">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-clean-white font-bold shadow-md">
+            AC
+          </div>
+          <span class="font-headline-sm text-xl font-extrabold text-text-dark-primary tracking-tight">ARYCLEMENT</span>
+        </div>
+        <p class="font-body-sm text-sm text-text-dark-secondary max-w-sm leading-relaxed">
+          Arquitectura de software de alto impacto, soluciones cloud escalables y desarrollo Full-Stack con rigor técnico y sub-segundo tiempo de respuesta.
+        </p>
+        <div class="flex items-center gap-2 pt-1">
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-mint-turquoise opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-mint-turquoise"></span>
+          </span>
+          <span class="font-label-code text-xs text-text-dark-secondary font-medium">Sistemas Operacionales • 99.98% Disponibilidad</span>
+        </div>
+      </div>
+      
+      <div class="md:col-span-3 flex flex-col gap-2">
+        <span class="font-label-code text-xs font-bold uppercase text-primary-container tracking-wider">Contacto Directo</span>
+        <a class="font-body-sm text-sm text-text-dark-primary hover:text-hot-pink-vibrant transition-colors flex items-center gap-2 pt-1" href="mailto:hello.ary.code@gmail.com">
+          <span class="material-symbols-outlined text-[16px] text-primary-container">mail</span>
+          <span>hello.ary.code@gmail.com</span>
+        </a>
+        <a class="font-body-sm text-sm text-text-dark-primary hover:text-hot-pink-vibrant transition-colors flex items-center gap-2" href="https://wa.me/584241685298584241685298" target="_blank" rel="noopener">
+          <span class="material-symbols-outlined text-[16px] text-mint-turquoise">chat</span>
+          <span>+58 424 168 5298</span>
+        </a>
+        <span class="font-body-sm text-xs text-text-dark-secondary pt-1">Caracas, Venezuela • Remoto Global</span>
+      </div>
+      
+      <div class="md:col-span-4 flex flex-col gap-2">
+        <span class="font-label-code text-xs font-bold uppercase text-primary-container tracking-wider">Redes & Canales</span>
+        <div class="flex flex-wrap items-center gap-2 pt-1">
+          <a aria-label="GitHub" class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-text-dark-primary hover:bg-primary-container hover:text-clean-white transition-all shadow-sm" href="https://github.com/aryclemente" target="_blank" rel="noopener">
+            <span class="material-symbols-outlined text-[20px]">terminal</span>
+          </a>
+          <a aria-label="LinkedIn" class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-text-dark-primary hover:bg-primary-container hover:text-clean-white transition-all shadow-sm" href="https://www.linkedin.com/in/arianna-clemente/" target="_blank" rel="noopener">
+            <span class="material-symbols-outlined text-[20px]">hub</span>
+          </a>
+          <a aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-text-dark-primary hover:bg-mint-turquoise hover:text-clean-white transition-all shadow-sm" href="https://wa.me/584241685298584241685298" target="_blank" rel="noopener">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+          </a>
+          <a aria-label="Email" class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-text-dark-primary hover:bg-hot-pink-vibrant hover:text-clean-white transition-all shadow-sm" href="mailto:hello.ary.code@gmail.com">
+            <span class="material-symbols-outlined text-[20px]">alternate_email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-dark-secondary font-label-code">
+      <p>© 2026 ARYCLEMENT Tech Studio // Arianna Clemente. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-4">
+        <span class="text-text-dark-secondary">Stack: Solutions Architect Core</span>
+        <span class="text-mint-turquoise font-semibold">● Production Ready</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+  // Mobile Navigation Drawer Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIcon = document.getElementById('menuIcon');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        if (menuIcon) menuIcon.textContent = 'close';
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileMenu.classList.add('hidden');
+        if (menuIcon) menuIcon.textContent = 'menu';
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Close when clicking mobile nav links
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        if (menuIcon) menuIcon.textContent = 'menu';
+        document.body.style.overflow = 'auto';
+      });
+    });
+  }
+</script>
+
+</body></html>

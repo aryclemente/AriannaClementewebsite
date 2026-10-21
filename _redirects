@@ -1,0 +1,6 @@
+# Netlify redirects for clean Portfolio URLs
+/portafolio/fullstack    /portafolio-fullstack.html    200
+/portafolio/wordpress    /portafolio-wordpress.html    200
+/portafolio/marketing    /portafolio-marketing.html    200
+/portafolio/soporte      /portafolio-soporte.html      200
+/portafolio              /portafolio.html              200

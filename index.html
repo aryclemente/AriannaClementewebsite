@@ -1,462 +1,1335 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arianna Clemente | Full Stack Developer & Solution Architect</title>
-    
-    <!-- Fuentes & Iconos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Rubik:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-    />
-    
-    <!-- Estilos Compilados Tailwind CSS -->
-    <link rel="stylesheet" href="dist/styles.css" />
-  </head>
-  <body class="bg-white text-black antialiased noise">
-    <!-- Navegación Superior -->
-    <nav
-      class="fixed w-full z-50 bg-white/90 border-b border-brand-lavender/20 backdrop-blur-md"
-    >
-      <div
-        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <div class="flex items-center space-x-2">
-          <a href="#" onclick="Navigation.switchTab('home')" class="brand-wordmark">
-            <div class="ac-badge">AC</div>
-            <span class="text-xl font-bold tracking-tight text-brand-black">Ary<span class="text-brand-pink font-extrabold">Code</span></span>
-          </a>
+<!DOCTYPE html><html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+
+<meta name="description" content="Arianna Clemente - Solutions Architect & Tech Lead. Arquitectura de software de alto rendimiento, desarrollo Full-Stack moderno (Laravel, PHP, WordPress, React, Cloud) y soluciones a medida con alta conversión.">
+<meta name="keywords" content="Arianna Clemente, Solutions Architect, Tech Lead, Full Stack Developer, Laravel, DSpace, WordPress, Cloud Architecture, IA Growth">
+<meta property="og:title" content="ARYCLEMENT // Arianna Clemente - Solutions Architect & Tech Lead">
+<meta property="og:description" content="Arquitectura de software de alto rendimiento y desarrollo Full-Stack moderno para empresas y organizaciones.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%234d17d6'/><text x='50' y='65' font-size='48' font-weight='900' font-family='sans-serif' fill='white' text-anchor='middle'>AC</text></svg>">
+
+<title>ARYCLEMENT // Arianna Clemente - Solutions Architect &amp; Tech Lead</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+
+    /* Animated text rotation / typing effect */
+    @keyframes textSlide {
+      0%, 20% { transform: translateY(0%); opacity: 1; }
+      25%, 45% { transform: translateY(-25%); opacity: 1; }
+      50%, 70% { transform: translateY(-50%); opacity: 1; }
+      75%, 95% { transform: translateY(-75%); opacity: 1; }
+      100% { transform: translateY(0%); opacity: 1; }
+    }
+
+    .rotating-words-wrapper {
+      display: inline-block;
+      height: 1.25em;
+      overflow: hidden;
+      vertical-align: bottom;
+      position: relative;
+    }
+
+    .rotating-words {
+      display: flex;
+      flex-direction: column;
+      animation: textSlide 9s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "text-dark-secondary": "#475569",
+            "tertiary-fixed": "#ffd9e1",
+            "border-slate": "#E2E8F0",
+            "surface-container-high": "#e7e8ec",
+            "on-surface-variant": "#484455",
+            "primary": "#3600a5",
+            "primary-container": "#4d17d6",
+            "hot-pink-vibrant": "#FF2E93",
+            "hot-pink-hover": "#E00070",
+            "surface-container-low": "#f2f3f7",
+            "clean-white": "#FFFFFF",
+            "text-dark-primary": "#0F172A",
+            "dark-violet": "#2A0845",
+            "deep-purple": "#4d17d6",
+            "secondary-container": "#00e3fd",
+            "mint-turquoise": "#00D2B4",
+            "surface": "#f8f9fd",
+            "surface-bright": "#ffffff",
+            "on-surface": "#191c1f",
+            "primary-fixed-dim": "#cabeff"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-xl": ["Plus Jakarta Sans", "sans-serif"],
+            "display-hero": ["Plus Jakarta Sans", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-xl": ["Inter", "sans-serif"],
+            "label-code": ["Inter", "monospace"],
+            "label-pill": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-hot-pink-vibrant selection:text-white">
+<!-- HEADER / NAVBAR -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-clean-white/95 backdrop-blur-md border-b border-border-slate/60 shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
+<div class="h-20 max-w-[1280px] mx-auto px-5 lg:px-8 flex items-center justify-between gap-4">
+<!-- Brand ID -->
+<a class="flex items-center gap-3 text-decoration-none group" href="#inicio">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-clean-white font-bold shadow-md shadow-primary-container/30 group-hover:scale-105 transition-transform">
+          AC
         </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm font-extrabold text-lg text-primary-container uppercase tracking-tight">ARYCLEMENT</span>
+<span class="hidden sm:inline font-label-code text-xs text-text-dark-secondary font-medium">// Arianna Clemente</span>
+</div>
+</div>
+</a>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+<a class="px-3.5 py-2 font-headline-sm text-sm font-semibold text-primary-container rounded-lg bg-primary-container/10 transition-colors" href="#inicio">Inicio</a>
+<a class="px-3.5 py-2 font-body-sm text-sm font-medium text-text-dark-secondary hover:text-primary-container transition-colors" href="#servicios">Servicios</a>
+<a class="px-3.5 py-2 font-body-sm text-sm font-medium text-text-dark-secondary hover:text-primary-container transition-colors" href="#proyectos">Proyectos</a>
+<a class="px-3.5 py-2 font-body-sm text-sm font-medium text-text-dark-secondary hover:text-primary-container transition-colors" href="portafolio.html">Portafolio</a>
+<a class="px-3.5 py-2 font-body-sm text-sm font-medium text-text-dark-secondary hover:text-primary-container transition-colors" href="#metodologia">Metodología</a>
+<a class="px-3.5 py-2 font-body-sm text-sm font-medium text-text-dark-secondary hover:text-primary-container transition-colors" href="#blog">Blog</a>
+</nav>
+<!-- Right CTA & Mobile Toggle -->
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center justify-center bg-hot-pink-vibrant hover:bg-hot-pink-hover text-clean-white font-headline-sm text-sm md:text-base font-bold px-4 md:px-6 py-2 md:py-2.5 rounded-xl transition-all shadow-[0_8px_18px_-4px_rgba(255,46,147,0.4)] transform hover:-translate-y-0.5" href="#contacto">
+<span class="">¡Hablemos!</span>
+</a>
+<button id="mobileMenuBtn" aria-label="Abrir menú" class="lg:hidden p-2.5 rounded-xl bg-surface-container-low border border-border-slate text-text-dark-primary hover:text-primary-container transition">
+  <span class="material-symbols-outlined text-2xl" id="menuIcon">menu</span>
+</button>
+</div>
+</div>
+</header>
 
-        <div class="flex items-center space-x-6">
-          <div class="hidden md:flex items-center space-x-8">
-            <button
-              onclick="Navigation.switchTab('home')"
-              data-i18n="nav-exp"
-              class="font-bold text-xs uppercase tracking-widest text-brand-black hover:text-brand-pink transition"
-            >
-              Portafolio
-            </button>
-            <a
-              href="#stack"
-              data-i18n="nav-stack"
-              class="font-bold text-xs uppercase tracking-widest text-brand-black hover:text-brand-pink transition"
-            >
-              Stack
-            </a>
-            <button
-              onclick="Navigation.switchTab('ai-config')"
-              class="flex items-center gap-2 bg-brand-pink/10 text-brand-pink px-4 py-1.5 rounded-full border border-brand-pink/20 font-bold text-xs uppercase tracking-widest hover:bg-brand-pink hover:text-white transition shadow-sm"
-            >
-              <i class="fa-solid fa-wand-sparkles text-[10px]"></i> Adaptar con IA
-            </button>
-          </div>
-
-          <!-- Switcher de Idioma -->
-          <button
-            onclick="toggleLanguage()"
-            class="flex items-center space-x-2 bg-brand-beige px-3 py-1.5 rounded-full border border-brand-lavender/30 hover:border-brand-pink transition group"
-          >
-            <i class="fa-solid fa-globe text-brand-pink text-sm"></i>
-            <span
-              id="langLabel"
-              class="text-[10px] font-black uppercase tracking-widest text-brand-black"
-              >ES</span
-            >
-          </button>
-
-          <a
-            href="#contacto"
-            data-i18n="nav-contact"
-            class="hidden sm:inline-block bg-brand-black text-white px-6 py-2 rounded-full hover:bg-brand-pink transition font-bold text-xs uppercase tracking-widest"
-          >
-            Contacto
-          </a>
-        </div>
-      </div>
+<!-- Mobile Menu Drawer -->
+<div id="mobileMenu" class="fixed inset-0 z-40 bg-dark-violet/80 backdrop-blur-md hidden transition-opacity duration-300">
+  <div class="fixed top-20 left-0 right-0 bg-clean-white border-b border-border-slate p-6 shadow-2xl flex flex-col gap-4">
+    <nav class="flex flex-col gap-2">
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition" href="#inicio">Inicio</a>
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition" href="#servicios">Servicios</a>
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition" href="#proyectos">Proyectos S.T.A.R</a>
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-primary-container hover:bg-primary-container/10 transition flex items-center justify-between" href="portafolio.html"><span>Portafolio Completo</span><span class="text-xs bg-primary-container/10 text-primary-container px-2.5 py-0.5 rounded-full font-label-code font-bold">4 Áreas</span></a>
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition" href="#metodologia">Metodología</a>
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition" href="#blog">Blog & Recursos</a>
+      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold text-clean-white bg-primary-container hover:bg-primary text-center mt-2 shadow-md transition" href="#contacto">¡Agendar Diagnóstico!</a>
     </nav>
+  </div>
+</div>
 
-    <!-- Pestaña Principal: HOME -->
-    <main id="home-tab" class="tab-content active block">
-      <!-- Hero Section: Franja Morada Amplia con Borde Curvo -->
-      <section
-        class="hero-purple-banner shadow-2xl relative z-10 pt-28 pb-24 lg:pt-36 lg:pb-32 flex items-center"
-      >
-        <div
-          class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10"
-        >
-          <div class="text-white z-10">
-            <div
-              class="inline-flex items-center space-x-2 bg-white/10 text-brand-lightTeal border border-brand-teal/40 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest mb-8 backdrop-blur-md"
-            >
-              <span class="relative flex h-2 w-2">
-                <span
-                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-teal opacity-75"
-                ></span>
-                <span
-                  class="relative inline-flex rounded-full h-2 w-2 bg-brand-teal"
-                ></span>
+<main class="w-full pt-20">
+<!-- 1. HERO SECTION (Solid Deep Electric Purple #4d17d6) -->
+<section class="relative w-full bg-[#4d17d6] text-clean-white overflow-hidden py-16 lg:py-24" id="inicio">
+<!-- Subtle Technical Overlay Grid -->
+<div class="absolute inset-0 pointer-events-none opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="relative max-w-[1280px] mx-auto px-5 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Hero Left Column (7 cols) -->
+<div class="lg:col-span-7 flex flex-col items-start gap-6">
+<!-- High-Contrast White Pill Badge -->
+<div class="bg-white text-[#4d17d6] font-bold px-4 py-1.5 rounded-full shadow-sm inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-sm font-bold text-[#FF2E93]">verified</span>
+<span class="font-label-pill text-xs uppercase tracking-wider font-extrabold text-[#4d17d6]">
+                Solutions Architect &amp; Tech Lead
               </span>
-              <span id="hero-tag" data-i18n="hero-tag"
-                >Full Stack Developer & Solution Architect</span
-              >
-            </div>
-
-            <h1
-              id="heroTitle"
-              class="text-6xl lg:text-8xl font-black leading-[0.9] mb-8 tracking-tighter"
-            >
-              Diseñando <br /><span class="text-brand-lightPink">Soluciones</span
-              ><br /><span class="text-brand-lightTeal">Escalables.</span>
-            </h1>
-
-            <p
-              id="heroDescription"
-              data-i18n="hero-desc"
-              class="text-white/80 text-xl mb-10 leading-relaxed max-w-lg font-light"
-            >
-              Técnico Medio en Informática con más de 3 años de experiencia
-              desarrollando ecosistemas digitales para ONGs e instituciones
-              educativas.
+</div>
+<!-- Dynamic Animated Headline -->
+<h1 class="font-display-hero text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-clean-white leading-[1.15] tracking-tight">
+              ¡Hola! Soy Arianna y construyo <br class="hidden sm:inline">
+<span class="text-secondary-container rotating-words-wrapper">
+<span class="rotating-words">
+<span class="text-secondary-container">Sitios Web</span>
+<span class="text-mint-turquoise">Pasarelas de Pagos</span>
+<span class="text-secondary-container">Sistemas a tu Medida</span>
+<span class="text-mint-turquoise">Automatizaciones IA</span>
+</span>
+</span>
+</h1>
+<!-- Hero Subtitle -->
+<p class="font-body-lg text-base sm:text-lg lg:text-xl text-primary-fixed-dim max-w-xl leading-relaxed">
+              Arquitectura de software de alto rendimiento, desarrollo Full-Stack moderno y diseño UX/UI pensado para impulsar el crecimiento real de tu negocio con cero caídas y máxima conversión.
             </p>
-
-            <div class="flex flex-wrap gap-6">
-              <a
-                href="#proyectos"
-                data-i18n="hero-btn"
-                class="bg-brand-teal text-white px-10 py-5 rounded-2xl font-bold text-sm uppercase tracking-widest hover:bg-brand-teal/90 hover:translate-y-[-2px] transition shadow-lg shadow-brand-teal/30 flex items-center gap-3"
-              >
-                <span>Explorar Casos</span>
-                <i class="fa-solid fa-arrow-down-long"></i>
-              </a>
-              <a
-                href="#contacto"
-                class="bg-white/10 text-white border border-white/20 px-8 py-5 rounded-2xl font-bold text-sm uppercase tracking-widest hover:bg-white/20 transition backdrop-blur-md"
-              >
-                Contacto
-              </a>
-            </div>
-          </div>
-
-          <!-- Consola Interactivas de Código -->
-          <div class="relative lg:block hidden">
-            <div
-              class="code-window rounded-3xl p-8 shadow-2xl relative overflow-hidden bg-brand-black/90 backdrop-blur-md border border-brand-teal/30"
-            >
-              <div class="flex items-center space-x-2 mb-4 pb-3 border-b border-white/10">
-                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                <span class="text-xs font-mono text-brand-lavender ml-2">architecture.ts</span>
+<!-- CTA Actions -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center justify-center gap-2 bg-hot-pink-vibrant hover:bg-hot-pink-hover text-clean-white font-headline-sm font-bold px-7 py-3.5 rounded-xl shadow-[0_12px_24px_-6px_rgba(255,46,147,0.45)] transition-all transform hover:-translate-y-0.5 text-base" href="#contacto">
+<span class="">¡Hablemos de tu Proyecto!</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-clean-white font-headline-sm font-semibold px-6 py-3.5 rounded-xl border border-white/20 transition-all text-base backdrop-blur-sm" href="#proyectos">
+<span class="material-symbols-outlined text-base text-secondary-container">layers</span>
+<span class="">Ver Proyectos</span>
+</a>
+</div>
+<!-- Trust / Performance Metrics -->
+<div class="pt-4 flex flex-wrap items-center gap-y-3 gap-x-6 border-t border-white/15 w-full">
+<div class="flex items-center gap-2">
+<span class="h-2.5 w-2.5 rounded-full bg-secondary-container shadow-[0_0_8px_rgba(0,227,253,0.8)]"></span>
+<span class="font-label-code text-xs sm:text-sm font-medium text-white">99.9% Uptime garantizado</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="h-2.5 w-2.5 rounded-full bg-mint-turquoise shadow-[0_0_8px_rgba(0,210,180,0.8)]"></span>
+<span class="font-label-code text-xs sm:text-sm font-medium text-white">+45% Eficiencia operativa</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="h-2.5 w-2.5 rounded-full bg-secondary-container shadow-[0_0_8px_rgba(0,227,253,0.8)]"></span>
+<span class="font-label-code text-xs sm:text-sm font-medium text-white">Sub-second latency</span>
+</div>
+</div>
+</div>
+<!-- Hero Right Column: Arianna's Real Photo with Badges (5 cols) -->
+<div class="lg:col-span-5 relative flex justify-center">
+<!-- Framing Container -->
+<div class="relative w-full max-w-[420px] rounded-3xl p-3 bg-dark-violet/40 shadow-2xl border border-white/10">
+<!-- Real Photo Card Frame -->
+<div class="relative w-full h-[490px] sm:h-[530px] rounded-2xl overflow-hidden bg-dark-violet shadow-inner">
+<img alt="Arianna Clemente - Solutions Architect &amp; Tech Lead" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700 ease-out" src="assets/images/arianna_hero.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuAPFFOVI5PupeLTfuH7hnTKVioiEX-F_56p2Kci6q0GuaCwTw2geon5hycz1n7NkUt0eKjByVhZRDXQHxs8r-NfpcZ9Ry4xFbDpwA6cZM5N_QqDjXHFv-_Akn_8C2xLQ14TtXLLVTyOKkmIcqsUe6JGar5ijs7otEo3HflaK20MpjMnYe7ya1JPJJ4WJCGutzkwfHx6J7TBXTbOlVvWadDp8fDau8NWC5d4g2RM3YfiavIWLiqKZ81ruLjuSe2ljjtNQA'">
+<!-- Subtle Gradient Scrim -->
+<div class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-dark-violet/90 via-dark-violet/30 to-transparent pointer-events-none"></div>
+<!-- Bottom text badge directly on photo -->
+<div class="absolute bottom-4 left-4 right-4 text-center sm:text-left">
+<div class="bg-dark-violet/85 backdrop-blur-md rounded-xl p-3 border border-white/10 shadow-lg">
+<p class="text-clean-white font-headline-sm text-sm font-bold">Arianna Clemente</p>
+<p class="text-secondary-container font-label-code text-xs">Solutions Architect • Full-Stack Specialist</p>
+</div>
+</div>
+</div>
+<!-- FLOATING HIGH-CONTRAST TECH BADGES -->
+<!-- 1. Top-Left: Solutions Architect Tag -->
+<div class="absolute -top-3 -left-3 hidden sm:flex items-center gap-2 bg-dark-violet/95 text-clean-white px-3.5 py-2 rounded-full shadow-2xl border border-secondary-container/40 backdrop-blur-md">
+<span class="material-symbols-outlined text-secondary-container text-base">bolt</span>
+<span class="font-label-pill text-xs font-bold text-secondary-container tracking-wider">#SolutionsArchitect</span>
+</div>
+<!-- 2. Top-Right: UX/UI & Systems -->
+<div class="absolute top-8 -right-4 hidden sm:flex items-center gap-2 bg-dark-violet/95 text-clean-white px-4 py-2 rounded-full shadow-2xl border border-mint-turquoise/40 backdrop-blur-md">
+<span class="material-symbols-outlined text-mint-turquoise text-base">dashboard_customize</span>
+<span class="font-label-pill text-xs font-semibold text-clean-white">UX/UI &amp; Systems</span>
+</div>
+<!-- 3. Bottom-Left: Laravel & Modern Stack -->
+<div class="absolute bottom-24 -left-5 hidden sm:flex items-center gap-2.5 bg-dark-violet/95 text-clean-white px-4 py-2.5 rounded-2xl shadow-2xl border border-white/15 backdrop-blur-md">
+<span class="flex h-2.5 w-2.5 rounded-full bg-mint-turquoise animate-pulse"></span>
+<div class="flex flex-col">
+<span class="font-label-code text-[11px] text-secondary-container uppercase">Arquitectura</span>
+<span class="font-headline-sm text-xs font-bold text-clean-white">Laravel &amp; Modern Stack</span>
+</div>
+</div>
+<!-- 4. Bottom-Right: 100% Uptime -->
+<div class="absolute -bottom-3 -right-3 flex items-center gap-2.5 bg-dark-violet text-clean-white px-4 py-2.5 rounded-2xl shadow-2xl border border-secondary-container/40 backdrop-blur-lg">
+<div class="w-7 h-7 rounded-lg bg-secondary-container/20 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-base">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-pill text-[11px] text-mint-turquoise font-extrabold uppercase tracking-wider">100% Uptime</span>
+<span class="font-label-code text-[11px] text-primary-fixed-dim">Zero-downtime deploys</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. CLIENTES / CONFIARON EN NOSOTROS -->
+<section class="w-full bg-clean-white py-12 border-b border-border-slate">
+<div class="max-w-[1280px] mx-auto px-5 lg:px-8">
+<p class="text-center font-label-pill text-xs font-bold uppercase tracking-widest text-text-dark-secondary mb-8">
+          Empresas y organizaciones que han confiado en nuestro trabajo
+        </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center">
+<!-- Client 1: Fe y Alegría -->
+<div class="group flex items-center justify-center p-4 rounded-xl border border-border-slate hover:border-primary-container/40 hover:shadow-md transition-all bg-surface-bright">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-red-600/10 text-red-600 flex items-center justify-center font-black text-sm">
+                FyA
               </div>
-              <pre
-                id="codeSnippet"
-                class="text-brand-lightTeal font-mono text-sm leading-relaxed"
-              ></pre>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sección de Proyectos / Casos en Turquesa -->
-      <section id="proyectos" class="py-24 lg:py-32 bg-brand-beige/30">
-        <div class="max-w-6xl mx-auto px-6">
-          <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
-            <div>
-              <div class="inline-flex items-center gap-2 text-brand-teal font-bold uppercase tracking-[0.4em] text-xs mb-3">
-                <i class="fa-solid fa-layer-group text-sm"></i>
-                <span data-i18n="exp-tag">Casos de Estudio & Proyectos</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-sm font-bold text-text-dark-primary group-hover:text-primary-container transition-colors">Fe y Alegría</span>
+<span class="font-label-code text-[10px] text-text-dark-secondary">Red Educativa Global</span>
+</div>
+</div>
+</div>
+<!-- Client 2: Ingedaca -->
+<div class="group flex items-center justify-center p-4 rounded-xl border border-border-slate hover:border-primary-container/40 hover:shadow-md transition-all bg-surface-bright">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-blue-600/10 text-blue-600 flex items-center justify-center font-black text-sm">
+                ING
               </div>
-              <h3
-                data-i18n="exp-title"
-                class="text-4xl lg:text-5xl font-black text-brand-black leading-tight max-w-2xl"
-              >
-                Soluciones de alto impacto en <span class="text-brand-teal italic">Turquesa_</span>
-              </h3>
-            </div>
-            <p class="text-brand-gray max-w-sm text-sm leading-relaxed">
-              Explora la arquitectura de datos, integración de APIs y ecosistemas digitales desarrollados para organizaciones globales.
-            </p>
-          </div>
-
-          <div
-            id="projectGrid"
-            class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            <!-- Se genera vía JS dinámicamente -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Modal Dinámico de Detalle de Proyecto -->
-      <div
-        id="projectModal"
-        class="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10"
-      >
-        <div
-          class="absolute inset-0 bg-brand-black/95 backdrop-blur-sm"
-          onclick="closeModal()"
-        ></div>
-        <div
-          class="bg-white rounded-[2rem] w-full max-w-4xl max-h-[90vh] relative z-10 overflow-hidden shadow-2xl flex flex-col modal-animate-in transition-transform duration-300 ease-out"
-        >
-          <div class="flex flex-col lg:row overflow-y-auto custom-scroll">
-            <!-- Galería de Imágenes -->
-            <div
-              class="relative w-full aspect-video bg-brand-beige group shrink-0"
-            >
-              <div
-                id="galleryContainer"
-                class="flex h-full w-full transition-transform duration-500"
-              >
-                <!-- Imágenes dinámicas -->
+<div class="flex flex-col">
+<span class="font-headline-sm text-sm font-bold text-text-dark-primary group-hover:text-primary-container transition-colors">Ingedaca</span>
+<span class="font-label-code text-[10px] text-text-dark-secondary">Ingeniería &amp; Proyectos</span>
+</div>
+</div>
+</div>
+<!-- Client 3: Colegio Gonzaga -->
+<div class="group flex items-center justify-center p-4 rounded-xl border border-border-slate hover:border-primary-container/40 hover:shadow-md transition-all bg-surface-bright">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-emerald-600/10 text-emerald-700 flex items-center justify-center font-black text-sm">
+                CG
               </div>
-
-              <!-- Controles Galería -->
-              <button
-                onclick="prevSlide()"
-                class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-md hover:bg-brand-pink hover:text-white transition opacity-0 group-hover:opacity-100"
-              >
-                <i class="fa-solid fa-chevron-left"></i>
-              </button>
-              <button
-                onclick="nextSlide()"
-                class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-md hover:bg-brand-pink hover:text-white transition opacity-0 group-hover:opacity-100"
-              >
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
-
-              <!-- Botón Cerrar -->
-              <button
-                onclick="closeModal()"
-                class="absolute top-6 right-6 w-10 h-10 bg-brand-black text-white rounded-full flex items-center justify-center hover:bg-brand-pink transition z-20"
-              >
-                <i class="fa-solid fa-xmark"></i>
-              </button>
-            </div>
-
-            <!-- Contenido del Modal -->
-            <div class="p-8 md:p-12">
-              <div class="mb-10">
-                <span
-                  id="modalCategory"
-                  class="text-brand-pink font-bold text-[10px] uppercase tracking-widest mb-3 block"
-                ></span>
-                <h3
-                  id="modalTitle"
-                  class="text-4xl font-black text-brand-black italic mb-4"
-                ></h3>
-                <p
-                  id="modalIntro"
-                  class="text-brand-gray text-lg italic leading-relaxed border-l-4 border-brand-lavender pl-6"
-                ></p>
+<div class="flex flex-col">
+<span class="font-headline-sm text-sm font-bold text-text-dark-primary group-hover:text-primary-container transition-colors">Colegio Gonzaga</span>
+<span class="font-label-code text-[10px] text-text-dark-secondary">Institución Académica</span>
+</div>
+</div>
+</div>
+<!-- Client 4: Impact Hub -->
+<div class="group flex items-center justify-center p-4 rounded-xl border border-border-slate hover:border-primary-container/40 hover:shadow-md transition-all bg-surface-bright">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-amber-500/15 text-amber-700 flex items-center justify-center font-black text-sm">
+                IH
               </div>
-
-              <div class="grid md:grid-cols-2 gap-10">
-                <div>
-                  <h4
-                    data-i18n="modal-role"
-                    class="text-xs font-black uppercase tracking-widest text-brand-gray mb-4"
-                  >
-                    Mi Rol
-                  </h4>
-                  <p
-                    id="modalRole"
-                    class="text-brand-black font-semibold text-xl mb-6"
-                  ></p>
-
-                  <h4
-                    data-i18n="modal-act"
-                    class="text-xs font-black uppercase tracking-widest text-brand-gray mb-4"
-                  >
-                    Actividades
-                  </h4>
-                  <ul
-                    id="modalActivities"
-                    class="space-y-3 text-sm text-brand-black"
-                  ></ul>
-                </div>
-
-                <div class="space-y-8">
-                  <div
-                    class="bg-brand-lightTeal/30 p-8 rounded-3xl border border-brand-teal/20"
-                  >
-                    <h4
-                      data-i18n="modal-res"
-                      class="text-xs font-black uppercase tracking-widest text-brand-teal mb-4"
-                    >
-                      Logros
-                    </h4>
-                    <p
-                      id="modalResults"
-                      class="text-brand-black text-sm leading-relaxed"
-                    ></p>
-                  </div>
-
-                  <div id="modalLinks" class="flex flex-col gap-4"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sección de Stack Técnico -->
-      <section id="stack" class="py-32 bg-brand-black text-white">
-        <div class="max-w-6xl mx-auto px-6">
-          <div class="text-center mb-20">
-            <h2
-              class="text-brand-pink font-bold uppercase tracking-[0.5em] text-xs mb-4"
-            >
-              Ecosistema Técnico
-            </h2>
-            <h3 class="text-5xl font-black italic">
-              Herramientas y Tecnologías_
-            </h3>
-          </div>
-          <div
-            id="stackGrid"
-            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8"
-          ></div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Pestaña: CONFIGURADOR IA -->
-    <main
-      id="ai-config-tab"
-      class="tab-content hidden pt-32 min-h-screen bg-brand-black"
-    >
-      <div class="max-w-4xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <span
-            class="text-brand-teal font-black text-[10px] uppercase tracking-[0.4em]"
-            >Personalización Inteligente</span
-          >
-          <h2 class="text-white text-5xl font-black mt-4 italic">
-            Configurador de Vacantes_
+<div class="flex flex-col">
+<span class="font-headline-sm text-sm font-bold text-text-dark-primary group-hover:text-primary-container transition-colors">Impact Hub</span>
+<span class="font-label-code text-[10px] text-text-dark-secondary">Innovation &amp; Startups</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SECTION: SERVICIOS (4-card Grid) -->
+<section class="w-full bg-[#f8f9fd] py-20 lg:py-28" id="servicios">
+<div class="max-w-[1280px] mx-auto px-5 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 text-primary-container mb-3">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span class="font-label-pill text-xs font-bold uppercase tracking-wider">Capacidades &amp; Especialidades</span>
+</div>
+<h2 class="font-headline-xl text-3xl lg:text-4xl font-extrabold text-text-dark-primary tracking-tight">
+            Servicios de Ingeniería Digital y Soluciones Web
           </h2>
+<p class="font-body-md text-text-dark-secondary mt-4">
+            Cada solución está construida con altos estándares de código, seguridad integral y rendimiento garantizado para resolver dolores reales de negocio.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"><!-- Servicio 1: Desarrollo a Medida -->
+<div class="group bg-clean-white rounded-2xl border border-border-slate hover:border-primary-container/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div>
+<!-- Video Banner 1 -->
+<div class="relative w-full aspect-video bg-dark-violet overflow-hidden group">
+<img alt="Desarrollo a Medida Preview" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/service_custom_dev.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDbyLruzS6Gnu4kpqWmlLM2IzDbqi68HAY8NmPXJD4BjJHhHXudV7TJrM5uOJJVU_7GOEIp68RdSRm5-NSvLynljojd7XAlIsZErn3BJOSmHN6R0wTayf8M0GBKC3Cr2rz9kT9nCAlxhL-hyCia0n5o5p_cEKA5vsqufy3K1ZgZLi4VTMMsWpJj9_CjOGCpssGj0llCeh4DN1cH8-cWI9zdA42R8iKMGqEvRqEleiY5ofyzGC6vxN5c'">
+<div class="absolute inset-0 bg-gradient-to-t from-dark-violet/90 via-dark-violet/30 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-dark-violet/85 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-xs font-label-code font-semibold">
+<span class="material-symbols-outlined text-mint-turquoise text-sm" style="font-variation-settings: 'FILL' 1;">smart_display</span>
+<span class="">Showcase Reel • 0:45</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-11 h-11 rounded-full bg-hot-pink-vibrant/90 text-clean-white flex items-center justify-center shadow-lg shadow-hot-pink-vibrant/40 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-[11px] font-label-code">
+<span class="font-medium">Laravel 11 + Docker + CI/CD</span>
+<span class="text-secondary-container bg-white/10 px-2 py-0.5 rounded font-semibold">Full-Stack</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container/10 text-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-xl">developer_mode</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-text-dark-primary">Desarrollo a Medida</h3>
+</div>
+<p class="font-body-sm text-xs sm:text-sm text-text-dark-secondary mb-4 leading-relaxed">
+        Arquitectura desacoplada, microservicios orientados a dominio y backends de alta disponibilidad con código escalable.
+      </p>
+<ul class="space-y-2 font-body-sm text-xs text-text-dark-secondary border-t border-border-slate/60 pt-3 font-label-code">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-mint-turquoise text-sm font-bold">check_circle</span><span class="">Laravel 11, APIs REST &amp; GraphQL</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-mint-turquoise text-sm font-bold">check_circle</span><span class="">PostgreSQL &amp; Redis Caching</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-mint-turquoise text-sm font-bold">check_circle</span><span class="">Contenedores Docker &amp; CI/CD Pipelines</span></li>
+</ul>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2">
+<a class="inline-flex items-center gap-1.5 text-xs font-bold font-headline-sm text-primary-container hover:text-hot-pink-vibrant transition-colors" href="#contacto">
+<span class="">Cotizar Desarrollo a Medida</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Servicio 2: Sitios Web WordPress -->
+<div class="group bg-clean-white rounded-2xl border border-border-slate hover:border-primary-container/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div>
+<!-- Video Banner 2 -->
+<div class="relative w-full aspect-video bg-dark-violet overflow-hidden group">
+<img alt="WordPress Ultrarrápido Preview" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/service_wordpress.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCCjV5oxqRFHren1ga7Q_BNaDG4LgHP1roSj-0fHTy0j1Ki2TP5fH3E7RDOzSZPFhkNOZOIX5xjRPVSbPOpvkgRjiMqVWUAyKLxHDKcQM4J3RkeoJZmckhJWgNg9TnhMtHXcgR4trS4SjVUD0aNFVXluFIIh15C9qOO7_YJ6fo1wk3S7gtRO5MZEggqz_0RqTPYOlYX0ccDd_orkffloBuRV1Jixezhn6_W1WiZ05CfZYWuwBnrMP-2'">
+<div class="absolute inset-0 bg-gradient-to-t from-dark-violet/90 via-dark-violet/30 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-dark-violet/85 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-xs font-label-code font-semibold">
+<span class="material-symbols-outlined text-mint-turquoise text-sm" style="font-variation-settings: 'FILL' 1;">smart_display</span>
+<span class="">Showcase Reel • 0:50</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-11 h-11 rounded-full bg-[#006875]/90 text-clean-white flex items-center justify-center shadow-lg shadow-[#006875]/40 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-[11px] font-label-code">
+<span class="font-medium">WooCommerce Headless &amp; Vitals</span>
+<span class="text-secondary-container bg-white/10 px-2 py-0.5 rounded font-semibold">95+ Speed</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/20 text-[#006875] flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-xl">web</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-text-dark-primary">Sitios Web WordPress</h3>
+</div>
+<p class="font-body-sm text-xs sm:text-sm text-text-dark-secondary mb-4 leading-relaxed">
+        Desarrollo headless o custom theme sin constructores pesados. Optimización obsesiva de performance y Core Web Vitals.
+      </p>
+<ul class="space-y-2 font-body-sm text-xs text-text-dark-secondary border-t border-border-slate/60 pt-3 font-label-code">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-mint-turquoise text-sm font-bold">check_circle</span><span class="">Google PageSpeed Score 95+ garantizado</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-mint-turquoise text-sm font-bold">check_circle</span><span class="">WooCommerce B2B / B2C escalable</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-mint-turquoise text-sm font-bold">check_circle</span><span class="">UX UI personalizado en Figma previo</span></li>
+</ul>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2">
+<a class="inline-flex items-center gap-1.5 text-xs font-bold font-headline-sm text-primary-container hover:text-hot-pink-vibrant transition-colors" href="#contacto">
+<span class="">Ver Planes WordPress Pro</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Servicio 3: Repositorios & Archivos -->
+<div class="group bg-clean-white rounded-2xl border border-border-slate hover:border-primary-container/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div>
+<!-- Video Banner 3 -->
+<div class="relative w-full aspect-video bg-dark-violet overflow-hidden group">
+<img alt="Repositorios Digitales Preview" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/service_repos.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDBwMjxlFho6z8yWUjrAEM3o3oelZoY3lVBxnOfaEzO_wMlMjiLVG0xgJ-bJWgNsHkN-AxKRiaEP49-W8ngeh03wmRXHAo-2XrA6M5r-SN1u8V0XAaIvZxfwA9dXG40Oqp6LZrpa3TGFj5IRhriK6OMhruzEiRAaEh0MLh1ZvWwuL0M_9qZ9XYOtr-G6hwlBnhUjdG1NjpN8oLqnc1D2gyHsqzMvPaBOzFncdOsSt6olqzAG0uoir65'">
+<div class="absolute inset-0 bg-gradient-to-t from-dark-violet/90 via-dark-violet/30 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-dark-violet/85 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-xs font-label-code font-semibold">
+<span class="material-symbols-outlined text-mint-turquoise text-sm" style="font-variation-settings: 'FILL' 1;">smart_display</span>
+<span class="">Showcase Reel • 1:05</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-11 h-11 rounded-full bg-primary-container/90 text-clean-white flex items-center justify-center shadow-lg shadow-primary-container/40 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-[11px] font-label-code">
+<span class="font-medium">DSpace + OAI-PMH + Solr</span>
+<span class="text-primary-fixed-dim bg-white/10 px-2 py-0.5 rounded font-semibold">Archivo Digital</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-xl bg-dark-violet/10 text-dark-violet flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-text-dark-primary">Repositorios &amp; Archivos</h3>
+</div>
+<p class="font-body-sm text-xs sm:text-sm text-text-dark-secondary mb-4 leading-relaxed">
+        Preservación de documentos para instituciones educativas, científicas y corporativas con interoperabilidad internacional.
+      </p>
+<ul class="space-y-2 font-body-sm text-xs text-text-dark-secondary border-t border-border-slate/60 pt-3 font-label-code">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-mint-turquoise text-sm font-bold">check_circle</span><span class="">Implementación y migración DSpace</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-mint-turquoise text-sm font-bold">check_circle</span><span class="">Metadatos Dublin Core &amp; OAI-PMH</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-mint-turquoise text-sm font-bold">check_circle</span><span class="">Búsquedas instantáneas indexadas</span></li>
+</ul>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2">
+<a class="inline-flex items-center gap-1.5 text-xs font-bold font-headline-sm text-primary-container hover:text-hot-pink-vibrant transition-colors" href="#contacto">
+<span class="">Consultar Repositorios</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Servicio 4: Marketing, IA & Growth Tech -->
+<div class="group bg-clean-white rounded-2xl border border-border-slate hover:border-primary-container/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div>
+<!-- Video Banner 4 -->
+<div class="relative w-full aspect-video bg-dark-violet overflow-hidden group">
+<img alt="Growth Tech &amp; AI Preview" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/service_growth_ai.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDgR_lq4J1ColtQEyqdnWWpSIEiMC4J4dk1abjUMjCOa8EQ3vRoxfEco-KvyrNCl0Op0icnN8Km6Z_o5D9K667xoQWeSmZV8TM7cVsAhI00kb__QuD09tVGuuH5UH6ObT68VkheFL3PPw_CVrip3oEGtMRsNTqQOzMxvnZfPzlCLl7rEMjdSZGWvT2BXCkiGN4le4fueqibgYs7ISrn1_zFIQRHZdxu1I3-IC4TOjS7bMWoNcgw6SqR'">
+<div class="absolute inset-0 bg-gradient-to-t from-dark-violet/90 via-dark-violet/30 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-dark-violet/85 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-xs font-label-code font-semibold">
+<span class="material-symbols-outlined text-mint-turquoise text-sm" style="font-variation-settings: 'FILL' 1;">smart_display</span>
+<span class="">Showcase Reel • 0:40</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-11 h-11 rounded-full bg-hot-pink-vibrant/90 text-clean-white flex items-center justify-center shadow-lg shadow-hot-pink-vibrant/40 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-[11px] font-label-code">
+<span class="font-medium">AI Agents + WhatsApp API</span>
+<span class="text-tertiary-fixed bg-white/10 px-2 py-0.5 rounded font-semibold">Growth Tech</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-xl bg-hot-pink-vibrant/10 text-hot-pink-vibrant flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-xl">query_stats</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-text-dark-primary">Marketing, IA &amp; Growth</h3>
+</div>
+<p class="font-body-sm text-xs sm:text-sm text-text-dark-secondary mb-4 leading-relaxed">
+        Funnels automáticos impulsados por modelos de lenguaje e integraciones webhook para multiplicar conversiones operativas.
+      </p>
+<ul class="space-y-2 font-body-sm text-xs text-text-dark-secondary border-t border-border-slate/60 pt-3 font-label-code">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-mint-turquoise text-sm font-bold">check_circle</span><span class="">Chatbots con IA &amp; WhatsApp API</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-mint-turquoise text-sm font-bold">check_circle</span><span class="">CRO &amp; Optimización de embudos</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-mint-turquoise text-sm font-bold">check_circle</span><span class="">Telemetría de eventos y analytics</span></li>
+</ul>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2">
+<a class="inline-flex items-center gap-1.5 text-xs font-bold font-headline-sm text-primary-container hover:text-hot-pink-vibrant transition-colors" href="#contacto">
+<span class="">Diseñar Embudo con IA</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div></div>
+</div>
+</section>
+<!-- 4. SECTION: PROYECTOS DESTACADOS (S.T.A.R Format) -->
+<section class="w-full bg-clean-white py-20 lg:py-28 border-y border-border-slate" id="proyectos">
+<div class="max-w-[1280px] mx-auto px-5 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/20 text-[#006875] mb-3">
+<span class="material-symbols-outlined text-sm">code_blocks</span>
+<span class="font-label-pill text-xs font-bold uppercase tracking-wider">Casos de Estudio</span>
+</div>
+<h2 class="font-headline-xl text-3xl lg:text-4xl font-extrabold text-text-dark-primary tracking-tight">
+              Proyectos Destacados de Alto Impacto
+            </h2>
+</div>
+<p class="font-body-md text-text-dark-secondary max-w-md">
+            Desarrollados bajo metodología S.T.A.R (Situación, Tarea, Acción y Resultados Medibles) para garantizar retorno de inversión.
+          </p>
+</div>
+<div class="space-y-12">
+<!-- Case 1: Enterprise Platform -->
+<div class="bg-surface rounded-3xl p-8 lg:p-10 border border-border-slate hover:border-primary-container/30 transition-all shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 space-y-4">
+<div class="flex flex-wrap items-center gap-2 mb-2">
+<span class="px-3 py-1 rounded-md bg-primary-container/10 text-primary-container text-xs font-bold font-headline-sm">Enterprise SaaS</span>
+<span class="px-3 py-1 rounded-md bg-mint-turquoise/15 text-[#006875] text-xs font-bold font-headline-sm">+45% Eficiencia Operativa</span>
+</div>
+<h3 class="font-headline-lg text-2xl font-bold text-text-dark-primary">
+                  Plataforma Centralizada de Gestión y Auditoría Operacional
+                </h3>
+<p class="font-body-md text-sm sm:text-base text-text-dark-secondary leading-relaxed">
+<strong>Situación &amp; Acción:</strong> Modernización integral de un sistema fragmentado con lentitud y cuellos de botella manuales. Se diseñó una arquitectura desacoplada en Laravel y PostgreSQL con colas asíncronas Redis y tablero de control interactivo.
+                </p>
+<!-- S.T.A.R metric badges -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+<div class="p-3 bg-clean-white rounded-xl border border-border-slate">
+<p class="text-xs text-text-dark-secondary font-label-code">Tiempo de respuesta</p>
+<p class="font-headline-sm text-lg font-extrabold text-primary-container">&lt; 180ms</p>
+</div>
+<div class="p-3 bg-clean-white rounded-xl border border-border-slate">
+<p class="text-xs text-text-dark-secondary font-label-code">Procesamiento diario</p>
+<p class="font-headline-sm text-lg font-extrabold text-primary-container">50k+ docs</p>
+</div>
+<div class="p-3 bg-clean-white rounded-xl border border-border-slate col-span-2 sm:col-span-1">
+<p class="text-xs text-text-dark-secondary font-label-code">Disponibilidad</p>
+<p class="font-headline-sm text-lg font-extrabold text-primary-container">99.98%</p>
+</div>
+</div>
+<!-- Tech Stack tags -->
+<div class="flex flex-wrap items-center gap-2 pt-3">
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">Laravel 11</span>
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">PostgreSQL</span>
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">Tailwind CSS</span>
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">Docker</span>
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">Redis</span>
+</div>
+</div>
+<div class="lg:col-span-5 bg-dark-violet rounded-2xl p-6 text-clean-white shadow-xl flex flex-col justify-between h-full"><!-- Video Demo Banner Case 1 -->
+<div class="relative w-full aspect-video bg-darkest-violet rounded-xl overflow-hidden mb-5 group border border-white/15">
+<img alt="Video Demo Auditoría Operacional" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/case_audit_platform.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDTbyX7ui67a4scmsjhSCmIrSSQd6E8aEa5CBWE1qUF-jN42phVfRPO7BWHvbKDS_EQzcPtLxVL_hCXJsu7RNUUisoLG0sCpLzmHZ_7F5Sm2Cs18VSl7TaNZe6rlon9qZhVZjPpXGObzDryAL-cQRc97p0EgWJvsW2WeL3Se9o5H5EaIc8Oa-upquW27I8xIouoDf6p8netic8676ydZ_93agxx8sWIkPIKbdL8G5x3ClbIFVeZ9XKk'">
+<div class="absolute inset-0 bg-gradient-to-t from-dark-violet/90 via-dark-violet/30 to-transparent"></div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 bg-dark-violet/85 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[11px] font-label-code font-semibold">
+<span class="material-symbols-outlined text-mint-turquoise text-sm" style="font-variation-settings: 'FILL' 1;">videocam</span>
+<span class="">Demo en vivo • 1:20 min</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="flex items-center gap-2 bg-hot-pink-vibrant/90 text-clean-white px-3.5 py-1.5 rounded-full font-headline-sm text-xs font-bold shadow-lg shadow-hot-pink-vibrant/40 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span class="">Ver demo en video</span>
+</div>
+</div>
+<div class="absolute bottom-2 left-2.5 right-2.5">
+<div class="w-full h-1 bg-white/20 rounded-full overflow-hidden">
+<div class="w-1/3 h-full bg-mint-turquoise"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pb-4 border-b border-white/10">
+<span class="font-label-code text-xs text-mint-turquoise">// Arquitectura de Datos</span>
+<span class="material-symbols-outlined text-secondary-container text-base">cloud_done</span>
+</div>
+<div class="py-6 space-y-3">
+<div class="bg-white/10 rounded-lg p-3 text-xs font-label-code text-primary-fixed-dim">
+<span class="text-secondary-container">GET</span> /api/v2/audit/metrics - 200 OK (82ms)
+                  </div>
+<div class="bg-white/10 rounded-lg p-3 text-xs font-label-code text-primary-fixed-dim">
+<span class="text-mint-turquoise">WORKER</span> Queue: sync-enterprise-data [Active]
+                  </div>
+<div class="bg-white/10 rounded-lg p-3 text-xs font-label-code text-primary-fixed-dim">
+<span class="text-hot-pink-vibrant">SECURITY</span> OAuth2 + RBAC strictly verified
+                  </div>
+</div>
+<div class="pt-2 text-right">
+<span class="text-xs font-label-pill text-secondary-container font-bold">Producción Activa • 2024</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Case 2: E-commerce & Pasarelas de Pagos -->
+<div class="bg-surface rounded-3xl p-8 lg:p-10 border border-border-slate hover:border-primary-container/30 transition-all shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 space-y-4">
+<div class="flex flex-wrap items-center gap-2 mb-2">
+<span class="px-3 py-1 rounded-md bg-secondary-container/20 text-[#006875] text-xs font-bold font-headline-sm">Fintech &amp; E-commerce</span>
+<span class="px-3 py-1 rounded-md bg-hot-pink-vibrant/10 text-hot-pink-vibrant text-xs font-bold font-headline-sm">Checkout Sub-second</span>
+</div>
+<h3 class="font-headline-lg text-2xl font-bold text-text-dark-primary">
+                  Pasarela de Cobros Multidivisa y Checkout de Ultra Conversión
+                </h3>
+<p class="font-body-md text-sm sm:text-base text-text-dark-secondary leading-relaxed">
+<strong>Situación &amp; Acción:</strong> Reducción de abandono de carrito y fricciones en pasarelas locales e internacionales (Stripe, PayPal y transferencias bancarias automatizadas con webhooks redundantes).
+                </p>
+<!-- Metrics -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+<div class="p-3 bg-clean-white rounded-xl border border-border-slate">
+<p class="text-xs text-text-dark-secondary font-label-code">Tasa de checkout</p>
+<p class="font-headline-sm text-lg font-extrabold text-[#006875]">+38% Conv.</p>
+</div>
+<div class="p-3 bg-clean-white rounded-xl border border-border-slate">
+<p class="text-xs text-text-dark-secondary font-label-code">Tiempo de pago</p>
+<p class="font-headline-sm text-lg font-extrabold text-[#006875]">&lt; 3 pasos</p>
+</div>
+<div class="p-3 bg-clean-white rounded-xl border border-border-slate col-span-2 sm:col-span-1">
+<p class="text-xs text-text-dark-secondary font-label-code">Prevención de fraude</p>
+<p class="font-headline-sm text-lg font-extrabold text-[#006875]">100% Validado</p>
+</div>
+</div>
+<!-- Tech Stack tags -->
+<div class="flex flex-wrap items-center gap-2 pt-3">
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">React</span>
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">Node.js</span>
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">Stripe API</span>
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">PostgreSQL</span>
+</div>
+</div>
+<div class="lg:col-span-5 bg-gradient-to-br from-[#004f58] to-[#00282e] rounded-2xl p-6 text-clean-white shadow-xl flex flex-col justify-between h-full"><!-- Video Demo Banner Case 2 -->
+<div class="relative w-full aspect-video bg-dark-violet rounded-xl overflow-hidden mb-5 group border border-white/15">
+<img alt="Video Demo Checkout Multidivisa" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/case_checkout.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCaNrMd546wKNzr9MtU4gA4im43FMKOqSbFHC2Wsjx7249_wYLk9TTxEmQINfwAsC8nbhkePzMygVmy-AlIzjFgkpSfQ5qUeV4-oCXiA4CZKKPIhXIh2TIFe-m0bF0tH9O22OqeLYKnTbj4ly-Mp5KXiLagP-khvhHYd7-VVezbCoq_lCOd2fA4_O2sSgSLqj_-odQPjzkeWT5GQbI73015WiPu8CBmTqzn_8002TeiJ7npZEjfOnay'">
+<div class="absolute inset-0 bg-gradient-to-t from-[#00282e]/90 via-[#004f58]/30 to-transparent"></div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 bg-[#00282e]/85 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[11px] font-label-code font-semibold">
+<span class="material-symbols-outlined text-mint-turquoise text-sm" style="font-variation-settings: 'FILL' 1;">videocam</span>
+<span class="">Walkthrough • 1:15 min</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="flex items-center gap-2 bg-[#006875]/90 text-clean-white px-3.5 py-1.5 rounded-full font-headline-sm text-xs font-bold shadow-lg shadow-[#006875]/40 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span class="">Ver demo en video</span>
+</div>
+</div>
+<div class="absolute bottom-2 left-2.5 right-2.5">
+<div class="w-full h-1 bg-white/20 rounded-full overflow-hidden">
+<div class="w-2/5 h-full bg-secondary-container"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pb-4 border-b border-white/10">
+<span class="font-label-code text-xs text-secondary-container">// Flujo de Transacciones</span>
+<span class="material-symbols-outlined text-mint-turquoise text-base">payments</span>
+</div>
+<div class="py-6 space-y-3">
+<div class="flex justify-between items-center bg-white/10 p-3 rounded-lg text-xs font-label-code">
+<span class="">Transacciones procesadas</span>
+<span class="text-mint-turquoise font-bold">+12,450 / mes</span>
+</div>
+<div class="flex justify-between items-center bg-white/10 p-3 rounded-lg text-xs font-label-code">
+<span class="">Tiempo medio de validación</span>
+<span class="text-secondary-container font-bold">420 ms</span>
+</div>
+</div>
+<div class="pt-2 text-right">
+<span class="text-xs font-label-pill text-mint-turquoise font-bold">Fintech Ready • PCI-DSS compliant</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Case 3: Digital Archives & Academic Repository -->
+<div class="bg-surface rounded-3xl p-8 lg:p-10 border border-border-slate hover:border-primary-container/30 transition-all shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 space-y-4">
+<div class="flex flex-wrap items-center gap-2 mb-2">
+<span class="px-3 py-1 rounded-md bg-dark-violet/10 text-dark-violet text-xs font-bold font-headline-sm">DSpace &amp; Archivos</span>
+<span class="px-3 py-1 rounded-md bg-mint-turquoise/15 text-text-dark-primary text-xs font-bold font-headline-sm">Preservación Digital</span>
+</div>
+<h3 class="font-headline-lg text-2xl font-bold text-text-dark-primary">
+                  Repositorio Institucional &amp; Indexación Masiva de Documentos
+                </h3>
+<p class="font-body-md text-sm sm:text-base text-text-dark-secondary leading-relaxed">
+<strong>Situación &amp; Acción:</strong> Migración, indexación semántica y optimización para miles de publicaciones académicas e históricas con soporte de metadatos estandarizados e interfaz responsive accesible.
+                </p>
+<!-- Metrics -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+<div class="p-3 bg-clean-white rounded-xl border border-border-slate">
+<p class="text-xs text-text-dark-secondary font-label-code">Artículos preservados</p>
+<p class="font-headline-sm text-lg font-extrabold text-primary-container">120k+</p>
+</div>
+<div class="p-3 bg-clean-white rounded-xl border border-border-slate">
+<p class="text-xs text-text-dark-secondary font-label-code">Velocidad búsqueda</p>
+<p class="font-headline-sm text-lg font-extrabold text-primary-container">Elasticsearch</p>
+</div>
+<div class="p-3 bg-clean-white rounded-xl border border-border-slate col-span-2 sm:col-span-1">
+<p class="text-xs text-text-dark-secondary font-label-code">Protocolo</p>
+<p class="font-headline-sm text-lg font-extrabold text-primary-container">OAI-PMH</p>
+</div>
+</div>
+<!-- Tech Stack tags -->
+<div class="flex flex-wrap items-center gap-2 pt-3">
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">DSpace</span>
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">Java / Solr</span>
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">Linux</span>
+<span class="px-2.5 py-1 bg-white rounded border border-border-slate text-xs font-label-code text-text-dark-primary font-medium">PostgreSQL</span>
+</div>
+</div>
+<div class="lg:col-span-5 bg-gradient-to-br from-dark-violet to-[#19022c] rounded-2xl p-6 text-clean-white shadow-xl flex flex-col justify-between h-full"><!-- Video Demo Banner Case 3 -->
+<div class="relative w-full aspect-video bg-dark-violet rounded-xl overflow-hidden mb-5 group border border-white/15">
+<img alt="Video Demo Repositorio DSpace" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/case_dspace.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBfeDJeijGm4I2CdmyfDkz1RdP8nDkkNAFx03j-ekhnNxyfd-yLoNAZE8PWB6Ybo4CY09DpQiLyUzDzrYnBR4A5QPSAM-AefHAChIOV-ojc7K_Ct8DLlXhsj6JWuPPXAQUR3G7AfQLlVMPzIs2XELIYDDiIUJX5r8ZGJ49pFYDalC7ueQyH0-UriFXzZvzcjyLHknkDAqLPwxmcZfCl92XNj6nfyNqPrsgHJ6tJcAZgm7eH9Z29cHgG'">
+<div class="absolute inset-0 bg-gradient-to-t from-[#19022c]/90 via-dark-violet/30 to-transparent"></div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 bg-[#19022c]/85 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[11px] font-label-code font-semibold">
+<span class="material-symbols-outlined text-mint-turquoise text-sm" style="font-variation-settings: 'FILL' 1;">videocam</span>
+<span class="">Tour Interactivo • 1:40 min</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="flex items-center gap-2 bg-primary-container/90 text-clean-white px-3.5 py-1.5 rounded-full font-headline-sm text-xs font-bold shadow-lg shadow-primary-container/40 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span class="">Ver demo en video</span>
+</div>
+</div>
+<div class="absolute bottom-2 left-2.5 right-2.5">
+<div class="w-full h-1 bg-white/20 rounded-full overflow-hidden">
+<div class="w-1/2 h-full bg-primary-fixed-dim"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pb-4 border-b border-white/10">
+<span class="font-label-code text-xs text-secondary-container">// Arquitectura de Repositorio</span>
+<span class="material-symbols-outlined text-secondary-container text-base">source</span>
+</div>
+<div class="py-6 space-y-3">
+<div class="bg-white/10 p-3 rounded-lg text-xs font-label-code text-primary-fixed-dim">
+<span class="text-secondary-container">Dublin Core</span> Qualified Metadata Set
+                  </div>
+<div class="bg-white/10 p-3 rounded-lg text-xs font-label-code text-primary-fixed-dim">
+<span class="text-mint-turquoise">Bitstream Storage</span> Automated S3 Offloading
+                  </div>
+</div>
+<div class="pt-2 text-right">
+<span class="text-xs font-label-pill text-primary-fixed-dim font-semibold">Institucional • Acceso Abierto</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Banner: Explore Full Portfolio -->
+<div class="mt-14 p-8 lg:p-12 rounded-3xl bg-gradient-to-r from-primary-container via-dark-violet to-[#19022c] text-clean-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-white/10">
+  <div class="flex flex-col gap-3 max-w-xl text-center md:text-left">
+    <div class="inline-flex items-center gap-2 text-mint-turquoise self-center md:self-start bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
+      <span class="material-symbols-outlined text-base">folder_special</span>
+      <span class="font-label-code text-xs uppercase font-bold tracking-wider">Especialización &amp; Casos Completos</span>
+    </div>
+    <h3 class="font-headline-lg text-2xl lg:text-3xl font-extrabold text-clean-white tracking-tight">
+      ¿Buscas proyectos en un área específica?
+    </h3>
+    <p class="font-body-md text-sm sm:text-base text-primary-fixed-dim leading-relaxed">
+      Accede a las 4 verticales técnicas detalladas con métricas en tiempo real: WordPress &amp; WPO, Desarrollo Full-Stack Laravel, Marketing &amp; Analítica GA4, y Soporte de Infraestructura Académica (DSpace/OJS).
+    </p>
+  </div>
+  <a href="portafolio.html" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-hot-pink-vibrant hover:bg-hot-pink-hover text-clean-white font-headline-sm text-base font-bold shadow-lg shadow-hot-pink-vibrant/40 transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+    <span>Explorar Portafolio Completo</span>
+    <span class="material-symbols-outlined text-xl">arrow_forward</span>
+  </a>
+</div>
+</div>
+</section>
+<!-- 5. SECTION: ¿CÓMO TRABAJAR CONMIGO? (Metodología clara en 4 pasos) -->
+<section class="w-full bg-[#f8f9fd] py-20 lg:py-28" id="metodologia">
+<div class="max-w-[1280px] mx-auto px-5 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 text-primary-container mb-3">
+<span class="material-symbols-outlined text-sm">route</span>
+<span class="font-label-pill text-xs font-bold uppercase tracking-wider">Proceso Transparente</span>
+</div>
+<h2 class="font-headline-xl text-3xl lg:text-4xl font-extrabold text-text-dark-primary tracking-tight">
+            ¿Cómo es Trabajar Conmigo?
+          </h2>
+<p class="font-body-md text-text-dark-secondary mt-4">
+            Un flujo claro, sin tecnicismos innecesarios ni sorpresas de última hora. Sprints definidos, comunicación fluida y resultados tangibles.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+<!-- Step 1 -->
+<div class="relative bg-clean-white p-7 rounded-2xl border border-border-slate shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-clean-white font-headline-sm font-extrabold text-lg flex items-center justify-center mb-6 shadow-md shadow-primary-container/30">
+              01
+            </div>
+<h3 class="font-headline-sm text-lg font-bold text-text-dark-primary mb-2">Diagnóstico &amp; Blueprint</h3>
+<p class="font-body-sm text-sm text-text-dark-secondary leading-relaxed">
+              Sesión profunda de descubrimiento para entender tu modelo de negocio, cuellos de botella actuales y diseñar la arquitectura técnica óptima.
+            </p>
+<div class="mt-4 pt-4 border-t border-border-slate/60 text-xs font-label-code text-primary-container font-semibold">
+              Entregable: Roadmap &amp; Diagrama de Arquitectura
+            </div>
+</div>
+<!-- Step 2 -->
+<div class="relative bg-clean-white p-7 rounded-2xl border border-border-slate shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="w-12 h-12 rounded-xl bg-[#006875] text-clean-white font-headline-sm font-extrabold text-lg flex items-center justify-center mb-6 shadow-md shadow-[#006875]/30">
+              02
+            </div>
+<h3 class="font-headline-sm text-lg font-bold text-text-dark-primary mb-2">Prototipado &amp; UX/UI</h3>
+<p class="font-body-sm text-sm text-text-dark-secondary leading-relaxed">
+              Diseño interactivo centrado en conversión y accesibilidad. Validamos los flujos de usuario antes de picar una sola línea de código.
+            </p>
+<div class="mt-4 pt-4 border-t border-border-slate/60 text-xs font-label-code text-[#006875] font-semibold">
+              Entregable: Prototipo Figma navegable
+            </div>
+</div>
+<!-- Step 3 -->
+<div class="relative bg-clean-white p-7 rounded-2xl border border-border-slate shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="w-12 h-12 rounded-xl bg-hot-pink-vibrant text-clean-white font-headline-sm font-extrabold text-lg flex items-center justify-center mb-6 shadow-md shadow-hot-pink-vibrant/30">
+              03
+            </div>
+<h3 class="font-headline-sm text-lg font-bold text-text-dark-primary mb-2">Desarrollo &amp; Despliegue</h3>
+<p class="font-body-sm text-sm text-text-dark-secondary leading-relaxed">
+              Construcción con código limpio, pruebas automáticas, pipelines CI/CD y despliegue en entornos seguros de alta disponibilidad.
+            </p>
+<div class="mt-4 pt-4 border-t border-border-slate/60 text-xs font-label-code text-hot-pink-vibrant font-semibold">
+              Entregable: Sistema en staging funcional
+            </div>
+</div>
+<!-- Step 4 -->
+<div class="relative bg-clean-white p-7 rounded-2xl border border-border-slate shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="w-12 h-12 rounded-xl bg-dark-violet text-clean-white font-headline-sm font-extrabold text-lg flex items-center justify-center mb-6 shadow-md shadow-dark-violet/30">
+              04
+            </div>
+<h3 class="font-headline-sm text-lg font-bold text-text-dark-primary mb-2">Capacitación &amp; Soporte</h3>
+<p class="font-body-sm text-sm text-text-dark-secondary leading-relaxed">
+              Entrega llave en mano con documentación paso a paso, sesiones de entrenamiento para tu equipo y garantía post-lanzamiento.
+            </p>
+<div class="mt-4 pt-4 border-t border-border-slate/60 text-xs font-label-code text-dark-violet font-semibold">
+              Entregable: Guías en video + Monitoreo
+            </div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a class="inline-flex items-center gap-2 font-headline-sm font-bold text-primary-container hover:text-hot-pink-vibrant transition-colors" href="#contacto">
+<span class="">¿Listo para iniciar la fase de diagnóstico? Agenda una sesión aquí</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 6. SECTION: BLOG & RECURSOS -->
+<section class="w-full bg-clean-white py-20 lg:py-28 border-y border-border-slate" id="blog">
+<div class="max-w-[1280px] mx-auto px-5 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 text-primary-container mb-3">
+<span class="material-symbols-outlined text-sm">article</span>
+<span class="font-label-pill text-xs font-bold uppercase tracking-wider">Publicaciones &amp; Criterio</span>
+</div>
+<h2 class="font-headline-xl text-3xl lg:text-4xl font-extrabold text-text-dark-primary tracking-tight">
+              Blog &amp; Recursos de Ingeniería
+            </h2>
+</div>
+<p class="font-body-md text-text-dark-secondary max-w-md">
+            Artículos prácticos sobre arquitectura web, optimización de costos y automatización aplicada a negocios.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Article 1 -->
+<article class="group bg-surface rounded-2xl border border-border-slate p-6 hover:shadow-xl hover:border-primary-container/40 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs font-label-code text-text-dark-secondary mb-4">
+<span class="px-2.5 py-1 rounded bg-primary-container/10 text-primary-container font-semibold">Arquitectura Cloud</span>
+<span class="">6 min lectura</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-text-dark-primary group-hover:text-primary-container transition-colors mb-3 leading-snug">
+                Cómo estructurar una arquitectura web que soporte 10x tráfico sin duplicar costos
+              </h3>
+<p class="font-body-sm text-sm text-text-dark-secondary leading-relaxed mb-6">
+                Estrategias de caching multicapa, bases de datos réplica de lectura y desbordamiento de cargas asíncronas para escalar con presupuesto inteligente.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1.5 text-xs font-bold font-headline-sm text-primary-container group-hover:text-hot-pink-vibrant transition-colors pt-4 border-t border-border-slate/60" href="#contacto">
+<span class="">Leer artículo</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</article>
+<!-- Article 2 -->
+<article class="group bg-surface rounded-2xl border border-border-slate p-6 hover:shadow-xl hover:border-primary-container/40 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs font-label-code text-text-dark-secondary mb-4">
+<span class="px-2.5 py-1 rounded bg-mint-turquoise/15 text-[#006875] font-semibold">Automatizaciones IA</span>
+<span class="">4 min lectura</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-text-dark-primary group-hover:text-primary-container transition-colors mb-3 leading-snug">
+                Automatizaciones con IA que reducen hasta 20 horas operativas por semana
+              </h3>
+<p class="font-body-sm text-sm text-text-dark-secondary leading-relaxed mb-6">
+                De clasificación de facturas a clasificación de leads cualificados: casos reales de integración con APIs de LLMs sin comprometer datos confidenciales.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1.5 text-xs font-bold font-headline-sm text-primary-container group-hover:text-hot-pink-vibrant transition-colors pt-4 border-t border-border-slate/60" href="#contacto">
+<span class="">Leer artículo</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</article>
+<!-- Article 3 -->
+<article class="group bg-surface rounded-2xl border border-border-slate p-6 hover:shadow-xl hover:border-primary-container/40 transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs font-label-code text-text-dark-secondary mb-4">
+<span class="px-2.5 py-1 rounded bg-hot-pink-vibrant/10 text-hot-pink-vibrant font-semibold">Toma de Decisiones</span>
+<span class="">5 min lectura</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold text-text-dark-primary group-hover:text-primary-container transition-colors mb-3 leading-snug">
+                WordPress vs. Desarrollo a Medida: Cuándo elegir cada uno para tu negocio
+              </h3>
+<p class="font-body-sm text-sm text-text-dark-secondary leading-relaxed mb-6">
+                Una comparativa técnica y de costos sin dogmas: analiza velocidad de lanzamiento, mantenimiento a largo plazo y necesidades reales de personalización.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1.5 text-xs font-bold font-headline-sm text-primary-container group-hover:text-hot-pink-vibrant transition-colors pt-4 border-t border-border-slate/60" href="#contacto">
+<span class="">Leer artículo</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</article>
+</div>
+</div>
+</section>
+<!-- 7. FINAL CTA & CONTACTO (High Contrast & Clean Form Mockup) -->
+<section class="w-full bg-dark-violet text-clean-white py-20 lg:py-28 relative overflow-hidden" id="contacto">
+<!-- Glow Decorators -->
+<div class="absolute -top-40 -left-40 w-96 h-96 bg-primary-container/40 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-40 -right-40 w-96 h-96 bg-hot-pink-vibrant/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative max-w-[1280px] mx-auto px-5 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Contact Info Left (6 cols) -->
+<div class="lg:col-span-6 space-y-6">
+<div class="bg-white text-[#4d17d6] font-bold px-4 py-1.5 rounded-full shadow-sm inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-[#FF2E93]">call</span>
+<span class="font-label-pill text-xs uppercase tracking-wider font-extrabold text-[#4d17d6]">
+                Contacto Directo
+              </span>
+</div>
+<h2 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-extrabold text-clean-white tracking-tight leading-tight">¿Tienes un proyecto en mente? Hablemos sin intermediarios.</h2>
+<p class="font-body-lg text-primary-fixed-dim text-base sm:text-lg leading-relaxed max-w-lg">
+              Ya sea que necesites una arquitectura completa desde cero, modernizar una plataforma existente o integrar pagos y automatizaciones, hablemos sin compromiso.
+            </p>
+<div class="space-y-4 pt-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-xl">mail</span>
+</div>
+<div>
+<p class="text-xs text-primary-fixed-dim font-label-code">Escríbeme directamente</p>
+<p class="font-headline-sm font-semibold text-clean-white text-base">hello@aryclement.dev</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-mint-turquoise">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+</div>
+<div>
+<p class="text-xs text-primary-fixed-dim font-label-code">Sesión técnica 1 a 1</p>
+<p class="font-headline-sm font-semibold text-clean-white text-base">Diagnóstico de 30 minutos sin costo</p>
+</div>
+</div>
+</div>
+<div class="pt-4">
+<a class="inline-flex items-center gap-2 bg-hot-pink-vibrant hover:bg-hot-pink-hover text-clean-white font-headline-sm font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-hot-pink-vibrant/30 transition-all transform hover:-translate-y-0.5" href="mailto:hello.ary.code@gmail.com">
+<span class="">Agendar Llamada de Diagnóstico</span>
+<span class="material-symbols-outlined text-base">event_available</span>
+</a>
+</div>
+</div>
+<!-- Contact Form Mockup Right (6 cols) -->
+<div class="lg:col-span-6 bg-surface-bright text-text-dark-primary rounded-3xl p-8 lg:p-10 shadow-2xl border border-white/20"><div class="flex items-center justify-between pb-3 border-b border-border-slate mb-6">
+<div class="flex items-center gap-2.5">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-mint-turquoise opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-mint-turquoise"></span>
+</span>
+<span class="font-label-code text-sm font-bold text-text-dark-primary">Canales de Comunicación Rápida</span>
+</div>
+<span class="font-label-code text-xs text-[#006875] font-bold bg-mint-turquoise/15 px-3 py-1 rounded-full">Respuesta &lt; 2 hrs</span>
+</div>
+<p class="font-body-sm text-sm text-text-dark-secondary mb-6 leading-relaxed">
+  Sin formularios interminables ni correos que nadie responde. Conversación directa con Arianna Clemente para evaluar factibilidad técnica, arquitectura y presupuestos.
+</p>
+<div class="flex flex-col gap-4 mb-6">
+<!-- Direct WhatsApp Action Button -->
+<a class="w-full p-4 rounded-2xl bg-mint-turquoise text-text-dark-primary flex items-center justify-between shadow-lg shadow-mint-turquoise/25 hover:brightness-105 active:scale-95 transition-all group" href="https://wa.me/584241685298?text=Hola%20Arianna,%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto%20de%20software" target="_blank">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-dark-violet text-mint-turquoise flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-2xl">chat</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-headline-sm text-base font-extrabold text-text-dark-primary leading-tight">Escríbeme a WhatsApp</span>
+<span class="font-label-code text-xs text-text-dark-primary/80 font-medium">Chat directo con Arianna • Respuesta rápida</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-full bg-white/40 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+<span class="material-symbols-outlined text-xl font-bold text-dark-violet">arrow_forward</span>
+</div>
+</a>
+<!-- Direct Email Action Button -->
+<a class="w-full p-4 rounded-2xl bg-surface-container-low text-text-dark-primary hover:bg-surface-container-high flex items-center justify-between border border-border-slate transition-all active:scale-95 group" href="mailto:hello.ary.code@gmail.com?subject=Consulta%20de%20Proyecto%20-%20Arquitectura%20Web">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-clean-white flex items-center justify-center shadow-md shadow-primary-container/20">
+<span class="material-symbols-outlined text-2xl">mail</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-headline-sm text-base font-bold text-text-dark-primary leading-tight">hello@aryclement.dev</span>
+<span class="font-label-code text-xs text-text-dark-secondary">Envíame un correo con tus requerimientos técnicos</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-full bg-white flex items-center justify-center group-hover:translate-x-1 transition-transform border border-border-slate">
+<span class="material-symbols-outlined text-xl text-primary-container font-semibold">send</span>
+</div>
+</a>
+</div>
+<!-- Trust / Service Guarantees -->
+<div class="grid grid-cols-2 gap-3 pt-2 border-t border-border-slate/70">
+<div class="bg-surface-container-low p-3.5 rounded-xl flex flex-col gap-1 border border-border-slate/60">
+<span class="font-label-code text-[11px] text-text-dark-secondary font-medium">Diagnóstico Inicial</span>
+<span class="font-headline-sm text-sm font-bold text-text-dark-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-mint-turquoise font-bold">check_circle</span>
+      30 min sin costo
+    </span>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-xl flex flex-col gap-1 border border-border-slate/60">
+<span class="font-label-code text-[11px] text-text-dark-secondary font-medium">Acuerdo Legal</span>
+<span class="font-headline-sm text-sm font-bold text-text-dark-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-primary-container font-bold">verified_user</span>
+      NDA Garantizado
+    </span>
+</div>
+</div></div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="w-full bg-[#19022c] text-clean-white pt-16 pb-12 border-t border-white/10">
+<div class="max-w-[1280px] mx-auto px-5 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12">
+<!-- Col 1: Brand Info -->
+<div class="md:col-span-5 flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-2xl font-extrabold uppercase tracking-tight text-clean-white">ARYCLEMENT</span>
+</div>
+<span class="font-label-code text-xs text-mint-turquoise font-medium">Arianna Clemente Studio // Solutions Architect</span>
+<p class="font-body-sm text-sm text-primary-fixed-dim max-w-sm leading-relaxed mt-1">
+            Ingeniería de software de alto rendimiento, plataformas cloud escalables y soluciones digitales creadas con foco absoluto en impacto comercial y estabilidad operativa.
+          </p>
+<div class="mt-2 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 w-fit border border-white/10">
+<span class="h-2 w-2 rounded-full bg-mint-turquoise"></span>
+<span class="font-label-code text-xs text-mint-turquoise">Production-Ready Architecture</span>
+</div>
+</div>
+<!-- Col 2: Navigation Links -->
+<div class="md:col-span-3 flex flex-col gap-3">
+<span class="font-label-pill text-xs uppercase tracking-wider text-secondary-container font-bold">Navegación</span>
+<ul class="flex flex-col gap-2 font-body-sm text-sm text-primary-fixed-dim">
+<li class=""><a class="hover:text-clean-white transition-colors" href="#inicio">Inicio</a></li>
+<li class=""><a class="hover:text-clean-white transition-colors" href="#servicios">Servicios Técnicos</a></li>
+<li class=""><a class="hover:text-clean-white transition-colors" href="#proyectos">Proyectos S.T.A.R</a></li>
+<li class=""><a class="hover:text-clean-white transition-colors" href="#metodologia">Metodología de Trabajo</a></li>
+<li class=""><a class="hover:text-clean-white transition-colors" href="#blog">Blog &amp; Recursos</a></li>
+</ul>
+</div>
+<!-- Col 3: Contact Details -->
+<div class="md:col-span-4 flex flex-col gap-3">
+<span class="font-label-pill text-xs uppercase tracking-wider text-secondary-container font-bold">Contacto Directo</span>
+<p class="font-body-sm text-sm text-primary-fixed-dim">
+            Sesiones de diagnóstico, consultoría técnica y desarrollo a medida para CTOs, líderes de negocio y organizaciones.
+          </p>
+<a class="font-label-code text-sm text-secondary-container hover:text-mint-turquoise transition-colors" href="mailto:hello.ary.code@gmail.com">
+            hello@aryclement.dev
+          </a>
+<div class="pt-3 flex flex-wrap items-center gap-2.5 text-primary-fixed-dim"><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-secondary-container/40 hover:bg-white/10 hover:text-secondary-container text-xs font-label-code transition-all" aria-label="LinkedIn"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.66 1.66 0 0 0-1.67 1.67c0 .92.75 1.67 1.67 1.67a1.67 1.67 0 0 0 1.67-1.67c0-.92-.75-1.67-1.67-1.67Z"></path></svg><span class="">LinkedIn</span></a><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-mint-turquoise/40 hover:bg-white/10 hover:text-mint-turquoise text-xs font-label-code transition-all" aria-label="Twitter/X"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg><span class="">Twitter</span></a><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-hot-pink-vibrant/40 hover:bg-white/10 hover:text-hot-pink-vibrant text-xs font-label-code transition-all" aria-label="Instagram"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"></path></svg><span class="">Instagram</span></a><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-mint-turquoise/40 hover:bg-white/10 hover:text-mint-turquoise text-xs font-label-code transition-all" aria-label="TikTok"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg><span class="">TikTok</span></a><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-red-600/40 hover:bg-white/10 hover:text-red-600 text-xs font-label-code transition-all" aria-label="YouTube"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg><span class="">YouTube</span></a></div>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-primary-fixed-dim font-label-code text-xs gap-4">
+<p class="">© 2025 ARYCLEMENT (Arianna Clemente). Todos los derechos reservados.</p>
+<p class="text-right">Sistemas Robustos &amp; Experiencias Digitales de Alta Precisión.</p>
+</div>
+</div>
+</footer>
+
+
+
+<!-- Interactive Showcase / Video Preview Modal -->
+<div id="videoModal" class="fixed inset-0 z-50 bg-dark-violet/85 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 transition-all duration-300">
+  <div class="relative w-full max-w-3xl bg-clean-white rounded-3xl overflow-hidden shadow-2xl border border-white/20 transform transition-all duration-300 scale-95 opacity-0" id="videoModalCard">
+    <!-- Modal Header -->
+    <div class="flex items-center justify-between p-5 sm:p-6 bg-[#19022c] text-clean-white border-b border-white/10">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-hot-pink-vibrant/20 text-hot-pink-vibrant flex items-center justify-center">
+          <span class="material-symbols-outlined text-xl">smart_display</span>
         </div>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div
-            class="bg-white/5 border-2 border-dashed border-white/10 rounded-[2.5rem] p-12 flex flex-col items-center justify-center group hover:border-brand-pink transition-colors relative overflow-hidden"
-          >
-            <input
-              type="file"
-              id="jobImage"
-              accept="image/*"
-              class="absolute inset-0 opacity-0 cursor-pointer"
-              onchange="AI_Service.handleUpload(event)"
-            />
-            <div id="uploadPlaceholder" class="text-center">
-              <div
-                class="w-16 h-16 bg-brand-pink/10 text-brand-pink rounded-full flex items-center justify-center mx-auto mb-6"
-              >
-                <i class="fa-solid fa-cloud-arrow-up text-2xl"></i>
-              </div>
-              <p class="text-white font-bold mb-2">Subir Captura de Vacante</p>
-            </div>
-            <div id="previewContainer" class="hidden absolute inset-0">
-              <img
-                id="imagePreview"
-                class="w-full h-full object-cover opacity-30"
-                alt="Preview"
-              />
-              <div class="absolute inset-0 flex items-center justify-center">
-                <button
-                  onclick="AI_Service.reset()"
-                  class="bg-brand-pink text-white px-4 py-2 rounded-lg text-xs font-bold uppercase"
-                >
-                  Cambiar
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-[2.5rem] p-8">
-            <div
-              id="ai-idle"
-              class="flex items-center gap-4 text-brand-lavender/40 italic h-full justify-center"
-            >
-              <i class="fa-solid fa-robot text-2xl"></i>
-              <p>Esperando imagen...</p>
-            </div>
-            <div id="ai-loading" class="hidden space-y-6">
-              <div
-                class="flex items-center gap-4 text-brand-pink animate-pulse"
-              >
-                <i class="fa-solid fa-spinner fa-spin text-2xl"></i>
-                <p class="font-bold uppercase text-xs">Analizando...</p>
-              </div>
-              <div class="space-y-3">
-                <div
-                  class="h-4 w-3/4 loading-shimmer rounded bg-gradient-to-r from-brand-black via-brand-black to-brand-black bg-[length:200%_100%] animate-pulse"
-                ></div>
-                <div
-                  class="h-20 w-full loading-shimmer rounded-xl bg-gradient-to-r from-brand-black via-brand-black to-brand-black bg-[length:200%_100%] animate-pulse"
-                ></div>
-              </div>
-            </div>
-            <div id="ai-result" class="hidden space-y-6">
-              <div
-                class="bg-brand-teal/10 border border-brand-teal/30 p-4 rounded-2xl"
-              >
-                <p
-                  id="res-company"
-                  class="text-brand-teal text-lg font-black italic"
-                ></p>
-                <p id="res-role" class="text-white font-bold text-sm"></p>
-              </div>
-              <button
-                onclick="UI.applyAdaptation()"
-                class="w-full bg-brand-pink text-white py-5 rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg shadow-brand-pink/20"
-              >
-                Adaptar Portafolio
-              </button>
-            </div>
-          </div>
+        <div>
+          <h3 class="font-headline-sm text-lg font-bold text-clean-white" id="modalTitle">Showcase Reel</h3>
+          <p class="font-label-code text-xs text-mint-turquoise" id="modalSubtitle">Demo en Vivo // Arquitectura & Flujos</p>
         </div>
       </div>
-    </main>
+      <button onclick="closeVideoModal()" aria-label="Cerrar modal" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-clean-white transition">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+    </div>
 
-    <!-- Footer / Sección de Contacto -->
-    <footer
-      id="contacto"
-      class="bg-brand-black text-white py-20 border-t border-brand-purple/20"
-    >
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-5xl font-black mb-12 tracking-tighter">
-          Construyamos <span class="text-brand-pink italic">algo</span> grande.
-        </h2>
-        <div
-          class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12"
-        >
-          <a
-            href="mailto:hello.ary.code@gmail.com"
-            class="text-xl font-bold hover:text-brand-pink transition border-b border-brand-gray pb-2"
-          >
-            hello.ary.code@gmail.com
-          </a>
-          <span class="text-brand-gray hidden md:block">|</span>
-          <span class="font-mono text-brand-teal">+58 424 168 5298</span>
+    <!-- Modal Body: Interactive Video Preview Container -->
+    <div class="relative w-full aspect-video bg-black flex items-center justify-center overflow-hidden group">
+      <img id="modalPoster" src="assets/images/service_custom_dev.png" class="w-full h-full object-cover opacity-70 filter brightness-95" alt="Showcase Preview">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+      
+      <!-- Center Animated Play Element -->
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+        <div class="w-16 h-16 rounded-full bg-hot-pink-vibrant text-clean-white flex items-center justify-center shadow-2xl shadow-hot-pink-vibrant/60 animate-pulse mb-3">
+          <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
         </div>
-        <p class="text-brand-lavender text-xs uppercase tracking-widest">
-          © 2026 Arianna Clemente (AryCode) — Diseñado & Desarrollado con pasión.
+        <p class="font-headline-sm text-sm sm:text-base font-bold text-white max-w-md drop-shadow-md" id="modalDesc">
+          Grabación y walkthrough técnico disponible en sesión 1 a 1 de diagnóstico
         </p>
       </div>
-    </footer>
 
-    <!-- Lógica de la Aplicación -->
-    <script src="app.js"></script>
-  </body>
-</html>
+      <!-- Live Telemetry overlay -->
+      <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs font-label-code">
+        <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-mint-turquoise font-semibold flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-mint-turquoise animate-ping"></span>
+          Sistema Operativo en Producción
+        </span>
+        <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-secondary-container font-semibold" id="modalDuration">
+          0:45 min
+        </span>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div class="p-5 sm:p-6 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-border-slate">
+      <div class="flex items-center gap-2 text-xs font-label-code text-text-dark-secondary">
+        <span class="material-symbols-outlined text-mint-turquoise text-base">verified</span>
+        <span>Código privado bajo acuerdo NDA institucional</span>
+      </div>
+      <div class="flex items-center gap-3 w-full sm:w-auto">
+        <a id="modalCta" href="#contacto" onclick="closeVideoModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-hot-pink-vibrant hover:bg-hot-pink-hover text-clean-white font-headline-sm text-sm font-bold px-6 py-2.5 rounded-xl shadow-md shadow-hot-pink-vibrant/30 transition">
+          <span>Solicitar Demo Completo</span>
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Mobile Navigation Drawer Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIcon = document.getElementById('menuIcon');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.textContent = 'close';
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Close when clicking mobile nav links
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+        document.body.style.overflow = 'auto';
+      });
+    });
+  }
+
+  // Interactive Video / Showcase Modal
+  const videoModal = document.getElementById('videoModal');
+  const videoModalCard = document.getElementById('videoModalCard');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalSubtitle = document.getElementById('modalSubtitle');
+  const modalDesc = document.getElementById('modalDesc');
+  const modalPoster = document.getElementById('modalPoster');
+  const modalDuration = document.getElementById('modalDuration');
+
+  const showcaseData = {
+    'desarrollo': {
+      title: 'Desarrollo a Medida // Backend & Microservicios',
+      subtitle: 'Arquitectura Laravel 11 + Docker + CI/CD',
+      desc: 'Arquitectura desacoplada de alto rendimiento, optimización de queries SQL y APIs REST/GraphQL con escalabilidad vertical y horizontal.',
+      poster: 'assets/images/service_custom_dev.png',
+      duration: 'Reel • 0:45 min'
+    },
+    'wordpress': {
+      title: 'Sitios Web WordPress Ultrarrápidos',
+      subtitle: 'WooCommerce Headless & Core Web Vitals 95+',
+      desc: 'Desarrollo de temas custom sin constructores pesados, caching avanzado y pasarelas de pago integradas con tiempos de carga bajo 800ms.',
+      poster: 'assets/images/service_wordpress.png',
+      duration: 'Reel • 0:50 min'
+    },
+    'repositorios': {
+      title: 'Repositorios Digitales & Preservación DSpace',
+      subtitle: 'DSpace 7/8 + Metadatos Dublin Core + Solr',
+      desc: 'Gestión masiva de documentos, indexación semántica, interoperabilidad OAI-PMH y migración segura para universidades e instituciones.',
+      poster: 'assets/images/service_repos.png',
+      duration: 'Reel • 1:05 min'
+    },
+    'growth': {
+      title: 'Marketing, IA & Growth Tech',
+      subtitle: 'Chatbots con LLM + WhatsApp API + Automatizaciones',
+      desc: 'Embudos de venta asistidos por inteligencia artificial con calificación automática de leads y sincronización CRM en tiempo real.',
+      poster: 'assets/images/service_growth_ai.png',
+      duration: 'Reel • 0:40 min'
+    },
+    'audit-platform': {
+      title: 'Plataforma Centralizada de Gestión y Auditoría',
+      subtitle: 'Enterprise SaaS • Laravel 11 + PostgreSQL + Redis',
+      desc: 'Reducción de tiempos de respuesta a <180ms y procesamiento continuo de más de 50.000 documentos diarios con 99.98% de disponibilidad.',
+      poster: 'assets/images/case_audit_platform.png',
+      duration: 'Demo en vivo • 1:20 min'
+    },
+    'checkout': {
+      title: 'Pasarela Multidivisa & Checkout de Alta Conversión',
+      subtitle: 'Fintech & E-commerce • Stripe + React + Webhooks',
+      desc: 'Flujo de transacciones en menos de 3 pasos con validación anti-fraude y +38% de incremento comprobado en conversión de carritos.',
+      poster: 'assets/images/case_checkout.png',
+      duration: 'Walkthrough • 1:15 min'
+    },
+    'dspace': {
+      title: 'Repositorio Institucional & Indexación Masiva',
+      subtitle: 'DSpace + Elasticsearch + Almacenamiento S3',
+      desc: 'Preservación de más de 120.000 artículos indexados con metadatos estandarizados para consulta pública global.',
+      poster: 'assets/images/case_dspace.png',
+      duration: 'Tour Interactivo • 1:40 min'
+    }
+  };
+
+  function openVideoModal(key) {
+    const data = showcaseData[key] || showcaseData['desarrollo'];
+    modalTitle.textContent = data.title;
+    modalSubtitle.textContent = data.subtitle;
+    modalDesc.textContent = data.desc;
+    modalPoster.src = data.poster;
+    modalDuration.textContent = data.duration;
+
+    videoModal.classList.remove('hidden');
+    videoModal.classList.add('flex');
+    setTimeout(() => {
+      videoModalCard.classList.remove('scale-95', 'opacity-0');
+      videoModalCard.classList.add('scale-100', 'opacity-100');
+    }, 10);
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeVideoModal() {
+    videoModalCard.classList.remove('scale-100', 'opacity-100');
+    videoModalCard.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+      videoModal.classList.add('hidden');
+      videoModal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }, 200);
+  }
+
+  // Bind video preview banners to modal
+  document.addEventListener('DOMContentLoaded', () => {
+    // Add pointer cursor and onclick to video banners
+    const banners = [
+      { selector: 'img[alt="Desarrollo a Medida Preview"]', key: 'desarrollo' },
+      { selector: 'img[alt="WordPress Ultrarrápido Preview"]', key: 'wordpress' },
+      { selector: 'img[alt="Repositorios Digitales Preview"]', key: 'repositorios' },
+      { selector: 'img[alt="Growth Tech & AI Preview"]', key: 'growth' },
+      { selector: 'img[alt="Video Demo Auditoría Operacional"]', key: 'audit-platform' },
+      { selector: 'img[alt="Video Demo Checkout Multidivisa"]', key: 'checkout' },
+      { selector: 'img[alt="Video Demo Repositorio DSpace"]', key: 'dspace' }
+    ];
+
+    banners.forEach(b => {
+      const img = document.querySelector(b.selector);
+      if (img) {
+        const container = img.closest('.aspect-video');
+        if (container) {
+          container.style.cursor = 'pointer';
+          container.setAttribute('title', 'Click para ver preview de la demostración');
+          container.addEventListener('click', (e) => {
+            e.preventDefault();
+            openVideoModal(b.key);
+          });
+        }
+      }
+    });
+  });
+
+  // Close modal on escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) {
+      closeVideoModal();
+    }
+  });
+
+  // Close modal when clicking backdrop
+  videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) {
+      closeVideoModal();
+    }
+  });
+</script>
+
+</body></html>
