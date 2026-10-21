@@ -22,37 +22,10 @@
     }
     ::-webkit-scrollbar { display: none; }
 
-    /* Animated text rotation / typing effect */
-    @keyframes textSlide {
-      0%, 20% { transform: translateY(0%); }
-      25%, 45% { transform: translateY(-25%); }
-      50%, 70% { transform: translateY(-50%); }
-      75%, 95% { transform: translateY(-75%); }
-      100% { transform: translateY(0%); }
-    }
-
-    .rotating-words-wrapper {
-      display: inline-flex;
-      height: 1.35em;
-      line-height: 1.35em;
-      overflow: hidden;
-      vertical-align: -0.22em;
-      position: relative;
-    }
-
-    .rotating-words {
-      display: flex;
-      flex-direction: column;
-      animation: textSlide 9s cubic-bezier(0.65, 0, 0.35, 1) infinite;
-    }
-
-    .rotating-words > span {
-      display: flex;
-      align-items: center;
-      height: 1.35em;
-      line-height: 1.35em;
-      box-sizing: border-box;
-      white-space: nowrap;
+    /* Hero Rotator & Smooth Word Transition */
+    #heroRotatingWord {
+      display: inline-block;
+      will-change: transform, opacity;
     }
 
     #ctaHablemosBtn, #ctaHablemosBtn *, .cta-hablemos, .cta-hablemos * {
@@ -276,23 +249,18 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 <!-- Hero Left Column (7 cols) -->
 <div class="lg:col-span-7 flex flex-col items-start gap-6">
-<!-- High-Contrast White Pill Badge -->
+<!-- High-Contrast White Pill Badge (Spanish) -->
 <div class="bg-white/95 text-[#4d17d6] font-bold px-4 py-1.5 rounded-full shadow-md inline-flex items-center gap-2">
 <span class="material-symbols-outlined text-sm font-bold text-[#FF2E93]">terminal</span>
 <span class="font-label-pill text-xs tracking-wide font-extrabold text-[#4d17d6]">
-                I code ideas to solve problems in software
+                Programo ideas para resolver problemas con software
               </span>
 </div>
-<!-- Dynamic Animated Headline -->
-<h1 class="font-display-hero text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-clean-white leading-[1.2] tracking-tight">
+<!-- Dynamic Animated Headline with Non-Clipping Smooth Rotator -->
+<h1 class="font-display-hero text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-clean-white leading-[1.25] tracking-tight">
               ¡Hola! Soy Arianna y construyo <br class="hidden sm:inline">
-<span class="rotating-words-wrapper text-secondary-container">
-<span class="rotating-words">
-<span class="text-secondary-container">Sitios Web</span>
-<span class="text-mint-turquoise">Sistemas a tu Medida</span>
-<span class="text-secondary-container">Automatizaciones IA</span>
-<span class="text-mint-turquoise">Pasarelas de Pagos</span>
-</span>
+<span class="inline-block relative">
+<span id="heroRotatingWord" class="inline-block text-secondary-container font-extrabold transition-all duration-300 ease-out">Sitios Web</span>
 </span>
 </h1>
 <!-- Hero Subtitle -->
@@ -367,63 +335,133 @@
 </div>
 </div>
 </section>
-<!-- 2. CLIENTES / CONFIARON EN NOSOTROS -->
-<section class="w-full bg-clean-white py-12 border-b border-border-slate">
-<div class="max-w-[1280px] mx-auto px-5 lg:px-8">
-<p class="text-center font-label-pill text-xs font-bold uppercase tracking-widest text-text-dark-secondary mb-8">
-          Empresas y organizaciones que han confiado en nuestro trabajo
-        </p>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center">
-<!-- Client 1: Fe y Alegría -->
-<div class="group flex items-center justify-center p-4 rounded-xl border border-border-slate hover:border-primary-container/40 hover:shadow-md transition-all bg-surface-bright">
-<div class="flex items-center gap-2.5">
-<div class="w-9 h-9 rounded-lg bg-red-600/10 text-red-600 flex items-center justify-center font-black text-sm">
-                FyA
-              </div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-sm font-bold text-text-dark-primary group-hover:text-primary-container transition-colors">Fe y Alegría</span>
-<span class="font-label-code text-[10px] text-text-dark-secondary">Red Educativa Global</span>
-</div>
-</div>
-</div>
-<!-- Client 2: Ingedaca -->
-<div class="group flex items-center justify-center p-4 rounded-xl border border-border-slate hover:border-primary-container/40 hover:shadow-md transition-all bg-surface-bright">
-<div class="flex items-center gap-2.5">
-<div class="w-9 h-9 rounded-lg bg-blue-600/10 text-blue-600 flex items-center justify-center font-black text-sm">
-                ING
-              </div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-sm font-bold text-text-dark-primary group-hover:text-primary-container transition-colors">Ingedaca</span>
-<span class="font-label-code text-[10px] text-text-dark-secondary">Ingeniería &amp; Proyectos</span>
-</div>
-</div>
-</div>
-<!-- Client 3: Colegio Gonzaga -->
-<div class="group flex items-center justify-center p-4 rounded-xl border border-border-slate hover:border-primary-container/40 hover:shadow-md transition-all bg-surface-bright">
-<div class="flex items-center gap-2.5">
-<div class="w-9 h-9 rounded-lg bg-emerald-600/10 text-emerald-700 flex items-center justify-center font-black text-sm">
-                CG
-              </div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-sm font-bold text-text-dark-primary group-hover:text-primary-container transition-colors">Colegio Gonzaga</span>
-<span class="font-label-code text-[10px] text-text-dark-secondary">Institución Académica</span>
-</div>
-</div>
-</div>
-<!-- Client 4: Impact Hub -->
-<div class="group flex items-center justify-center p-4 rounded-xl border border-border-slate hover:border-primary-container/40 hover:shadow-md transition-all bg-surface-bright">
-<div class="flex items-center gap-2.5">
-<div class="w-9 h-9 rounded-lg bg-amber-500/15 text-amber-700 flex items-center justify-center font-black text-sm">
-                IH
-              </div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-sm font-bold text-text-dark-primary group-hover:text-primary-container transition-colors">Impact Hub</span>
-<span class="font-label-code text-[10px] text-text-dark-secondary">Innovation &amp; Startups</span>
-</div>
-</div>
-</div>
-</div>
-</div>
+<!-- 2. CLIENTES / EMPRESAS QUE HAN TRABAJADO CONMIGO (CARRUSEL AUTOMÁTICO 2S) -->
+<section class="w-full bg-[#fbfbfe] py-14 lg:py-16 border-b border-border-slate overflow-hidden relative" id="marcas">
+  <div class="max-w-[1280px] mx-auto px-5 lg:px-8 mb-8 text-center">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary-container/10 text-primary-container mb-2.5">
+      <span class="material-symbols-outlined text-sm font-bold">verified</span>
+      <span class="font-label-pill text-xs font-bold uppercase tracking-wider">Confianza &amp; Trayectoria</span>
+    </div>
+    <h2 class="font-headline-sm text-2xl sm:text-3xl font-extrabold text-text-dark-primary tracking-tight">
+      Empresas y organizaciones que han confiado en mi trabajo
+    </h2>
+    <p class="font-body-sm text-text-dark-secondary max-w-xl mx-auto mt-1">
+      Soluciones en producción: plataformas de recaudación, sitios institucionales, e-learning y sistemas a medida.
+    </p>
+  </div>
+
+  <!-- Carrusel Viewport con Gradientes Laterales y Controles -->
+  <div class="relative max-w-[1400px] mx-auto px-4 sm:px-12 group/carousel">
+    <!-- Gradient Scrim Left -->
+    <div class="absolute left-0 sm:left-6 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-[#fbfbfe] to-transparent z-10 pointer-events-none"></div>
+    <!-- Gradient Scrim Right -->
+    <div class="absolute right-0 sm:right-6 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-[#fbfbfe] to-transparent z-10 pointer-events-none"></div>
+
+    <!-- Prev / Next Navigation Buttons -->
+    <button id="brandPrevBtn" aria-label="Marca anterior" class="absolute left-1 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white shadow-lg border border-border-slate flex items-center justify-center text-text-dark-primary hover:text-primary-container transition-all hover:scale-110 opacity-70 group-hover/carousel:opacity-100 hover:shadow-xl">
+      <span class="material-symbols-outlined text-2xl">chevron_left</span>
+    </button>
+    <button id="brandNextBtn" aria-label="Siguiente marca" class="absolute right-1 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white shadow-lg border border-border-slate flex items-center justify-center text-text-dark-primary hover:text-primary-container transition-all hover:scale-110 opacity-70 group-hover/carousel:opacity-100 hover:shadow-xl">
+      <span class="material-symbols-outlined text-2xl">chevron_right</span>
+    </button>
+
+    <!-- Carousel Overflow Viewport -->
+    <div id="brandCarouselViewport" class="overflow-hidden select-none py-2">
+      <div id="brandCarouselTrack" class="flex items-center gap-6 will-change-transform" style="transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);">
+        <!-- 1. CEP -->
+        <div class="brand-slide flex-shrink-0 w-[220px] sm:w-[250px] md:w-[270px]">
+          <div class="h-28 sm:h-32 px-5 py-4 bg-white rounded-2xl border border-border-slate/80 shadow-sm hover:shadow-md hover:border-primary-container/40 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
+            <div class="h-14 sm:h-16 w-full flex items-center justify-center">
+              <img src="assets/images/marcas/cep.png" alt="CEP - Centro de Educación Popular" class="max-h-full max-w-[170px] object-contain filter group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            </div>
+            <span class="text-[11px] font-label-code font-bold text-text-dark-secondary group-hover:text-primary-container transition-colors tracking-wide text-center truncate max-w-full">
+              CEP
+            </span>
+          </div>
+        </div>
+        <!-- 2. logogonzaga -->
+        <div class="brand-slide flex-shrink-0 w-[220px] sm:w-[250px] md:w-[270px]">
+          <div class="h-28 sm:h-32 px-5 py-4 bg-white rounded-2xl border border-border-slate/80 shadow-sm hover:shadow-md hover:border-primary-container/40 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
+            <div class="h-14 sm:h-16 w-full flex items-center justify-center">
+              <img src="assets/images/marcas/logogonzaga.png" alt="Colegio Gonzaga" class="max-h-full max-w-[170px] object-contain filter group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            </div>
+            <span class="text-[11px] font-label-code font-bold text-text-dark-secondary group-hover:text-primary-container transition-colors tracking-wide text-center truncate max-w-full">
+              Colegio Gonzaga
+            </span>
+          </div>
+        </div>
+        <!-- 3. ven_color_h (Fe y Alegría) -->
+        <div class="brand-slide flex-shrink-0 w-[220px] sm:w-[250px] md:w-[270px]">
+          <div class="h-28 sm:h-32 px-5 py-4 bg-white rounded-2xl border border-border-slate/80 shadow-sm hover:shadow-md hover:border-primary-container/40 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
+            <div class="h-14 sm:h-16 w-full flex items-center justify-center">
+              <img src="assets/images/marcas/ven_color_h.png" alt="Fe y Alegría Venezuela" class="max-h-full max-w-[170px] object-contain filter group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            </div>
+            <span class="text-[11px] font-label-code font-bold text-text-dark-secondary group-hover:text-primary-container transition-colors tracking-wide text-center truncate max-w-full">
+              Fe y Alegría
+            </span>
+          </div>
+        </div>
+        <!-- 4. Logo Beca a un estudiante -->
+        <div class="brand-slide flex-shrink-0 w-[220px] sm:w-[250px] md:w-[270px]">
+          <div class="h-28 sm:h-32 px-5 py-4 bg-white rounded-2xl border border-border-slate/80 shadow-sm hover:shadow-md hover:border-primary-container/40 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
+            <div class="h-14 sm:h-16 w-full flex items-center justify-center">
+              <img src="assets/images/marcas/Logo%20Beca%20a%20Un%20Estudiante%202025-color%20grande.png" alt="Beca a un Estudiante - Fe y Alegría" class="max-h-full max-w-[170px] object-contain filter group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            </div>
+            <span class="text-[11px] font-label-code font-bold text-text-dark-secondary group-hover:text-primary-container transition-colors tracking-wide text-center truncate max-w-full">
+              Beca a un Estudiante
+            </span>
+          </div>
+        </div>
+        <!-- 5. cide eventos -->
+        <div class="brand-slide flex-shrink-0 w-[220px] sm:w-[250px] md:w-[270px]">
+          <div class="h-28 sm:h-32 px-5 py-4 bg-white rounded-2xl border border-border-slate/80 shadow-sm hover:shadow-md hover:border-primary-container/40 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
+            <div class="h-14 sm:h-16 w-full flex items-center justify-center">
+              <img src="assets/images/marcas/cide-eventos.png" alt="CIDE Eventos" class="max-h-full max-w-[170px] object-contain filter group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            </div>
+            <span class="text-[11px] font-label-code font-bold text-text-dark-secondary group-hover:text-primary-container transition-colors tracking-wide text-center truncate max-w-full">
+              CIDE Eventos
+            </span>
+          </div>
+        </div>
+        <!-- 6. ciicep -->
+        <div class="brand-slide flex-shrink-0 w-[220px] sm:w-[250px] md:w-[270px]">
+          <div class="h-28 sm:h-32 px-5 py-4 bg-white rounded-2xl border border-border-slate/80 shadow-sm hover:shadow-md hover:border-primary-container/40 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
+            <div class="h-14 sm:h-16 w-full flex items-center justify-center">
+              <img src="assets/images/marcas/logoCIICEP2.webp" alt="CIICEP" class="max-h-full max-w-[170px] object-contain filter group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            </div>
+            <span class="text-[11px] font-label-code font-bold text-text-dark-secondary group-hover:text-primary-container transition-colors tracking-wide text-center truncate max-w-full">
+              CIICEP
+            </span>
+          </div>
+        </div>
+        <!-- 7. Editorial crisalidas -->
+        <div class="brand-slide flex-shrink-0 w-[220px] sm:w-[250px] md:w-[270px]">
+          <div class="h-28 sm:h-32 px-5 py-4 bg-white rounded-2xl border border-border-slate/80 shadow-sm hover:shadow-md hover:border-primary-container/40 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
+            <div class="h-14 sm:h-16 w-full flex items-center justify-center">
+              <img src="assets/images/marcas/editorialcrisalidas.png" alt="Editorial Crisálidas" class="max-h-full max-w-[170px] object-contain filter group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            </div>
+            <span class="text-[11px] font-label-code font-bold text-text-dark-secondary group-hover:text-primary-container transition-colors tracking-wide text-center truncate max-w-full">
+              Editorial Crisálidas
+            </span>
+          </div>
+        </div>
+        <!-- 8. ingedaca -->
+        <div class="brand-slide flex-shrink-0 w-[220px] sm:w-[250px] md:w-[270px]">
+          <div class="h-28 sm:h-32 px-5 py-4 bg-white rounded-2xl border border-border-slate/80 shadow-sm hover:shadow-md hover:border-primary-container/40 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
+            <div class="h-14 sm:h-16 w-full flex items-center justify-center">
+              <img src="assets/images/marcas/INGEDACA-Logo-Mobil.svg" alt="Ingedaca C.A." class="max-h-full max-w-[170px] object-contain filter group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            </div>
+            <span class="text-[11px] font-label-code font-bold text-text-dark-secondary group-hover:text-primary-container transition-colors tracking-wide text-center truncate max-w-full">
+              Ingedaca
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dots Indicator -->
+    <div id="brandCarouselDots" class="flex items-center justify-center gap-1.5 mt-5"></div>
+  </div>
 </section>
 <!-- 3. SECTION: SERVICIOS (4-card Grid) -->
 <section class="w-full bg-[#f8f9fd] py-20 lg:py-28" id="servicios">
@@ -1498,6 +1536,200 @@
       closeVideoModal();
     }
   });
+
+  // Dynamic Hero Rotating Text (Smooth, No-Clipping, Fluid Transition)
+  (function initHeroRotator() {
+    const rotatingEl = document.getElementById('heroRotatingWord');
+    if (!rotatingEl) return;
+
+    const phrases = [
+      { text: "Sitios Web", color: "#70efde" },
+      { text: "Sistemas a tu Medida", color: "#00f5d4" },
+      { text: "Automatizaciones IA", color: "#70efde" },
+      { text: "Pasarelas de Pagos", color: "#00f5d4" }
+    ];
+
+    let current = 0;
+
+    setInterval(() => {
+      // Step 1: Smoothly fade and drift upward
+      rotatingEl.style.transition = 'opacity 0.35s ease-out, transform 0.35s ease-out';
+      rotatingEl.style.opacity = '0';
+      rotatingEl.style.transform = 'translateY(-12px)';
+
+      setTimeout(() => {
+        current = (current + 1) % phrases.length;
+        const next = phrases[current];
+
+        // Step 2: Swap content and color while invisible, reposition below
+        rotatingEl.textContent = next.text;
+        rotatingEl.style.color = next.color;
+        rotatingEl.style.transition = 'none';
+        rotatingEl.style.transform = 'translateY(12px)';
+        rotatingEl.style.opacity = '0';
+
+        // Force reflow
+        void rotatingEl.offsetHeight;
+
+        // Step 3: Glide smoothly into normal position
+        rotatingEl.style.transition = 'opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+        rotatingEl.style.opacity = '1';
+        rotatingEl.style.transform = 'translateY(0)';
+      }, 360);
+    }, 2400);
+  })();
+
+  // 2-Second Brand Logo Carousel with Seamless Loop
+  (function initBrandCarousel() {
+    const track = document.getElementById('brandCarouselTrack');
+    const viewport = document.getElementById('brandCarouselViewport');
+    const prevBtn = document.getElementById('brandPrevBtn');
+    const nextBtn = document.getElementById('brandNextBtn');
+    const dotsContainer = document.getElementById('brandCarouselDots');
+    if (!track || !viewport) return;
+
+    const originalSlides = Array.from(track.querySelectorAll('.brand-slide'));
+    const totalOriginal = originalSlides.length;
+    if (totalOriginal === 0) return;
+
+    // Clone all slides once to ensure seamless infinite looping
+    originalSlides.forEach(slide => {
+      const clone = slide.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    });
+
+    // Create 8 dots
+    if (dotsContainer) {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalOriginal; i++) {
+        const dot = document.createElement('button');
+        dot.className = `h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-[#FF2E93] w-6' : 'bg-gray-300 w-2 hover:bg-gray-400'}`;
+        dot.setAttribute('aria-label', `Ir a marca ${i + 1}`);
+        dot.addEventListener('click', () => {
+          goToIndex(i);
+          resetAutoPlay();
+        });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateDots(activeIdx) {
+      if (!dotsContainer) return;
+      const dots = dotsContainer.children;
+      for (let i = 0; i < dots.length; i++) {
+        if (i === (activeIdx % totalOriginal)) {
+          dots[i].className = 'w-6 h-2 rounded-full bg-[#FF2E93] transition-all duration-300';
+        } else {
+          dots[i].className = 'w-2 h-2 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300';
+        }
+      }
+    }
+
+    let currentIndex = 0;
+    let isTransitioning = false;
+    let autoPlayTimer = null;
+
+    function getStepWidth() {
+      const firstSlide = track.querySelector('.brand-slide');
+      if (!firstSlide) return 260;
+      const style = window.getComputedStyle(track);
+      const gap = parseFloat(style.gap) || 24;
+      return firstSlide.getBoundingClientRect().width + gap;
+    }
+
+    function moveTo(index, withTransition = true) {
+      const stepWidth = getStepWidth();
+      if (withTransition) {
+        track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+        isTransitioning = true;
+      } else {
+        track.style.transition = 'none';
+        isTransitioning = false;
+      }
+      track.style.transform = `translateX(-${index * stepWidth}px)`;
+      updateDots(index);
+    }
+
+    function nextSlide() {
+      if (isTransitioning) return;
+      currentIndex++;
+      moveTo(currentIndex, true);
+    }
+
+    function prevSlide() {
+      if (isTransitioning) return;
+      if (currentIndex === 0) {
+        // Jump to cloned equivalent without transition
+        currentIndex = totalOriginal;
+        moveTo(currentIndex, false);
+        void track.offsetHeight; // reflow
+      }
+      currentIndex--;
+      moveTo(currentIndex, true);
+    }
+
+    function goToIndex(index) {
+      if (isTransitioning) return;
+      currentIndex = index;
+      moveTo(currentIndex, true);
+    }
+
+    track.addEventListener('transitionend', () => {
+      isTransitioning = false;
+      // If we slid past the 8 original slides into the clones:
+      if (currentIndex >= totalOriginal) {
+        currentIndex = currentIndex % totalOriginal;
+        moveTo(currentIndex, false); // Snap back invisibly to original
+      }
+    });
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      // EXACTLY every 2 seconds as requested by the user
+      autoPlayTimer = setInterval(() => {
+        nextSlide();
+      }, 2000);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+    }
+
+    function resetAutoPlay() {
+      stopAutoPlay();
+      startAutoPlay();
+    }
+
+    // Attach event listeners
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+      });
+    }
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+      });
+    }
+
+    // Pause on hover
+    viewport.addEventListener('mouseenter', stopAutoPlay);
+    viewport.addEventListener('mouseleave', startAutoPlay);
+
+    // Responsive resize handler
+    window.addEventListener('resize', () => {
+      moveTo(currentIndex, false);
+    });
+
+    // Start auto carousel immediately
+    startAutoPlay();
+  })();
 </script>
 
 </body></html>
