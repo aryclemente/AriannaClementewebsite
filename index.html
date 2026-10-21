@@ -24,18 +24,19 @@
 
     /* Animated text rotation / typing effect */
     @keyframes textSlide {
-      0%, 20% { transform: translateY(0%); opacity: 1; }
-      25%, 45% { transform: translateY(-25%); opacity: 1; }
-      50%, 70% { transform: translateY(-50%); opacity: 1; }
-      75%, 95% { transform: translateY(-75%); opacity: 1; }
-      100% { transform: translateY(0%); opacity: 1; }
+      0%, 20% { transform: translateY(0%); }
+      25%, 45% { transform: translateY(-25%); }
+      50%, 70% { transform: translateY(-50%); }
+      75%, 95% { transform: translateY(-75%); }
+      100% { transform: translateY(0%); }
     }
 
     .rotating-words-wrapper {
-      display: inline-block;
-      height: 1.25em;
+      display: inline-flex;
+      height: 1.35em;
+      line-height: 1.35em;
       overflow: hidden;
-      vertical-align: bottom;
+      vertical-align: -0.22em;
       position: relative;
     }
 
@@ -43,6 +44,15 @@
       display: flex;
       flex-direction: column;
       animation: textSlide 9s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    }
+
+    .rotating-words > span {
+      display: flex;
+      align-items: center;
+      height: 1.35em;
+      line-height: 1.35em;
+      box-sizing: border-box;
+      white-space: nowrap;
     }
 
     #ctaHablemosBtn, #ctaHablemosBtn *, .cta-hablemos, .cta-hablemos * {
@@ -254,30 +264,34 @@
 </div>
 
 <main class="w-full pt-20">
-<!-- 1. HERO SECTION (Solid Deep Electric Purple #4d17d6) -->
-<section class="relative w-full bg-[#4d17d6] text-clean-white overflow-hidden py-16 lg:py-24" id="inicio">
+<!-- 1. HERO SECTION (Vibrant Purple to Pink Gradient) -->
+<section class="relative w-full bg-[linear-gradient(135deg,#1b0230_0%,#3d087b_40%,#6b0b8a_70%,#b80058_100%)] text-clean-white overflow-hidden py-16 lg:py-24" id="inicio">
+<!-- Atmospheric Ambient Glows -->
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#FF2E93]/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-[#4d17d6]/30 blur-3xl pointer-events-none"></div>
 <!-- Subtle Technical Overlay Grid -->
 <div class="absolute inset-0 pointer-events-none opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
 <div class="relative max-w-[1280px] mx-auto px-5 lg:px-8">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 <!-- Hero Left Column (7 cols) -->
 <div class="lg:col-span-7 flex flex-col items-start gap-6">
 <!-- High-Contrast White Pill Badge -->
-<div class="bg-white text-[#4d17d6] font-bold px-4 py-1.5 rounded-full shadow-sm inline-flex items-center gap-2">
-<span class="material-symbols-outlined text-sm font-bold text-[#FF2E93]">verified</span>
-<span class="font-label-pill text-xs uppercase tracking-wider font-extrabold text-[#4d17d6]">
-                Solutions Architect &amp; Tech Lead
+<div class="bg-white/95 text-[#4d17d6] font-bold px-4 py-1.5 rounded-full shadow-md inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-sm font-bold text-[#FF2E93]">terminal</span>
+<span class="font-label-pill text-xs tracking-wide font-extrabold text-[#4d17d6]">
+                I code ideas to solve problems in software
               </span>
 </div>
 <!-- Dynamic Animated Headline -->
-<h1 class="font-display-hero text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-clean-white leading-[1.15] tracking-tight">
+<h1 class="font-display-hero text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-clean-white leading-[1.2] tracking-tight">
               ¡Hola! Soy Arianna y construyo <br class="hidden sm:inline">
-<span class="text-secondary-container rotating-words-wrapper">
+<span class="rotating-words-wrapper text-secondary-container">
 <span class="rotating-words">
 <span class="text-secondary-container">Sitios Web</span>
+<span class="text-mint-turquoise">Sistemas a tu Medida</span>
+<span class="text-secondary-container">Automatizaciones IA</span>
 <span class="text-mint-turquoise">Pasarelas de Pagos</span>
-<span class="text-secondary-container">Sistemas a tu Medida</span>
-<span class="text-mint-turquoise">Automatizaciones IA</span>
 </span>
 </span>
 </h1>
@@ -291,71 +305,61 @@
 <span class="">¡Hablemos de tu Proyecto!</span>
 <span class="material-symbols-outlined text-lg">arrow_forward</span>
 </a>
-<a class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-clean-white font-headline-sm font-semibold px-6 py-3.5 rounded-xl border border-white/20 transition-all text-base backdrop-blur-sm" href="#proyectos">
-<span class="material-symbols-outlined text-base text-secondary-container">layers</span>
-<span class="">Ver Proyectos</span>
+<a class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-clean-white font-headline-sm font-semibold px-6 py-3.5 rounded-xl border border-white/20 transition-all text-base backdrop-blur-sm" href="portafolio.html">
+<span class="material-symbols-outlined text-base text-secondary-container">folder_open</span>
+<span class="">Ver Portafolio</span>
 </a>
-</div>
-<!-- Trust / Performance Metrics -->
-<div class="pt-4 flex flex-wrap items-center gap-y-3 gap-x-6 border-t border-white/15 w-full">
-<div class="flex items-center gap-2">
-<span class="h-2.5 w-2.5 rounded-full bg-secondary-container shadow-[0_0_8px_rgba(0,227,253,0.8)]"></span>
-<span class="font-label-code text-xs sm:text-sm font-medium text-white">99.9% Uptime garantizado</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="h-2.5 w-2.5 rounded-full bg-mint-turquoise shadow-[0_0_8px_rgba(0,210,180,0.8)]"></span>
-<span class="font-label-code text-xs sm:text-sm font-medium text-white">+45% Eficiencia operativa</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="h-2.5 w-2.5 rounded-full bg-secondary-container shadow-[0_0_8px_rgba(0,227,253,0.8)]"></span>
-<span class="font-label-code text-xs sm:text-sm font-medium text-white">Sub-second latency</span>
-</div>
 </div>
 </div>
 <!-- Hero Right Column: Arianna's Real Photo with Badges (5 cols) -->
 <div class="lg:col-span-5 relative flex justify-center">
 <!-- Framing Container -->
-<div class="relative w-full max-w-[420px] rounded-3xl p-3 bg-dark-violet/40 shadow-2xl border border-white/10">
+<div class="relative w-full max-w-[430px] rounded-3xl p-3 bg-dark-violet/40 shadow-2xl border border-white/10">
 <!-- Real Photo Card Frame -->
-<div class="relative w-full h-[490px] sm:h-[530px] rounded-2xl overflow-hidden bg-dark-violet shadow-inner">
-<img alt="Arianna Clemente - Solutions Architect &amp; Tech Lead" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700 ease-out" src="assets/images/arianna_hero.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuAPFFOVI5PupeLTfuH7hnTKVioiEX-F_56p2Kci6q0GuaCwTw2geon5hycz1n7NkUt0eKjByVhZRDXQHxs8r-NfpcZ9Ry4xFbDpwA6cZM5N_QqDjXHFv-_Akn_8C2xLQ14TtXLLVTyOKkmIcqsUe6JGar5ijs7otEo3HflaK20MpjMnYe7ya1JPJJ4WJCGutzkwfHx6J7TBXTbOlVvWadDp8fDau8NWC5d4g2RM3YfiavIWLiqKZ81ruLjuSe2ljjtNQA'">
-<!-- Subtle Gradient Scrim -->
-<div class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-dark-violet/90 via-dark-violet/30 to-transparent pointer-events-none"></div>
-<!-- Bottom text badge directly on photo -->
-<div class="absolute bottom-4 left-4 right-4 text-center sm:text-left">
-<div class="bg-dark-violet/85 backdrop-blur-md rounded-xl p-3 border border-white/10 shadow-lg">
+<div class="relative w-full h-[500px] sm:h-[540px] rounded-2xl overflow-hidden bg-[#1b0230] shadow-inner">
+<img alt="Arianna Clemente - Ingeniera Informática &amp; Full-Stack Specialist" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700 ease-out" src="assets/images/arianna_hero.jpg">
+<!-- Left blend gradient scrim (Requirement 7: unifica fondo e imagen a la izquierda) -->
+<div class="absolute inset-y-0 left-0 w-32 sm:w-44 bg-gradient-to-r from-[#1b0230] via-[#1b0230]/60 to-transparent pointer-events-none z-10"></div>
+<!-- Bottom blend gradient scrim for readable bottom badge -->
+<div class="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#150126] via-[#150126]/75 to-transparent pointer-events-none z-10"></div>
+<!-- Bottom text badge directly on photo (CV info) -->
+<div class="absolute bottom-4 left-4 right-4 text-center sm:text-left z-20">
+<div class="bg-dark-violet/90 backdrop-blur-md rounded-xl p-3 border border-white/10 shadow-lg">
+<div class="flex items-center justify-between">
 <p class="text-clean-white font-headline-sm text-sm font-bold">Arianna Clemente</p>
-<p class="text-secondary-container font-label-code text-xs">Solutions Architect • Full-Stack Specialist</p>
+<span class="text-[10px] font-label-code bg-mint-turquoise/20 text-mint-turquoise px-2 py-0.5 rounded-full font-bold">Ingeniera Informática</span>
+</div>
+<p class="text-secondary-container font-label-code text-xs mt-0.5">Especialista Full-Stack, WordPress &amp; Sistemas Cloud</p>
 </div>
 </div>
 </div>
 <!-- FLOATING HIGH-CONTRAST TECH BADGES -->
-<!-- 1. Top-Left: Solutions Architect Tag -->
-<div class="absolute -top-3 -left-3 hidden sm:flex items-center gap-2 bg-dark-violet/95 text-clean-white px-3.5 py-2 rounded-full shadow-2xl border border-secondary-container/40 backdrop-blur-md">
-<span class="material-symbols-outlined text-secondary-container text-base">bolt</span>
-<span class="font-label-pill text-xs font-bold text-secondary-container tracking-wider">#SolutionsArchitect</span>
+<!-- 1. Top-Left: +5 Años de Experiencia -->
+<div class="absolute -top-3 -left-3 hidden sm:flex items-center gap-2 bg-dark-violet/95 text-clean-white px-4 py-2 rounded-full shadow-2xl border border-secondary-container/40 backdrop-blur-md z-20">
+<span class="material-symbols-outlined text-secondary-container text-base">workspace_premium</span>
+<span class="font-label-pill text-xs font-bold text-clean-white tracking-wider">+5 Años de Experiencia</span>
 </div>
-<!-- 2. Top-Right: UX/UI & Systems -->
-<div class="absolute top-8 -right-4 hidden sm:flex items-center gap-2 bg-dark-violet/95 text-clean-white px-4 py-2 rounded-full shadow-2xl border border-mint-turquoise/40 backdrop-blur-md">
-<span class="material-symbols-outlined text-mint-turquoise text-base">dashboard_customize</span>
-<span class="font-label-pill text-xs font-semibold text-clean-white">UX/UI &amp; Systems</span>
+<!-- 2. Top-Right: Desarrollo Web & UX/UI -->
+<div class="absolute top-8 -right-4 hidden sm:flex items-center gap-2 bg-dark-violet/95 text-clean-white px-4 py-2 rounded-full shadow-2xl border border-mint-turquoise/40 backdrop-blur-md z-20">
+<span class="material-symbols-outlined text-mint-turquoise text-base">code</span>
+<span class="font-label-pill text-xs font-semibold text-clean-white">Desarrollo Web &amp; UX/UI</span>
 </div>
-<!-- 3. Bottom-Left: Laravel & Modern Stack -->
-<div class="absolute bottom-24 -left-5 hidden sm:flex items-center gap-2.5 bg-dark-violet/95 text-clean-white px-4 py-2.5 rounded-2xl shadow-2xl border border-white/15 backdrop-blur-md">
+<!-- 3. Bottom-Left: Arquitectura Laravel, PHP & Cloud -->
+<div class="absolute bottom-28 -left-5 hidden sm:flex items-center gap-2.5 bg-dark-violet/95 text-clean-white px-4 py-2.5 rounded-2xl shadow-2xl border border-white/15 backdrop-blur-md z-20">
 <span class="flex h-2.5 w-2.5 rounded-full bg-mint-turquoise animate-pulse"></span>
 <div class="flex flex-col">
-<span class="font-label-code text-[11px] text-secondary-container uppercase">Arquitectura</span>
-<span class="font-headline-sm text-xs font-bold text-clean-white">Laravel &amp; Modern Stack</span>
+<span class="font-label-code text-[11px] text-secondary-container uppercase font-bold tracking-wider">Arquitectura</span>
+<span class="font-headline-sm text-xs font-bold text-clean-white">Laravel, PHP &amp; Cloud</span>
 </div>
 </div>
-<!-- 4. Bottom-Right: 100% Uptime -->
-<div class="absolute -bottom-3 -right-3 flex items-center gap-2.5 bg-dark-violet text-clean-white px-4 py-2.5 rounded-2xl shadow-2xl border border-secondary-container/40 backdrop-blur-lg">
-<div class="w-7 h-7 rounded-lg bg-secondary-container/20 flex items-center justify-center text-secondary-container">
+<!-- 4. Bottom-Right: Gancho de Proyectos en Español -->
+<div class="absolute -bottom-3 -right-3 flex items-center gap-2.5 bg-dark-violet/95 text-clean-white px-4 py-2.5 rounded-2xl shadow-2xl border border-mint-turquoise/40 backdrop-blur-lg z-20">
+<div class="w-8 h-8 rounded-lg bg-mint-turquoise/20 flex items-center justify-center text-mint-turquoise">
 <span class="material-symbols-outlined text-base">verified</span>
 </div>
 <div class="flex flex-col">
-<span class="font-label-pill text-[11px] text-mint-turquoise font-extrabold uppercase tracking-wider">100% Uptime</span>
-<span class="font-label-code text-[11px] text-primary-fixed-dim">Zero-downtime deploys</span>
+<span class="font-label-pill text-xs text-mint-turquoise font-extrabold uppercase tracking-wider">+20 Proyectos Desplegados</span>
+<span class="font-label-code text-[11px] text-primary-fixed-dim font-medium">WordPress, Laravel &amp; Cloud</span>
 </div>
 </div>
 </div>
