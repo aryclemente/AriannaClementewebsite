@@ -104,3 +104,50 @@ Lista principal de tecnologías y herramientas dominadas:
 - [ ] Traducir/revisar los contenidos para el modo bilingüe (Español / Inglés).
 
 ---
+
+## 5. Estado Actual del Sitio Web, Secciones Ocultas y Próximos Pasos (Roadmap)
+
+### 5.1. Enfoque Estratégico Vigente: Orientación a Reclutadores (Hiring / Tech Lead)
+Actualmente, el sitio web prioriza la captación y evaluación por parte de **reclutadores técnicos, hiring managers y líderes de ingeniería** (en lugar de venta directa de servicios a clientes finales):
+* **CTAs adaptados:** "Ver Perfil", "Conversar sobre mi Perfil", "Evaluemos mi perfil para tu equipo o vacante técnica".
+* **Modalidad y Disponibilidad:** Inmediata / Full-Time, Remoto internacional o Híbrido, Contractor o Nómina directa.
+* **Canal de Contacto Principal:** `hello.ary.code@gmail.com` y WhatsApp directo.
+* **Redes Sociales Activas en Footer:**
+  * LinkedIn: [https://www.linkedin.com/in/aryclement/](https://www.linkedin.com/in/aryclement/)
+  * YouTube: [https://www.youtube.com/](https://www.youtube.com/)
+  *(X/Twitter, Instagram y TikTok permanecen temporalmente ocultos).*
+
+---
+
+### 5.2. Secciones Temporalmente Ocultas (Backlog para Próximas Fases)
+Las siguientes secciones se encuentran implementadas en el código pero ocultas (`display: none`) para mantener el foco en empleabilidad y portafolio técnico:
+
+1. **Sección: ¿Cómo es trabajar conmigo? (`#metodologia`):**
+   * Metodología de trabajo en 4 pasos (Diagnóstico & Blueprint, Prototipado & UX/UI, Desarrollo & Despliegue, Capacitación & Soporte).
+   * *Acción futura:* Adaptar el contenido con la nueva imagen `arianna_why_me.png` y reactivarla cuando se habilite la oferta comercial a clientes y empresas.
+2. **Sección: Blog & Recursos de Ingeniería (`#blog`):**
+   * Artículos técnicos sobre arquitectura cloud, automatización con IA y comparativas de desarrollo.
+   * *Acción futura:* Redactar y vincular artículos reales o posts de LinkedIn/Medium antes de reactivar la sección.
+3. **Casos de Estudio Detallados en Formato S.T.A.R en Homepage:**
+   * Reemplazados temporalmente en la portada principal por un panel ágil de **4 Categorías Técnicas** que redirigen a los portafolios activos.
+   * *Acción futura:* Mantener los casos STAR en sus respectivas subpáginas de portafolio y reintroducir destacados interactivos.
+
+---
+
+### 5.3. Sistema de Modal Drawer Lateral para Servicios
+* Se implementó una **ventana modal / slide-over drawer** a la derecha que se despliega al hacer clic en los botones de servicios.
+* **Inspiración y Maquetación:** Basado en la referencia visual solicitada (cabecera violeta oscura `#19022c`, badge "Volver al listado", botón "Compartir", tarjeta de estimación técnica en amarillo/ámbar, bloque de "Detalles Clave" en morado oscuro, checklist con checks verdes y barra de acción fija inferior con botón de favoritos ❤️).
+* **Estructura de Datos Modular:**
+  * Los datos residen en el objeto JavaScript `servicesData` en `index.html`.
+  * **Pendiente por el usuario:** Suministrar el archivo detallado de servicios con el contenido final de cada uno (Desarrollo a Medida, WordPress Pro, Repositorios/DSpace y Marketing/IA) para volcarlo de forma definitiva.
+
+---
+
+### 5.4. Próximos Pasos (Checklist de Tareas Pendientes)
+
+- [ ] **Archivo de Servicios Detallado:** Recibir y procesar el documento con el detalle fino de cada servicio para sincronizarlo con el drawer lateral.
+- [ ] **Curriculum Vitae (CV) Descargable:** Subir el PDF actualizado de Arianna Clemente y enlazarlo en el header y sección de contacto.
+- [ ] **Configurador con IA:** Implementar la integración con la API de Gemini para el analizador de vacantes técnicas en el portafolio.
+- [ ] **Reactivación de "¿Cómo es trabajar conmigo?":** Integrar `assets/images/arianna_why_me.png` y ajustar copy a la propuesta de valor final.
+- [ ] **Reactivación del Blog:** Publicar los primeros 3 posts técnicos sobre Laravel 11, optimización de Core Web Vitals y agentes LLM.
+- [ ] **Redes Sociales Secundarias:** Reactivar X/Twitter, Instagram y TikTok una vez que los perfiles profesionales de marca estén 100% listos.
