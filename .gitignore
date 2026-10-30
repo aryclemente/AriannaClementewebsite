@@ -4,3 +4,9 @@ dist/
 .DS_Store
 npm-debug.log
 package-lock.json
+
+# Remotion temporary frames & build outputs
+assets/videos/temp_frames/
+assets/videos/scratch_cep/
+assets/videos/out/
+

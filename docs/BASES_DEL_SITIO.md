@@ -105,49 +105,67 @@ Lista principal de tecnologías y herramientas dominadas:
 
 ---
 
-## 5. Estado Actual del Sitio Web, Secciones Ocultas y Próximos Pasos (Roadmap)
+## 5. Cambios del sitio web
 
-### 5.1. Enfoque Estratégico Vigente: Orientación a Reclutadores (Hiring / Tech Lead)
-Actualmente, el sitio web prioriza la captación y evaluación por parte de **reclutadores técnicos, hiring managers y líderes de ingeniería** (en lugar de venta directa de servicios a clientes finales):
-* **CTAs adaptados:** "Ver Perfil", "Conversar sobre mi Perfil", "Evaluemos mi perfil para tu equipo o vacante técnica".
-* **Modalidad y Disponibilidad:** Inmediata / Full-Time, Remoto internacional o Híbrido, Contractor o Nómina directa.
-* **Canal de Contacto Principal:** `hello.ary.code@gmail.com` y WhatsApp directo.
-* **Redes Sociales Activas en Footer:**
-  * LinkedIn: [https://www.linkedin.com/in/aryclement/](https://www.linkedin.com/in/aryclement/)
-  * YouTube: [https://www.youtube.com/](https://www.youtube.com/)
-  *(X/Twitter, Instagram y TikTok permanecen temporalmente ocultos).*
+Muy bien, ahora vamos con la pagina de inicio, en la seccion de banner hero, apliquemos los siguientes cambios:
 
----
+1. El color solido de fondo, apliquemos un degradado entre morado y rosado. 
+2. Elimina estas metricas 
+99.9% Uptime garantizado
++45% Eficiencia operativa
+Sub-second latency
+3. Cambia por la nueva imagen arianna_hero que subi en la carpeta assets/images
+4. El texto que se mueve Sitio we, automatizaciones, sistemas a tu medida, tiene el tamaño incorrecto, y se ve parte de las letras superiores e inferiores, corrige esto. 
+5. Cambia el boton Ver Proyectos por Ver portafolio.
+6. Cambia el subtitulo Solutions Architect & Tech Lead por I code ideas to solve problems in software.
 
-### 5.2. Secciones Temporalmente Ocultas (Backlog para Próximas Fases)
-Las siguientes secciones se encuentran implementadas en el código pero ocultas (`display: none`) para mantener el foco en empleabilidad y portafolio técnico:
+Ahora ve a la seccion de porque trabajar conmigo, y vamos a hacer lo mismo, aplicar los cambios de estilos y contenido, para que se vea como en la imagen, la nueva imagen es arianna_why_me.png que esta en la carpeta assets/images. 
 
-1. **Sección: ¿Cómo es trabajar conmigo? (`#metodologia`):**
-   * Metodología de trabajo en 4 pasos (Diagnóstico & Blueprint, Prototipado & UX/UI, Desarrollo & Despliegue, Capacitación & Soporte).
-   * *Acción futura:* Adaptar el contenido con la nueva imagen `arianna_why_me.png` y reactivarla cuando se habilite la oferta comercial a clientes y empresas.
-2. **Sección: Blog & Recursos de Ingeniería (`#blog`):**
-   * Artículos técnicos sobre arquitectura cloud, automatización con IA y comparativas de desarrollo.
-   * *Acción futura:* Redactar y vincular artículos reales o posts de LinkedIn/Medium antes de reactivar la sección.
-3. **Casos de Estudio Detallados en Formato S.T.A.R en Homepage:**
-   * Reemplazados temporalmente en la portada principal por un panel ágil de **4 Categorías Técnicas** que redirigen a los portafolios activos.
-   * *Acción futura:* Mantener los casos STAR en sus respectivas subpáginas de portafolio y reintroducir destacados interactivos.
 
----
+Excelente! Ahora vamos a la seccion de empresas que han trabajado conmigo,tenemos logos, estan en la carpeta assets/images/marcas/ los nombres son: .
+1. CEP
+2. logogonzaga
+3. ven_color_h
+4. Logo Beca a un estudiante
+5. cide eventos
+6. ciicep
+7. Editorial crisalidas
+8. ingedaca
 
-### 5.3. Sistema de Modal Drawer Lateral para Servicios
-* Se implementó una **ventana modal / slide-over drawer** a la derecha que se despliega al hacer clic en los botones de servicios.
-* **Inspiración y Maquetación:** Basado en la referencia visual solicitada (cabecera violeta oscura `#19022c`, badge "Volver al listado", botón "Compartir", tarjeta de estimación técnica en amarillo/ámbar, bloque de "Detalles Clave" en morado oscuro, checklist con checks verdes y barra de acción fija inferior con botón de favoritos ❤️).
-* **Estructura de Datos Modular:**
-  * Los datos residen en el objeto JavaScript `servicesData` en `index.html`.
-  * **Pendiente por el usuario:** Suministrar el archivo detallado de servicios con el contenido final de cada uno (Desarrollo a Medida, WordPress Pro, Repositorios/DSpace y Marketing/IA) para volcarlo de forma definitiva.
+como son mas de 4 vamos agregar tipo carrusel, que ellas se deszlicen a medida cada 2 segundos y se repita el carrusel.
 
----
 
-### 5.4. Próximos Pasos (Checklist de Tareas Pendientes)
+Vamos a rediseñar el portafolio de Wordpress, el primero proyecto el del gonzaga. 
 
-- [ ] **Archivo de Servicios Detallado:** Recibir y procesar el documento con el detalle fino de cada servicio para sincronizarlo con el drawer lateral.
-- [ ] **Curriculum Vitae (CV) Descargable:** Subir el PDF actualizado de Arianna Clemente y enlazarlo en el header y sección de contacto.
-- [ ] **Configurador con IA:** Implementar la integración con la API de Gemini para el analizador de vacantes técnicas en el portafolio.
-- [ ] **Reactivación de "¿Cómo es trabajar conmigo?":** Integrar `assets/images/arianna_why_me.png` y ajustar copy a la propuesta de valor final.
-- [ ] **Reactivación del Blog:** Publicar los primeros 3 posts técnicos sobre Laravel 11, optimización de Core Web Vitals y agentes LLM.
-- [ ] **Redes Sociales Secundarias:** Reactivar X/Twitter, Instagram y TikTok una vez que los perfiles profesionales de marca estén 100% listos.
+1. Vamos a cambiar el titulo de este banner ⚡ ESPECIALIDAD EN SISTEMAS CMS & WPO
+
+2. Estas metricas me parecen muy tecnicas para clientes y reclutadores. Benchmark Global
+speed
+99.8% Latencia Baja
+95+
+CWV Score
+< 1.2s
+FCP Medio
+0 Bloat
+No Heavy Builders
+Vamos a cambiarlas. 
+
+
+
+
+3. Este texto tambien me gustaria cambiarlo
+Soluciones web de alto impacto, arquitecturas optimizadas para velocidad (WPO) y desarrollo de plugins/temas a medida para ONGs e instituciones educativas.
+Quiero hablar del problema y la solucion, un antes y un despues. 
+
+4. Vamos a integrar el video del cep a la seccion del caso de estudio del CEP. Tambien la imagen cep3.jpg
+
+5. Enfoquemos la redaccion de cada caso de estudio enfocado en una que pueda entender el cliente y el reclutador. Quiero que se destaque el problema, la solucion, y el impacto que tuvo en la organizacion. En vez de tantos terminos tecnicos.
+
+6. Disponibilidad Q2/Q3 para Nuevos Proyectos
+Si se refiere a los cutrimestres o trimestres. Ya es octubre, no tiene sentido. Y lo mas importante, no tiene sentido poner disponibilidad de fechas. Si es dificil modificarlo. 
+
+7. Respuesta promedio: < 4 horas hábiles
+No incluyamos esto ahora, pero me parece bien agendar para futuras mejoras, conectar con el whatsapp bussiness, y automatizar.
+
+8. Ajustar los textos de las secciones CIDE, Beca a un estudiant y contacto para coincidir con el cliente y con menos palabras tecnicas. Vamos a enfocarnos en el Impacto.
+
