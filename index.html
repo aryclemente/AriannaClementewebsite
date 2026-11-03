@@ -11,10 +11,15 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%234d17d6'/><text x='50' y='65' font-size='48' font-weight='900' font-family='sans-serif' fill='white' text-anchor='middle'>AC</text></svg>">
 
 <title>ARYCLEMENT // Arianna Clemente - Solutions Architect &amp; Tech Lead</title>
+<link rel="stylesheet" href="dist/styles.css">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+</noscript>
 <style>
     @layer base {
       html, body { margin: 0; padding: 0; }
@@ -96,60 +101,6 @@
       border-radius: 9999px;
     }
   </style>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "surface-container-lowest": "#ffffff",
-            "text-dark-secondary": "#475569",
-            "tertiary-fixed": "#ffd9e1",
-            "border-slate": "#E2E8F0",
-            "surface-container-high": "#e7e8ec",
-            "on-surface-variant": "#484455",
-            "primary": "#3600a5",
-            "primary-container": "#4d17d6",
-            "hot-pink-vibrant": "#FF2E93",
-            "hot-pink-hover": "#E00070",
-            "surface-container-low": "#f2f3f7",
-            "clean-white": "#FFFFFF",
-            "text-dark-primary": "#0F172A",
-            "dark-violet": "#2A0845",
-            "deep-purple": "#4d17d6",
-            "secondary-container": "#00e3fd",
-            "mint-turquoise": "#00D2B4",
-            "surface": "#f8f9fd",
-            "surface-bright": "#ffffff",
-            "on-surface": "#191c1f",
-            "primary-fixed-dim": "#cabeff"
-          },
-          borderRadius: {
-            "DEFAULT": "0.25rem",
-            "lg": "0.5rem",
-            "xl": "0.75rem",
-            "2xl": "1rem",
-            "3xl": "1.5rem",
-            "full": "9999px"
-          },
-          fontFamily: {
-            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
-            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
-            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
-            "headline-xl": ["Plus Jakarta Sans", "sans-serif"],
-            "display-hero": ["Plus Jakarta Sans", "sans-serif"],
-            "body-sm": ["Inter", "sans-serif"],
-            "body-md": ["Inter", "sans-serif"],
-            "body-lg": ["Inter", "sans-serif"],
-            "body-xl": ["Inter", "sans-serif"],
-            "label-code": ["Inter", "monospace"],
-            "label-pill": ["Plus Jakarta Sans", "sans-serif"]
-          }
-        }
-      }
-    }
-  </script>
 </head>
 <body class="bg-surface font-body-md text-on-surface antialiased selection:bg-hot-pink-vibrant selection:text-white">
 <!-- HEADER / NAVBAR -->
@@ -183,69 +134,87 @@
         Inicio
       </a>
       
-      <!-- Portafolio Dropdown (Exact "Inicio" shading style on hover/active) -->
+      <!-- Portafolio Dropdown (WordPress activo, otros 'Muy pronto') -->
       <div class="relative group" id="portafolioDropdownContainer">
-        <a href="portafolio.html" class="px-3.5 py-2 font-headline-sm text-sm font-semibold text-text-dark-secondary hover:text-primary-container hover:bg-primary-container/10 rounded-xl transition-colors inline-flex items-center gap-1.5 cursor-pointer">
+        <a href="portafolio-wordpress.html" class="px-3.5 py-2 font-headline-sm text-sm font-semibold text-text-dark-secondary hover:text-primary-container hover:bg-primary-container/10 rounded-xl transition-colors inline-flex items-center gap-1.5 cursor-pointer">
           <span>Portafolio</span>
           <span class="material-symbols-outlined text-base transition-transform duration-200 group-hover:rotate-180 text-primary-container">expand_more</span>
         </a>
         
         <!-- Dropdown Menu -->
-        <div class="dropdown-menu absolute top-full left-0 pt-2 w-72 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 z-50">
+        <div class="dropdown-menu absolute top-full left-0 pt-2 w-80 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 z-50">
           <div class="bg-clean-white border border-border-slate/80 rounded-2xl shadow-xl p-2 flex flex-col gap-1">
             <div class="px-3 py-1.5 text-[11px] font-label-code font-bold uppercase tracking-wider text-text-dark-secondary border-b border-border-slate/50 mb-1 flex items-center justify-between">
               <span>Especialidades</span>
-              <span class="text-[10px] bg-primary-container/10 text-primary-container px-2 py-0.5 rounded-full font-bold">4 Áreas</span>
+              <span class="text-[10px] bg-mint-turquoise/15 text-[#006875] px-2 py-0.5 rounded-full font-bold">1 Disponible</span>
             </div>
             
-            <a href="portafolio-wordpress.html" class="px-3 py-2 font-headline-sm text-sm font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container rounded-xl transition-colors flex items-center gap-2.5">
-              <span class="material-symbols-outlined text-lg text-primary-container">web</span>
-              <div class="flex flex-col">
-                <span class="leading-tight">WordPress &amp; Sitios Web</span>
-                <span class="text-[11px] font-normal text-text-dark-secondary">WPO, CMS escolar &amp; Plugins</span>
+            <!-- WordPress (Activo) -->
+            <a href="portafolio-wordpress.html" class="px-3 py-2 font-headline-sm text-sm font-semibold text-primary-container bg-primary-container/10 rounded-xl transition-colors flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-lg text-primary-container">web</span>
+                <div class="flex flex-col">
+                  <span class="leading-tight font-bold">WordPress &amp; Sitios Web</span>
+                  <span class="text-[11px] font-normal text-text-dark-secondary">WPO, CMS escolar &amp; Plugins</span>
+                </div>
               </div>
+              <span class="text-[10px] font-label-code font-bold bg-mint-turquoise/20 text-[#006875] px-2 py-0.5 rounded-full">Activo</span>
             </a>
             
-            <a href="portafolio-fullstack.html" class="px-3 py-2 font-headline-sm text-sm font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container rounded-xl transition-colors flex items-center gap-2.5">
-              <span class="material-symbols-outlined text-lg text-primary-container">terminal</span>
-              <div class="flex flex-col">
-                <span class="leading-tight">Desarrollo Full-Stack</span>
-                <span class="text-[11px] font-normal text-text-dark-secondary">Laravel, C2P &amp; Microservicios</span>
+            <!-- Full-Stack (Desactivado) -->
+            <div class="px-3 py-2 font-headline-sm text-sm font-medium text-slate-400 bg-slate-50/70 rounded-xl flex items-center justify-between cursor-not-allowed select-none opacity-60">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-lg text-slate-400">terminal</span>
+                <div class="flex flex-col">
+                  <span class="leading-tight">Desarrollo Full-Stack</span>
+                  <span class="text-[11px] font-normal text-slate-400">Laravel, APIs &amp; Microservicios</span>
+                </div>
               </div>
-            </a>
+              <span class="text-[10px] font-label-code text-slate-500 bg-slate-200/70 px-2 py-0.5 rounded-full font-medium">Muy pronto</span>
+            </div>
             
-            <a href="portafolio-marketing.html" class="px-3 py-2 font-headline-sm text-sm font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container rounded-xl transition-colors flex items-center gap-2.5">
-              <span class="material-symbols-outlined text-lg text-primary-container">query_stats</span>
-              <div class="flex flex-col">
-                <span class="leading-tight">Marketing &amp; Analytics</span>
-                <span class="text-[11px] font-normal text-text-dark-secondary">GA4, Meta Ads &amp; Growth</span>
+            <!-- Marketing (Desactivado) -->
+            <div class="px-3 py-2 font-headline-sm text-sm font-medium text-slate-400 bg-slate-50/70 rounded-xl flex items-center justify-between cursor-not-allowed select-none opacity-60">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-lg text-slate-400">query_stats</span>
+                <div class="flex flex-col">
+                  <span class="leading-tight">Marketing &amp; Analytics</span>
+                  <span class="text-[11px] font-normal text-slate-400">GA4, Meta Ads &amp; Growth</span>
+                </div>
               </div>
-            </a>
+              <span class="text-[10px] font-label-code text-slate-500 bg-slate-200/70 px-2 py-0.5 rounded-full font-medium">Muy pronto</span>
+            </div>
             
-            <a href="portafolio-soporte.html" class="px-3 py-2 font-headline-sm text-sm font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container rounded-xl transition-colors flex items-center gap-2.5">
-              <span class="material-symbols-outlined text-lg text-primary-container">dns</span>
-              <div class="flex flex-col">
-                <span class="leading-tight">Soporte &amp; Académico</span>
-                <span class="text-[11px] font-normal text-text-dark-secondary">Revistas OJS, DSpace &amp; Moodle</span>
+            <!-- Soporte (Desactivado) -->
+            <div class="px-3 py-2 font-headline-sm text-sm font-medium text-slate-400 bg-slate-50/70 rounded-xl flex items-center justify-between cursor-not-allowed select-none opacity-60">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-lg text-slate-400">dns</span>
+                <div class="flex flex-col">
+                  <span class="leading-tight">Soporte &amp; Académico</span>
+                  <span class="text-[11px] font-normal text-slate-400">Revistas OJS, DSpace &amp; Moodle</span>
+                </div>
               </div>
-            </a>
+              <span class="text-[10px] font-label-code text-slate-500 bg-slate-200/70 px-2 py-0.5 rounded-full font-medium">Muy pronto</span>
+            </div>
             
+            <!-- Hub General (Desactivado) -->
             <div class="border-t border-border-slate/50 mt-1 pt-1">
-              <a href="portafolio.html" class="px-3 py-2 font-headline-sm text-xs font-bold text-primary-container hover:bg-primary-container/10 rounded-xl transition-colors flex items-center justify-between">
-                <span>Ver Portafolio General (Hub)</span>
-                <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
+              <div class="px-3 py-2 font-headline-sm text-xs font-medium text-slate-400 flex items-center justify-between cursor-not-allowed select-none opacity-60">
+                <span>Portafolio General (Hub)</span>
+                <span class="text-[10px] font-label-code text-slate-500 bg-slate-200/70 px-2 py-0.5 rounded-full font-medium">Muy pronto</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </nav>
     
-    <!-- Right CTA & Mobile Toggle (focused on recruiter profile) -->
+    <!-- Right CTA & Mobile Toggle (focused on calendar appointment) -->
     <div class="flex items-center gap-3">
-      <a id="ctaHablemosBtn" class="cta-hablemos inline-flex items-center justify-center bg-hot-pink-vibrant hover:bg-hot-pink-hover !text-white text-clean-white font-headline-sm text-sm md:text-base font-bold px-4 md:px-6 py-2 md:py-2.5 rounded-xl transition-all shadow-[0_8px_18px_-4px_rgba(255,46,147,0.4)] transform hover:-translate-y-0.5" href="#contacto" style="color: #ffffff !important;">
-        <span style="color: #ffffff !important;" class="text-white font-bold">Ver Perfil</span>
-      </a>
+      <button type="button" id="ctaHablemosBtn" onclick="openBookingModal()" class="cta-hablemos inline-flex items-center justify-center gap-1.5 bg-hot-pink-vibrant hover:bg-hot-pink-hover !text-white text-clean-white font-headline-sm text-sm md:text-base font-bold px-4 md:px-6 py-2 md:py-2.5 rounded-xl transition-all shadow-[0_8px_18px_-4px_rgba(255,46,147,0.4)] transform hover:-translate-y-0.5 cursor-pointer" style="color: #ffffff !important;">
+        <span class="material-symbols-outlined text-base">calendar_month</span>
+        <span style="color: #ffffff !important;" class="text-white font-bold">Agenda conmigo</span>
+      </button>
       <button id="mobileMenuBtn" aria-label="Abrir menú" class="lg:hidden p-2.5 rounded-xl bg-surface-container-low border border-border-slate text-text-dark-primary hover:text-primary-container transition">
         <span class="material-symbols-outlined text-2xl" id="menuIcon">menu</span>
       </button>
@@ -259,35 +228,46 @@
     <nav class="flex flex-col gap-2">
       <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold bg-primary-container/10 text-primary-container transition" href="#inicio">Inicio</a>
       
-      <!-- Portafolio section with 4 specialties -->
+      <!-- Portafolio section -->
       <div class="flex flex-col gap-1 bg-surface-container-low/60 p-2.5 rounded-2xl border border-border-slate/60">
         <div class="px-3 py-1 font-headline-sm text-xs font-bold uppercase tracking-wider text-text-dark-secondary flex items-center justify-between">
           <span>Portafolio</span>
-          <span class="text-[10px] bg-primary-container/10 text-primary-container px-2 py-0.5 rounded-full font-label-code font-bold">4 Áreas</span>
+          <span class="text-[10px] bg-mint-turquoise/15 text-[#006875] px-2 py-0.5 rounded-full font-label-code font-bold">1 Disponible</span>
         </div>
-        <a class="mobile-nav-link px-3 py-2.5 rounded-xl font-headline-sm text-sm font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition flex items-center gap-2.5" href="portafolio.html">
-          <span class="material-symbols-outlined text-lg text-primary-container">dashboard</span>
-          <span>Ver Portafolio General (Hub)</span>
+        <a class="mobile-nav-link px-3 py-2.5 rounded-xl font-headline-sm text-sm font-bold text-primary-container bg-primary-container/10 transition flex items-center justify-between" href="portafolio-wordpress.html">
+          <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-lg text-primary-container">web</span>
+            <span>WordPress &amp; Sitios Web</span>
+          </div>
+          <span class="text-[10px] font-label-code bg-mint-turquoise/20 text-[#006875] px-2 py-0.5 rounded-full font-bold">Activo</span>
         </a>
-        <a class="mobile-nav-link px-3 py-2.5 rounded-xl font-headline-sm text-sm font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition flex items-center gap-2.5" href="portafolio-wordpress.html">
-          <span class="material-symbols-outlined text-lg text-primary-container">web</span>
-          <span>WordPress &amp; Sitios Web</span>
-        </a>
-        <a class="mobile-nav-link px-3 py-2.5 rounded-xl font-headline-sm text-sm font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition flex items-center gap-2.5" href="portafolio-fullstack.html">
-          <span class="material-symbols-outlined text-lg text-primary-container">terminal</span>
-          <span>Desarrollo Full-Stack</span>
-        </a>
-        <a class="mobile-nav-link px-3 py-2.5 rounded-xl font-headline-sm text-sm font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition flex items-center gap-2.5" href="portafolio-marketing.html">
-          <span class="material-symbols-outlined text-lg text-primary-container">query_stats</span>
-          <span>Marketing &amp; Analytics</span>
-        </a>
-        <a class="mobile-nav-link px-3 py-2.5 rounded-xl font-headline-sm text-sm font-semibold text-text-dark-primary hover:bg-primary-container/10 hover:text-primary-container transition flex items-center gap-2.5" href="portafolio-soporte.html">
-          <span class="material-symbols-outlined text-lg text-primary-container">dns</span>
-          <span>Soporte Técnico &amp; Académico</span>
-        </a>
+        <div class="px-3 py-2 rounded-xl font-headline-sm text-sm text-slate-400 flex items-center justify-between opacity-60 cursor-not-allowed">
+          <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-lg">terminal</span>
+            <span>Desarrollo Full-Stack</span>
+          </div>
+          <span class="text-[10px] font-label-code bg-slate-200/70 px-2 py-0.5 rounded-full">Muy pronto</span>
+        </div>
+        <div class="px-3 py-2 rounded-xl font-headline-sm text-sm text-slate-400 flex items-center justify-between opacity-60 cursor-not-allowed">
+          <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-lg">query_stats</span>
+            <span>Marketing &amp; Analytics</span>
+          </div>
+          <span class="text-[10px] font-label-code bg-slate-200/70 px-2 py-0.5 rounded-full">Muy pronto</span>
+        </div>
+        <div class="px-3 py-2 rounded-xl font-headline-sm text-sm text-slate-400 flex items-center justify-between opacity-60 cursor-not-allowed">
+          <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-lg">dns</span>
+            <span>Soporte Técnico &amp; Académico</span>
+          </div>
+          <span class="text-[10px] font-label-code bg-slate-200/70 px-2 py-0.5 rounded-full">Muy pronto</span>
+        </div>
       </div>
 
-      <a class="mobile-nav-link px-4 py-3 rounded-xl font-headline-sm text-base font-semibold !text-white text-clean-white bg-primary-container hover:bg-primary text-center mt-2 shadow-md transition" href="#contacto" style="color: #ffffff !important;">Hablemos de mi Perfil</a>
+      <button type="button" onclick="openBookingModal()" class="mobile-nav-link w-full px-4 py-3 rounded-xl font-headline-sm text-base font-semibold !text-white text-clean-white bg-hot-pink-vibrant hover:bg-hot-pink-hover text-center mt-2 shadow-md transition flex items-center justify-center gap-2 cursor-pointer" style="color: #ffffff !important;">
+        <span class="material-symbols-outlined text-base">calendar_month</span>
+        <span>Agenda conmigo</span>
+      </button>
     </nav>
   </div>
 </div>
@@ -302,9 +282,9 @@
 <div class="relative max-w-[1280px] mx-auto px-5 lg:px-8">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 <!-- Hero Left Column (7 cols) -->
-<div class="lg:col-span-7 flex flex-col items-start gap-6">
+<div class="lg:col-span-7 flex flex-col items-center text-center lg:items-start lg:text-left gap-6">
 <!-- High-Contrast White Pill Badge with Emoji (Style of User Reference) -->
-<div class="bg-white/95 text-text-dark-primary font-bold px-4 py-2 rounded-full shadow-lg border border-white/80 inline-flex items-center gap-2 backdrop-blur-md hero-anim-1">
+<div class="bg-white/95 text-text-dark-primary font-bold px-4 py-2 rounded-full shadow-lg border border-white/80 inline-flex items-center gap-2 backdrop-blur-md hero-anim-1 mx-auto lg:mx-0">
 <span class="font-headline-sm text-xs tracking-wide font-extrabold text-text-dark-primary">
                 Programo ideas para resolver problemas con software
               </span>
@@ -318,16 +298,16 @@
 </span>
 </h1>
 <!-- Hero Subtitle -->
-<p class="font-body-lg text-base sm:text-lg lg:text-xl text-primary-fixed-dim max-w-xl leading-relaxed hero-anim-3">
+<p class="font-body-lg text-base sm:text-lg lg:text-xl text-primary-fixed-dim max-w-xl leading-relaxed hero-anim-3 mx-auto lg:mx-0">
               Arquitectura de software de alto rendimiento, desarrollo Full-Stack moderno y diseño UX/UI pensado para impulsar el crecimiento real de tu negocio con cero caídas y máxima conversión.
             </p>
-<!-- CTA Actions (Focused on Recruiters) -->
-<div class="flex flex-wrap items-center gap-4 pt-2 hero-anim-4">
+<!-- CTA Actions -->
+<div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2 hero-anim-4">
 <a class="inline-flex items-center justify-center gap-2 bg-hot-pink-vibrant hover:bg-hot-pink-hover text-clean-white font-headline-sm font-bold px-7 py-3.5 rounded-xl shadow-[0_12px_24px_-6px_rgba(255,46,147,0.45)] transition-all transform hover:-translate-y-0.5 text-base" href="#contacto">
-<span class="">¡Hablemos de mi Perfil!</span>
+<span class="">Conversemos de tu Proyecto</span>
 <span class="material-symbols-outlined text-lg">arrow_forward</span>
 </a>
-<a class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-clean-white font-headline-sm font-semibold px-6 py-3.5 rounded-xl border border-white/20 transition-all text-base backdrop-blur-sm" href="portafolio.html">
+<a class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-clean-white font-headline-sm font-semibold px-6 py-3.5 rounded-xl border border-white/20 transition-all text-base backdrop-blur-sm" href="portafolio-wordpress.html">
 <span class="material-symbols-outlined text-base text-secondary-container">folder_open</span>
 <span class="">Ver Portafolio</span>
 </a>
@@ -339,7 +319,7 @@
 <div class="relative w-full max-w-[430px] rounded-3xl p-3 bg-dark-violet/40 shadow-2xl border border-white/10">
 <!-- Real Photo Card Frame -->
 <div class="relative w-full h-[500px] sm:h-[540px] rounded-2xl overflow-hidden bg-[#1b0230] shadow-inner">
-<img alt="Arianna Clemente - Ingeniera Informática &amp; Full-Stack Specialist" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700 ease-out" src="assets/images/arianna_hero.jpg">
+<img alt="Arianna Clemente - Ingeniera Informática &amp; Full-Stack Specialist" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700 ease-out" src="assets/images/arianna_hero.jpg" width="765" height="1024" fetchpriority="high" decoding="async">
 <!-- Left blend gradient scrim -->
 <div class="absolute inset-y-0 left-0 w-32 sm:w-44 bg-gradient-to-r from-[#1b0230] via-[#1b0230]/60 to-transparent pointer-events-none z-10"></div>
 <!-- Bottom blend gradient scrim for readable bottom badge -->
@@ -417,49 +397,49 @@
         <!-- 1. CEP -->
         <div class="brand-slide flex-shrink-0 w-[190px] sm:w-[220px] md:w-[240px]">
           <div class="h-24 sm:h-28 px-4 py-2 flex items-center justify-center group">
-            <img src="assets/images/marcas/cep.png" alt="CEP" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            <img src="assets/images/marcas/cep.png" alt="CEP" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy" decoding="async" width="200" height="125">
           </div>
         </div>
         <!-- 2. logogonzaga -->
         <div class="brand-slide flex-shrink-0 w-[190px] sm:w-[220px] md:w-[240px]">
           <div class="h-24 sm:h-28 px-4 py-2 flex items-center justify-center group">
-            <img src="assets/images/marcas/logogonzaga.png" alt="Colegio Gonzaga" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            <img src="assets/images/marcas/logogonzaga.png" alt="Colegio Gonzaga" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy" decoding="async" width="200" height="54">
           </div>
         </div>
         <!-- 3. ven_color_h (Fe y Alegría) -->
         <div class="brand-slide flex-shrink-0 w-[190px] sm:w-[220px] md:w-[240px]">
           <div class="h-24 sm:h-28 px-4 py-2 flex items-center justify-center group">
-            <img src="assets/images/marcas/ven_color_h.png" alt="Fe y Alegría" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            <img src="assets/images/marcas/ven_color_h.png" alt="Fe y Alegría" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy" decoding="async" width="200" height="89">
           </div>
         </div>
-        <!-- 4. Logo Beca a un estudiante -->
+        <!-- 4. Logo Beca a un estudiante (Agrandado 30%) -->
         <div class="brand-slide flex-shrink-0 w-[190px] sm:w-[220px] md:w-[240px]">
           <div class="h-24 sm:h-28 px-4 py-2 flex items-center justify-center group">
-            <img src="assets/images/marcas/Logo%20Beca%20a%20Un%20Estudiante%202025-color%20grande.png" alt="Beca a un Estudiante" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            <img src="assets/images/marcas/Logo%20Beca%20a%20Un%20Estudiante%202025-color%20grande.png" alt="Beca a un Estudiante" class="max-h-[62px] sm:max-h-[73px] max-w-[220px] object-contain transition-transform duration-300 group-hover:scale-105" style="max-height: 73px; max-width: 220px;" loading="lazy" decoding="async" width="200" height="200">
           </div>
         </div>
         <!-- 5. cide eventos -->
         <div class="brand-slide flex-shrink-0 w-[190px] sm:w-[220px] md:w-[240px]">
           <div class="h-24 sm:h-28 px-4 py-2 flex items-center justify-center group">
-            <img src="assets/images/marcas/cide-eventos.png" alt="CIDE Eventos" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            <img src="assets/images/marcas/cide-eventos.png" alt="CIDE Eventos" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy" decoding="async" width="200" height="200">
           </div>
         </div>
         <!-- 6. ciicep -->
         <div class="brand-slide flex-shrink-0 w-[190px] sm:w-[220px] md:w-[240px]">
           <div class="h-24 sm:h-28 px-4 py-2 flex items-center justify-center group">
-            <img src="assets/images/marcas/logoCIICEP2.webp" alt="CIICEP" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            <img src="assets/images/marcas/logoCIICEP2.webp" alt="CIICEP" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy" decoding="async" width="200" height="62">
           </div>
         </div>
         <!-- 7. Editorial crisalidas -->
         <div class="brand-slide flex-shrink-0 w-[190px] sm:w-[220px] md:w-[240px]">
           <div class="h-24 sm:h-28 px-4 py-2 flex items-center justify-center group">
-            <img src="assets/images/marcas/editorialcrisalidas.png" alt="Editorial Crisálidas" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            <img src="assets/images/marcas/editorialcrisalidas.png" alt="Editorial Crisálidas" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy" decoding="async" width="100" height="100">
           </div>
         </div>
         <!-- 8. ingedaca -->
         <div class="brand-slide flex-shrink-0 w-[190px] sm:w-[220px] md:w-[240px]">
           <div class="h-24 sm:h-28 px-4 py-2 flex items-center justify-center group">
-            <img src="assets/images/marcas/INGEDACA-Logo-Mobil.svg" alt="Ingedaca" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            <img src="assets/images/marcas/INGEDACA-Logo-Mobil.svg" alt="Ingedaca" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy" decoding="async" width="180" height="50">
           </div>
         </div>
       </div>
@@ -469,8 +449,8 @@
     <div id="brandCarouselDots" class="flex items-center justify-center gap-1.5 mt-5"></div>
   </div>
 </section>
-<!-- 3. SECTION: SERVICIOS (4-card Grid) -->
-<section class="w-full bg-[#f8f9fd] py-20 lg:py-28" id="servicios">
+<!-- 3. SECTION: SERVICIOS (Temporalmente Oculta) -->
+<section class="hidden" style="display: none !important;" id="servicios">
 <div class="max-w-[1280px] mx-auto px-5 lg:px-8">
 <div class="text-center max-w-2xl mx-auto mb-16">
 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 text-primary-container mb-3">
@@ -489,7 +469,7 @@
 <div>
 <!-- Video Banner 1 -->
 <div class="relative w-full aspect-video bg-dark-violet overflow-hidden group">
-<img alt="Desarrollo a Medida Preview" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/service_custom_dev.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDbyLruzS6Gnu4kpqWmlLM2IzDbqi68HAY8NmPXJD4BjJHhHXudV7TJrM5uOJJVU_7GOEIp68RdSRm5-NSvLynljojd7XAlIsZErn3BJOSmHN6R0wTayf8M0GBKC3Cr2rz9kT9nCAlxhL-hyCia0n5o5p_cEKA5vsqufy3K1ZgZLi4VTMMsWpJj9_CjOGCpssGj0llCeh4DN1cH8-cWI9zdA42R8iKMGqEvRqEleiY5ofyzGC6vxN5c'">
+<img alt="Desarrollo a Medida Preview" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/service_custom_dev.png" width="512" height="279" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDbyLruzS6Gnu4kpqWmlLM2IzDbqi68HAY8NmPXJD4BjJHhHXudV7TJrM5uOJJVU_7GOEIp68RdSRm5-NSvLynljojd7XAlIsZErn3BJOSmHN6R0wTayf8M0GBKC3Cr2rz9kT9nCAlxhL-hyCia0n5o5p_cEKA5vsqufy3K1ZgZLi4VTMMsWpJj9_CjOGCpssGj0llCeh4DN1cH8-cWI9zdA42R8iKMGqEvRqEleiY5ofyzGC6vxN5c'">
 <div class="absolute inset-0 bg-gradient-to-t from-dark-violet/90 via-dark-violet/30 to-transparent"></div>
 <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-dark-violet/85 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-xs font-label-code font-semibold">
 <span class="material-symbols-outlined text-mint-turquoise text-sm" style="font-variation-settings: 'FILL' 1;">smart_display</span>
@@ -534,7 +514,7 @@
 <div>
 <!-- Video Banner 2 -->
 <div class="relative w-full aspect-video bg-dark-violet overflow-hidden group">
-<img alt="WordPress Ultrarrápido Preview" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/service_wordpress.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCCjV5oxqRFHren1ga7Q_BNaDG4LgHP1roSj-0fHTy0j1Ki2TP5fH3E7RDOzSZPFhkNOZOIX5xjRPVSbPOpvkgRjiMqVWUAyKLxHDKcQM4J3RkeoJZmckhJWgNg9TnhMtHXcgR4trS4SjVUD0aNFVXluFIIh15C9qOO7_YJ6fo1wk3S7gtRO5MZEggqz_0RqTPYOlYX0ccDd_orkffloBuRV1Jixezhn6_W1WiZ05CfZYWuwBnrMP-2'">
+<img alt="WordPress Ultrarrápido Preview" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/service_wordpress.png" width="512" height="279" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCCjV5oxqRFHren1ga7Q_BNaDG4LgHP1roSj-0fHTy0j1Ki2TP5fH3E7RDOzSZPFhkNOZOIX5xjRPVSbPOpvkgRjiMqVWUAyKLxHDKcQM4J3RkeoJZmckhJWgNg9TnhMtHXcgR4trS4SjVUD0aNFVXluFIIh15C9qOO7_YJ6fo1wk3S7gtRO5MZEggqz_0RqTPYOlYX0ccDd_orkffloBuRV1Jixezhn6_W1WiZ05CfZYWuwBnrMP-2'">
 <div class="absolute inset-0 bg-gradient-to-t from-dark-violet/90 via-dark-violet/30 to-transparent"></div>
 <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-dark-violet/85 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-xs font-label-code font-semibold">
 <span class="material-symbols-outlined text-mint-turquoise text-sm" style="font-variation-settings: 'FILL' 1;">smart_display</span>
@@ -579,7 +559,7 @@
 <div>
 <!-- Video Banner 3 -->
 <div class="relative w-full aspect-video bg-dark-violet overflow-hidden group">
-<img alt="Repositorios Digitales Preview" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/service_repos.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDBwMjxlFho6z8yWUjrAEM3o3oelZoY3lVBxnOfaEzO_wMlMjiLVG0xgJ-bJWgNsHkN-AxKRiaEP49-W8ngeh03wmRXHAo-2XrA6M5r-SN1u8V0XAaIvZxfwA9dXG40Oqp6LZrpa3TGFj5IRhriK6OMhruzEiRAaEh0MLh1ZvWwuL0M_9qZ9XYOtr-G6hwlBnhUjdG1NjpN8oLqnc1D2gyHsqzMvPaBOzFncdOsSt6olqzAG0uoir65'">
+<img alt="Repositorios Digitales Preview" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/service_repos.png" width="512" height="279" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDBwMjxlFho6z8yWUjrAEM3o3oelZoY3lVBxnOfaEzO_wMlMjiLVG0xgJ-bJWgNsHkN-AxKRiaEP49-W8ngeh03wmRXHAo-2XrA6M5r-SN1u8V0XAaIvZxfwA9dXG40Oqp6LZrpa3TGFj5IRhriK6OMhruzEiRAaEh0MLh1ZvWwuL0M_9qZ9XYOtr-G6hwlBnhUjdG1NjpN8oLqnc1D2gyHsqzMvPaBOzFncdOsSt6olqzAG0uoir65'">
 <div class="absolute inset-0 bg-gradient-to-t from-dark-violet/90 via-dark-violet/30 to-transparent"></div>
 <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-dark-violet/85 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-xs font-label-code font-semibold">
 <span class="material-symbols-outlined text-mint-turquoise text-sm" style="font-variation-settings: 'FILL' 1;">smart_display</span>
@@ -624,7 +604,7 @@
 <div>
 <!-- Video Banner 4 -->
 <div class="relative w-full aspect-video bg-dark-violet overflow-hidden group">
-<img alt="Growth Tech &amp; AI Preview" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/service_growth_ai.png" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDgR_lq4J1ColtQEyqdnWWpSIEiMC4J4dk1abjUMjCOa8EQ3vRoxfEco-KvyrNCl0Op0icnN8Km6Z_o5D9K667xoQWeSmZV8TM7cVsAhI00kb__QuD09tVGuuH5UH6ObT68VkheFL3PPw_CVrip3oEGtMRsNTqQOzMxvnZfPzlCLl7rEMjdSZGWvT2BXCkiGN4le4fueqibgYs7ISrn1_zFIQRHZdxu1I3-IC4TOjS7bMWoNcgw6SqR'">
+<img alt="Growth Tech &amp; AI Preview" class="w-full h-full object-cover opacity-60 filter brightness-90 group-hover:scale-105 transition-transform duration-500" src="assets/images/service_growth_ai.png" width="512" height="279" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDgR_lq4J1ColtQEyqdnWWpSIEiMC4J4dk1abjUMjCOa8EQ3vRoxfEco-KvyrNCl0Op0icnN8Km6Z_o5D9K667xoQWeSmZV8TM7cVsAhI00kb__QuD09tVGuuH5UH6ObT68VkheFL3PPw_CVrip3oEGtMRsNTqQOzMxvnZfPzlCLl7rEMjdSZGWvT2BXCkiGN4le4fueqibgYs7ISrn1_zFIQRHZdxu1I3-IC4TOjS7bMWoNcgw6SqR'">
 <div class="absolute inset-0 bg-gradient-to-t from-dark-violet/90 via-dark-violet/30 to-transparent"></div>
 <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-dark-violet/85 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-xs font-label-code font-semibold">
 <span class="material-symbols-outlined text-mint-turquoise text-sm" style="font-variation-settings: 'FILL' 1;">smart_display</span>
@@ -666,28 +646,25 @@
 </div></div>
 </div>
 </section>
-<!-- 4. SECTION: EXPLORA NUESTRO PORTAFOLIO TÉCNICO (4 Categorías Activas) -->
+<!-- 4. SECTION: EXPLORA NUESTRO PORTAFOLIO TÉCNICO (WordPress Centrado) -->
 <section class="w-full bg-[#f8f9fd] py-20 lg:py-28 border-y border-border-slate" id="proyectos">
   <div class="max-w-[1280px] mx-auto px-5 lg:px-8">
-    <!-- Header -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
-      <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 text-primary-container mb-3">
-          <span class="material-symbols-outlined text-sm">folder_special</span>
-          <span class="font-label-pill text-xs font-bold uppercase tracking-wider">Nuestro Portafolio</span>
-        </div>
-        <h2 class="font-headline-xl text-3xl lg:text-4xl font-extrabold text-text-dark-primary tracking-tight">
-          Explora los Proyectos por Especialidad
-        </h2>
+    <!-- Header Centrado -->
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 text-primary-container mb-3">
+        <span class="material-symbols-outlined text-sm">folder_special</span>
+        <span class="font-label-pill text-xs font-bold uppercase tracking-wider">Nuestro Portafolio</span>
       </div>
-      <p class="font-body-md text-text-dark-secondary max-w-md leading-relaxed text-sm sm:text-base">
-        Visítanos y revisa en detalle el código, la arquitectura cloud y los resultados medibles organizados en nuestras 4 ramas de especialización técnica.
+      <h2 class="font-headline-xl text-3xl lg:text-4xl font-extrabold text-text-dark-primary tracking-tight">
+        Portafolio WordPress &amp; Sitios Web
+      </h2>
+      <p class="font-body-md text-text-dark-secondary max-w-lg mx-auto mt-3 leading-relaxed text-sm sm:text-base">
+        Explora nuestros casos de éxito: desarrollo a medida, optimización de velocidad y soluciones orientadas a conversión.
       </p>
     </div>
 
-    <!-- 4 Categories Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
-      
+    <!-- Portafolio WordPress Centrado -->
+    <div class="max-w-2xl mx-auto">
       <!-- Categoría 1: WordPress & Sitios Web -->
       <div class="group bg-clean-white rounded-3xl p-7 lg:p-8 border border-border-slate hover:border-primary-container/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
         <div class="absolute top-0 right-0 w-32 h-32 bg-mint-turquoise/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
@@ -721,129 +698,135 @@
           </a>
         </div>
       </div>
-
-      <!-- Categoría 2: Desarrollo Full-Stack -->
-      <div class="group bg-clean-white rounded-3xl p-7 lg:p-8 border border-border-slate hover:border-primary-container/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
-        <div>
-          <div class="flex items-center justify-between mb-5">
-            <div class="w-12 h-12 rounded-2xl bg-primary-container/10 text-primary-container flex items-center justify-center shadow-sm">
-              <span class="material-symbols-outlined text-2xl">developer_mode</span>
-            </div>
-            <span class="px-3 py-1 rounded-full bg-primary-container/15 text-primary-container text-xs font-bold font-label-code">
-              🚀 99.98% Uptime
-            </span>
-          </div>
-          <h3 class="font-headline-sm text-xl font-bold text-text-dark-primary group-hover:text-primary-container transition-colors mb-2.5">
-            Desarrollo Full-Stack &amp; APIs
-          </h3>
-          <p class="font-body-sm text-sm text-text-dark-secondary mb-5 leading-relaxed">
-            Plataformas SaaS desacopladas, microservicios orientados a dominio, backends robustos con colas asíncronas y APIs RESTful/GraphQL de alto rendimiento.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">Laravel 11</span>
-            <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">PostgreSQL</span>
-            <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">Docker CI/CD</span>
-            <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">Redis Cache</span>
-          </div>
-        </div>
-        <div class="pt-4 border-t border-border-slate/60 flex items-center justify-between">
-          <span class="text-xs font-label-code text-text-dark-secondary font-medium">Arquitectura Cloud SaaS</span>
-          <a href="portafolio-fullstack.html" class="inline-flex items-center gap-1.5 font-headline-sm text-sm font-bold text-primary-container group-hover:text-hot-pink-vibrant transition-colors">
-            <span>Visitar Categoría</span>
-            <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Categoría 3: Marketing & Analytics -->
-      <div class="group bg-clean-white rounded-3xl p-7 lg:p-8 border border-border-slate hover:border-primary-container/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-hot-pink-vibrant/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
-        <div>
-          <div class="flex items-center justify-between mb-5">
-            <div class="w-12 h-12 rounded-2xl bg-hot-pink-vibrant/10 text-hot-pink-vibrant flex items-center justify-center shadow-sm">
-              <span class="material-symbols-outlined text-2xl">query_stats</span>
-            </div>
-            <span class="px-3 py-1 rounded-full bg-hot-pink-vibrant/15 text-hot-pink-vibrant text-xs font-bold font-label-code">
-              📈 +38% Conversión
-            </span>
-          </div>
-          <h3 class="font-headline-sm text-xl font-bold text-text-dark-primary group-hover:text-primary-container transition-colors mb-2.5">
-            Marketing, IA &amp; Growth Tech
-          </h3>
-          <p class="font-body-sm text-sm text-text-dark-secondary mb-5 leading-relaxed">
-            Embudos de venta asistidos por inteligencia artificial, agentes LLM conectados con WhatsApp API y telemetría de eventos con analítica predictiva.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">AI Agents</span>
-            <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">WhatsApp API</span>
-            <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">Google Analytics 4</span>
-            <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">CRO Avanzado</span>
-          </div>
-        </div>
-        <div class="pt-4 border-t border-border-slate/60 flex items-center justify-between">
-          <span class="text-xs font-label-code text-text-dark-secondary font-medium">Automatizaciones IA</span>
-          <a href="portafolio-marketing.html" class="inline-flex items-center gap-1.5 font-headline-sm text-sm font-bold text-primary-container group-hover:text-hot-pink-vibrant transition-colors">
-            <span>Visitar Categoría</span>
-            <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Categoría 4: Soporte Técnico & Académico -->
-      <div class="group bg-clean-white rounded-3xl p-7 lg:p-8 border border-border-slate hover:border-primary-container/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-dark-violet/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
-        <div>
-          <div class="flex items-center justify-between mb-5">
-            <div class="w-12 h-12 rounded-2xl bg-dark-violet/10 text-dark-violet flex items-center justify-center shadow-sm">
-              <span class="material-symbols-outlined text-2xl">inventory_2</span>
-            </div>
-            <span class="px-3 py-1 rounded-full bg-dark-violet/15 text-dark-violet text-xs font-bold font-label-code">
-              🏛️ +120K Documentos
-            </span>
-          </div>
-          <h3 class="font-headline-sm text-xl font-bold text-text-dark-primary group-hover:text-primary-container transition-colors mb-2.5">
-            Soporte Técnico &amp; Repositorios DSpace
-          </h3>
-          <p class="font-body-sm text-sm text-text-dark-secondary mb-5 leading-relaxed">
-            Preservación digital para universidades e instituciones científicas, migraciones DSpace/OJS, indexación semántica y soporte a infraestructura Linux.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">DSpace 7 &amp; 8</span>
-            <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">OAI-PMH &amp; Dublin Core</span>
-            <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">Apache Solr</span>
-            <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">Linux Debian/Ubuntu</span>
-          </div>
-        </div>
-        <div class="pt-4 border-t border-border-slate/60 flex items-center justify-between">
-          <span class="text-xs font-label-code text-text-dark-secondary font-medium">Preservación Abierta</span>
-          <a href="portafolio-soporte.html" class="inline-flex items-center gap-1.5 font-headline-sm text-sm font-bold text-primary-container group-hover:text-hot-pink-vibrant transition-colors">
-            <span>Visitar Categoría</span>
-            <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </a>
-        </div>
-      </div>
-
     </div>
 
-    <!-- Hub Central Banner -->
-    <div class="mt-14 p-8 lg:p-10 rounded-3xl bg-gradient-to-r from-[#19022c] via-dark-violet to-primary-container text-clean-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl border border-white/10">
-      <div class="flex flex-col gap-2 max-w-xl text-center md:text-left">
-        <div class="inline-flex items-center gap-2 text-mint-turquoise self-center md:self-start bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
-          <span class="material-symbols-outlined text-sm">hub</span>
-          <span class="font-label-code text-xs uppercase font-bold tracking-wider">Visítanos // Portafolio Unificado</span>
+    <!-- Categorías Ocultas (Desarrollo, Marketing, Soporte) -->
+    <div class="hidden" style="display: none !important;">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+        <!-- Categoría 2: Desarrollo Full-Stack -->
+        <div class="group bg-clean-white rounded-3xl p-7 lg:p-8 border border-border-slate hover:border-primary-container/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-2xl bg-primary-container/10 text-primary-container flex items-center justify-center shadow-sm">
+                <span class="material-symbols-outlined text-2xl">developer_mode</span>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-primary-container/15 text-primary-container text-xs font-bold font-label-code">
+                🚀 99.98% Uptime
+              </span>
+            </div>
+            <h3 class="font-headline-sm text-xl font-bold text-text-dark-primary group-hover:text-primary-container transition-colors mb-2.5">
+              Desarrollo Full-Stack &amp; APIs
+            </h3>
+            <p class="font-body-sm text-sm text-text-dark-secondary mb-5 leading-relaxed">
+              Plataformas SaaS desacopladas, microservicios orientados a dominio, backends robustos con colas asíncronas y APIs RESTful/GraphQL de alto rendimiento.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">Laravel 11</span>
+              <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">PostgreSQL</span>
+              <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">Docker CI/CD</span>
+              <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">Redis Cache</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-border-slate/60 flex items-center justify-between">
+            <span class="text-xs font-label-code text-text-dark-secondary font-medium">Arquitectura Cloud SaaS</span>
+            <a href="portafolio-fullstack.html" class="inline-flex items-center gap-1.5 font-headline-sm text-sm font-bold text-primary-container group-hover:text-hot-pink-vibrant transition-colors">
+              <span>Visitar Categoría</span>
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
         </div>
-        <h3 class="font-headline-lg text-2xl lg:text-3xl font-extrabold text-clean-white tracking-tight">
-          ¿Deseas ver la visión global de todos los proyectos?
-        </h3>
-        <p class="font-body-md text-sm text-primary-fixed-dim leading-relaxed">
-          Ingresa al hub general con filtros dinámicos, demostraciones en video y casos de estudio completos.
-        </p>
+
+        <!-- Categoría 3: Marketing & Analytics -->
+        <div class="group bg-clean-white rounded-3xl p-7 lg:p-8 border border-border-slate hover:border-primary-container/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-hot-pink-vibrant/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-2xl bg-hot-pink-vibrant/10 text-hot-pink-vibrant flex items-center justify-center shadow-sm">
+                <span class="material-symbols-outlined text-2xl">query_stats</span>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-hot-pink-vibrant/15 text-hot-pink-vibrant text-xs font-bold font-label-code">
+                📈 +38% Conversión
+              </span>
+            </div>
+            <h3 class="font-headline-sm text-xl font-bold text-text-dark-primary group-hover:text-primary-container transition-colors mb-2.5">
+              Marketing, IA &amp; Growth Tech
+            </h3>
+            <p class="font-body-sm text-sm text-text-dark-secondary mb-5 leading-relaxed">
+              Embudos de venta asistidos por inteligencia artificial, agentes LLM conectados con WhatsApp API y telemetría de eventos con analítica predictiva.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">AI Agents</span>
+              <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">WhatsApp API</span>
+              <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">Google Analytics 4</span>
+              <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">CRO Avanzado</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-border-slate/60 flex items-center justify-between">
+            <span class="text-xs font-label-code text-text-dark-secondary font-medium">Automatizaciones IA</span>
+            <a href="portafolio-marketing.html" class="inline-flex items-center gap-1.5 font-headline-sm text-sm font-bold text-primary-container group-hover:text-hot-pink-vibrant transition-colors">
+              <span>Visitar Categoría</span>
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Categoría 4: Soporte Técnico & Académico -->
+        <div class="group bg-clean-white rounded-3xl p-7 lg:p-8 border border-border-slate hover:border-primary-container/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-dark-violet/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-2xl bg-dark-violet/10 text-dark-violet flex items-center justify-center shadow-sm">
+                <span class="material-symbols-outlined text-2xl">inventory_2</span>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-dark-violet/15 text-dark-violet text-xs font-bold font-label-code">
+                🏛️ +120K Documentos
+              </span>
+            </div>
+            <h3 class="font-headline-sm text-xl font-bold text-text-dark-primary group-hover:text-primary-container transition-colors mb-2.5">
+              Soporte Técnico &amp; Repositorios DSpace
+            </h3>
+            <p class="font-body-sm text-sm text-text-dark-secondary mb-5 leading-relaxed">
+              Preservación digital para universidades e instituciones científicas, migraciones DSpace/OJS, indexación semántica y soporte a infraestructura Linux.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">DSpace 7 &amp; 8</span>
+              <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">OAI-PMH &amp; Dublin Core</span>
+              <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">Apache Solr</span>
+              <span class="px-2.5 py-1 bg-surface rounded-lg text-xs font-label-code text-text-dark-primary border border-border-slate/60">Linux Debian/Ubuntu</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-border-slate/60 flex items-center justify-between">
+            <span class="text-xs font-label-code text-text-dark-secondary font-medium">Preservación Abierta</span>
+            <a href="portafolio-soporte.html" class="inline-flex items-center gap-1.5 font-headline-sm text-sm font-bold text-primary-container group-hover:text-hot-pink-vibrant transition-colors">
+              <span>Visitar Categoría</span>
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+        </div>
       </div>
-      <a href="portafolio.html" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-hot-pink-vibrant hover:bg-hot-pink-hover text-clean-white font-headline-sm text-base font-bold shadow-lg shadow-hot-pink-vibrant/40 transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
-        <span>Ver Portafolio Completo</span>
-        <span class="material-symbols-outlined text-xl">arrow_forward</span>
-      </a>
+    </div>
+
+    <!-- Hub Central Banner (Oculto Temporalmente: Portafolio Unificado) -->
+    <div class="hidden" style="display: none !important;">
+      <div class="mt-14 p-8 lg:p-10 rounded-3xl bg-gradient-to-r from-[#19022c] via-dark-violet to-primary-container text-clean-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl border border-white/10">
+        <div class="flex flex-col gap-2 max-w-xl text-center md:text-left">
+          <div class="inline-flex items-center gap-2 text-mint-turquoise self-center md:self-start bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
+            <span class="material-symbols-outlined text-sm">hub</span>
+            <span class="font-label-code text-xs uppercase font-bold tracking-wider">Visítanos // Portafolio Unificado</span>
+          </div>
+          <h3 class="font-headline-lg text-2xl lg:text-3xl font-extrabold text-clean-white tracking-tight">
+            ¿Deseas ver la visión global de todos los proyectos?
+          </h3>
+          <p class="font-body-md text-sm text-primary-fixed-dim leading-relaxed">
+            Ingresa al hub general con filtros dinámicos, demostraciones en video y casos de estudio completos.
+          </p>
+        </div>
+        <a href="portafolio.html" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-hot-pink-vibrant hover:bg-hot-pink-hover text-clean-white font-headline-sm text-base font-bold shadow-lg shadow-hot-pink-vibrant/40 transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+          <span>Ver Portafolio Completo</span>
+          <span class="material-symbols-outlined text-xl">arrow_forward</span>
+        </a>
+      </div>
     </div>
 
   </div>
@@ -1020,7 +1003,7 @@
 </div>
 <h2 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-extrabold text-clean-white tracking-tight leading-tight">Evaluemos mi perfil para tu equipo o vacante técnica.</h2>
 <p class="font-body-lg text-primary-fixed-dim text-base sm:text-lg leading-relaxed max-w-lg">
-              Disponible para roles de Solutions Architect, Tech Lead y Senior Full-Stack. Conoce mi trayectoria técnica, criterio arquitectónico y capacidad de ejecución inmediata.
+              Conoce mi trayectoria técnica, criterio arquitectónico y capacidad de ejecución inmediata.
             </p>
 <div class="space-y-4 pt-4">
 <div class="flex items-center gap-3">
@@ -1043,26 +1026,27 @@
 </div>
 </div>
 <div class="pt-4">
-<a class="inline-flex items-center gap-2 bg-hot-pink-vibrant hover:bg-hot-pink-hover text-clean-white font-headline-sm font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-hot-pink-vibrant/30 transition-all transform hover:-translate-y-0.5" href="mailto:hello.ary.code@gmail.com">
-<span class="">Conversar sobre mi Perfil</span>
-<span class="material-symbols-outlined text-base">event_available</span>
-</a>
+<button type="button" onclick="openBookingModal()" class="inline-flex items-center gap-2 bg-hot-pink-vibrant hover:bg-hot-pink-hover text-clean-white font-headline-sm font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-hot-pink-vibrant/30 transition-all transform hover:-translate-y-0.5 cursor-pointer">
+<span class="">Agenda conmigo</span>
+<span class="material-symbols-outlined text-base">calendar_month</span>
+</button>
 </div>
 </div>
 <!-- Contact Form Mockup Right (6 cols) -->
-<div class="lg:col-span-6 bg-surface-bright text-text-dark-primary rounded-3xl p-8 lg:p-10 shadow-2xl border border-white/20"><div class="flex items-center justify-between pb-3 border-b border-border-slate mb-6">
-<div class="flex items-center gap-2.5">
-<span class="relative flex h-2.5 w-2.5">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-mint-turquoise opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-mint-turquoise"></span>
-</span>
-<span class="font-label-code text-sm font-bold text-text-dark-primary">Canales de Comunicación Rápida</span>
-</div>
-<span class="font-label-code text-xs text-[#006875] font-bold bg-mint-turquoise/15 px-3 py-1 rounded-full">Respuesta &lt; 2 hrs</span>
-</div>
-<p class="font-body-sm text-sm text-text-dark-secondary mb-6 leading-relaxed">
-  Sin intermediarios. Contacto directo con Arianna Clemente para coordinar entrevistas técnicas, revisión de CV detallado o propuestas de liderazgo de ingeniería.
-</p>
+<div class="lg:col-span-6 bg-surface-bright text-text-dark-primary rounded-3xl p-8 lg:p-10 shadow-2xl border border-white/20">
+  <div class="flex items-center justify-between pb-4 border-b border-border-slate mb-6">
+    <div class="flex items-center gap-3">
+      <span class="relative flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-mint-turquoise opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-mint-turquoise"></span>
+      </span>
+      <h3 class="font-headline-xl text-2xl sm:text-3xl font-extrabold text-text-dark-primary tracking-tight">Contáctame</h3>
+    </div>
+    <span class="font-label-code text-xs text-[#006875] font-bold bg-mint-turquoise/15 px-3 py-1 rounded-full">Respuesta &lt; 2 hrs</span>
+  </div>
+  <p class="font-body-sm text-sm text-text-dark-secondary mb-6 leading-relaxed">
+    Contacto directo con Arianna Clemente para coordinar entrevistas técnicas, revisión de CV detallado o propuestas de liderazgo de ingeniería.
+  </p>
 <div class="flex flex-col gap-4 mb-6">
 <!-- Direct WhatsApp Action Button -->
 <a class="w-full p-4 rounded-2xl bg-mint-turquoise text-text-dark-primary flex items-center justify-between shadow-lg shadow-mint-turquoise/25 hover:brightness-105 active:scale-95 transition-all group" href="https://wa.me/584241685298?text=Hola%20Arianna,%20vi%20tu%20perfil%20profesional%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad%20t%C3%A9cnica" target="_blank">
@@ -1152,11 +1136,7 @@
 <span class="font-label-pill text-xs uppercase tracking-wider text-secondary-container font-bold">Navegación</span>
 <ul class="flex flex-col gap-2 font-body-sm text-sm text-primary-fixed-dim">
 <li class=""><a class="hover:text-clean-white transition-colors" href="#inicio">Inicio</a></li>
-<li class=""><a class="hover:text-clean-white transition-colors" href="portafolio.html">Portafolio General</a></li>
-<li class=""><a class="hover:text-clean-white transition-colors" href="portafolio-wordpress.html">WordPress &amp; Sitios Web</a></li>
-<li class=""><a class="hover:text-clean-white transition-colors" href="portafolio-fullstack.html">Desarrollo Full-Stack</a></li>
-<li class=""><a class="hover:text-clean-white transition-colors" href="portafolio-marketing.html">Marketing &amp; Analytics</a></li>
-<li class=""><a class="hover:text-clean-white transition-colors" href="portafolio-soporte.html">Soporte Técnico</a></li>
+<li class=""><a class="hover:text-clean-white transition-colors font-semibold text-mint-turquoise flex items-center gap-1.5" href="portafolio-wordpress.html"><span class="w-1.5 h-1.5 rounded-full bg-mint-turquoise"></span>WordPress &amp; Sitios Web</a></li>
 </ul>
 </div>
 <!-- Col 3: Contact Details -->
@@ -1183,7 +1163,7 @@
 <!-- Right-Side Slide-Over Service Modal Drawer (Matches Reference Design) -->
 <div id="serviceDrawerOverlay" class="fixed inset-0 bg-[#0c0114]/75 backdrop-blur-sm z-50 hidden transition-opacity duration-300 opacity-0" onclick="closeServiceDrawer()"></div>
 
-<aside id="serviceDrawerPanel" class="fixed top-0 right-0 bottom-0 w-full max-w-xl md:max-w-2xl bg-clean-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-hidden border-l border-border-slate" aria-labelledby="drawerTitle" role="dialog" aria-modal="true">
+<div id="serviceDrawerPanel" class="fixed top-0 right-0 bottom-0 w-full max-w-xl md:max-w-2xl bg-clean-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-hidden border-l border-border-slate" aria-labelledby="drawerTitle" role="dialog" aria-modal="true">
   <!-- Top Dark Header -->
   <div class="bg-[#19022c] text-clean-white p-6 sm:p-7 shrink-0 border-b border-white/10 relative">
     <div class="flex items-center justify-between mb-4">
@@ -1349,7 +1329,7 @@
       <span id="drawerFavIcon" class="material-symbols-outlined text-2xl transition-transform">favorite_border</span>
     </button>
   </div>
-</aside>
+</div>
 
 <!-- Interactive Showcase / Video Preview Modal -->
 <div id="videoModal" class="fixed inset-0 z-50 bg-dark-violet/85 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 transition-all duration-300">
@@ -1372,7 +1352,7 @@
 
     <!-- Modal Body: Interactive Video Preview Container -->
     <div class="relative w-full aspect-video bg-black flex items-center justify-center overflow-hidden group">
-      <img id="modalPoster" src="assets/images/service_custom_dev.png" class="w-full h-full object-cover opacity-70 filter brightness-95" alt="Showcase Preview">
+      <img id="modalPoster" src="assets/images/service_custom_dev.png" width="512" height="279" loading="lazy" decoding="async" class="w-full h-full object-cover opacity-70 filter brightness-95" alt="Showcase Preview">
       <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
       
       <!-- Center Animated Play Element -->
@@ -1410,6 +1390,117 @@
         </a>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Google Calendar Booking Modal ("Agenda conmigo") -->
+<div id="bookingModal" class="fixed inset-0 z-50 bg-dark-violet/85 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 transition-all duration-300">
+  <div class="relative w-full max-w-2xl bg-clean-white rounded-3xl overflow-hidden shadow-2xl border border-white/20 transform transition-all duration-300 scale-95 opacity-0 max-h-[92vh] flex flex-col" id="bookingModalCard">
+    
+    <!-- Modal Header -->
+    <div class="flex items-center justify-between p-5 sm:p-6 bg-gradient-to-r from-[#19022c] via-dark-violet to-primary-container text-clean-white border-b border-white/10 flex-shrink-0">
+      <div class="flex items-center gap-3.5">
+        <div class="w-11 h-11 rounded-2xl bg-hot-pink-vibrant/25 border border-hot-pink-vibrant/40 text-hot-pink-vibrant flex items-center justify-center shadow-md">
+          <span class="material-symbols-outlined text-2xl">calendar_month</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h3 class="font-headline-sm text-xl font-extrabold text-clean-white tracking-tight">Agenda conmigo</h3>
+            <span class="px-2.5 py-0.5 rounded-full bg-mint-turquoise/20 text-mint-turquoise text-[11px] font-bold font-label-code border border-mint-turquoise/30">Google Calendar</span>
+          </div>
+          <p class="font-label-code text-xs text-primary-fixed-dim mt-0.5">Sincronización técnica de 30 minutos // 1 a 1 directa</p>
+        </div>
+      </div>
+      <button onclick="closeBookingModal()" aria-label="Cerrar modal" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-clean-white transition cursor-pointer">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+    </div>
+
+    <!-- Modal Body (Scrollable) -->
+    <div class="p-6 sm:p-8 space-y-6 overflow-y-auto bg-surface-bright flex-1">
+      
+      <!-- Intro description -->
+      <p class="font-body-md text-sm sm:text-base text-text-dark-secondary leading-relaxed">
+        Reserva un espacio en mi calendario para evaluar tu proyecto web, definir arquitectura de software o conversar sobre oportunidades técnicas.
+      </p>
+
+      <!-- 3-Step Flow Instructions -->
+      <div class="space-y-3.5">
+        <span class="font-label-pill text-xs font-bold uppercase tracking-wider text-primary-container">¿Cómo funciona el flujo de reserva?</span>
+        
+        <div class="grid grid-cols-1 gap-3">
+          <!-- Step 1 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl bg-clean-white border border-border-slate/80 shadow-xs hover:border-primary-container/30 transition-colors">
+            <div class="w-9 h-9 rounded-xl bg-primary-container/10 text-primary-container font-headline-sm font-extrabold text-sm flex items-center justify-center flex-shrink-0">
+              1
+            </div>
+            <div class="space-y-0.5">
+              <h4 class="font-headline-sm text-sm font-bold text-text-dark-primary">Elige el día y la hora que prefieras</h4>
+              <p class="font-body-sm text-xs text-text-dark-secondary leading-relaxed">
+                El sistema se sincroniza en tiempo real con mi disponibilidad y ajusta los horarios automáticamente a tu zona horaria local.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl bg-clean-white border border-border-slate/80 shadow-xs hover:border-primary-container/30 transition-colors">
+            <div class="w-9 h-9 rounded-xl bg-hot-pink-vibrant/10 text-hot-pink-vibrant font-headline-sm font-extrabold text-sm flex items-center justify-center flex-shrink-0">
+              2
+            </div>
+            <div class="space-y-0.5">
+              <h4 class="font-headline-sm text-sm font-bold text-text-dark-primary">Comparte el motivo de la reunión</h4>
+              <p class="font-body-sm text-xs text-text-dark-secondary leading-relaxed">
+                Indica si deseas cotizar un sitio web/WordPress, una consultoría de arquitectura o conversar sobre una vacante técnica.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl bg-clean-white border border-border-slate/80 shadow-xs hover:border-primary-container/30 transition-colors">
+            <div class="w-9 h-9 rounded-xl bg-mint-turquoise/20 text-[#006875] font-headline-sm font-extrabold text-sm flex items-center justify-center flex-shrink-0">
+              3
+            </div>
+            <div class="space-y-0.5">
+              <h4 class="font-headline-sm text-sm font-bold text-text-dark-primary">Confirmación instantánea con Google Meet</h4>
+              <p class="font-body-sm text-xs text-text-dark-secondary leading-relaxed">
+                Ambos recibiremos la invitación en el calendario con el enlace directo de videollamada listo para conectarnos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust badges banner -->
+      <div class="p-4 rounded-2xl bg-surface-container-low border border-border-slate/70 flex flex-wrap items-center justify-between gap-3 text-xs font-label-code text-text-dark-secondary">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-mint-turquoise text-lg">check_circle</span>
+          <span class="font-semibold text-text-dark-primary">30 min de duración</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-mint-turquoise text-lg">videocam</span>
+          <span class="font-semibold text-text-dark-primary">Google Meet oficial</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-mint-turquoise text-lg">shield</span>
+          <span class="font-semibold text-text-dark-primary">Sin costo ni compromiso</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div class="p-5 sm:p-6 bg-clean-white border-t border-border-slate flex flex-col-reverse sm:flex-row items-center justify-between gap-3 flex-shrink-0">
+      <button type="button" onclick="closeBookingModal()" class="w-full sm:w-auto px-5 py-3 rounded-xl border border-border-slate text-text-dark-secondary hover:text-text-dark-primary hover:bg-surface-container-low transition font-headline-sm text-sm font-semibold text-center cursor-pointer">
+        Volver al sitio
+      </button>
+
+      <a href="https://calendar.app.google/ZM6dyYQS8vsyFLMj8" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-hot-pink-vibrant hover:bg-hot-pink-hover text-clean-white font-headline-sm text-base font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-hot-pink-vibrant/35 transition-all transform hover:-translate-y-0.5 group">
+        <span class="material-symbols-outlined text-xl">event_available</span>
+        <span>Abrir Página de Citas</span>
+        <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">open_in_new</span>
+      </a>
+    </div>
+
   </div>
 </div>
 
@@ -1831,14 +1922,52 @@
     });
   });
 
-  // Close modal on escape
+  // Google Calendar Booking Modal Controller ("Agenda conmigo")
+  const bookingModal = document.getElementById('bookingModal');
+  const bookingModalCard = document.getElementById('bookingModalCard');
+
+  window.openBookingModal = function() {
+    if (!bookingModal || !bookingModalCard) return;
+    bookingModal.classList.remove('hidden');
+    bookingModal.classList.add('flex');
+    void bookingModal.offsetWidth;
+    bookingModalCard.classList.remove('scale-95', 'opacity-0');
+    bookingModalCard.classList.add('scale-100', 'opacity-100');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeBookingModal = function() {
+    if (!bookingModal || !bookingModalCard) return;
+    bookingModalCard.classList.remove('scale-100', 'opacity-100');
+    bookingModalCard.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+      bookingModal.classList.add('hidden');
+      bookingModal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }, 200);
+  };
+
+  if (bookingModal) {
+    bookingModal.addEventListener('click', (e) => {
+      if (e.target === bookingModal) {
+        closeBookingModal();
+      }
+    });
+  }
+
+  // Close modals on escape
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) {
-      closeVideoModal();
+    if (e.key === 'Escape') {
+      if (videoModal && !videoModal.classList.contains('hidden')) {
+        closeVideoModal();
+      }
+      if (bookingModal && !bookingModal.classList.contains('hidden')) {
+        closeBookingModal();
+      }
     }
   });
 
-  // Close modal when clicking backdrop
+  // Close video modal when clicking backdrop
   videoModal.addEventListener('click', (e) => {
     if (e.target === videoModal) {
       closeVideoModal();
@@ -1912,8 +2041,12 @@
       dotsContainer.innerHTML = '';
       for (let i = 0; i < totalOriginal; i++) {
         const dot = document.createElement('button');
-        dot.className = `h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-[#FF2E93] w-6' : 'bg-gray-300 w-2 hover:bg-gray-400'}`;
+        dot.type = 'button';
+        dot.className = 'w-7 h-7 flex items-center justify-center p-1 cursor-pointer focus:outline-none';
         dot.setAttribute('aria-label', `Ir a marca ${i + 1}`);
+        const pill = document.createElement('span');
+        pill.className = `h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-[#E60077] w-6' : 'bg-gray-300 w-2 hover:bg-gray-400'}`;
+        dot.appendChild(pill);
         dot.addEventListener('click', () => {
           goToIndex(i);
           resetAutoPlay();
@@ -1926,10 +2059,12 @@
       if (!dotsContainer) return;
       const dots = dotsContainer.children;
       for (let i = 0; i < dots.length; i++) {
+        const pill = dots[i].querySelector('span');
+        if (!pill) continue;
         if (i === (activeIdx % totalOriginal)) {
-          dots[i].className = 'w-6 h-2 rounded-full bg-[#FF2E93] transition-all duration-300';
+          pill.className = 'w-6 h-2 rounded-full bg-[#E60077] transition-all duration-300';
         } else {
-          dots[i].className = 'w-2 h-2 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300';
+          pill.className = 'w-2 h-2 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300';
         }
       }
     }

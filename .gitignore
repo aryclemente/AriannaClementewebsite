@@ -1,5 +1,6 @@
 node_modules/
 dist/
+!dist/styles.css
 .env
 .DS_Store
 npm-debug.log
@@ -9,4 +10,7 @@ package-lock.json
 assets/videos/temp_frames/
 assets/videos/scratch_cep/
 assets/videos/out/
+
+# Lighthouse local reports
+reports/
 

@@ -11,8 +11,62 @@
   --color-brand-lightTeal: #ddfaf8;
   --color-brand-lavender: #9fa5c8;
 
+  --color-surface-container-lowest: #ffffff;
+  --color-text-dark-secondary: #475569;
+  --color-tertiary-fixed: #ffd9e1;
+  --color-on-tertiary-fixed-variant: #56192b;
+  --color-border-slate: #E2E8F0;
+  --color-surface-container-high: #e7e8ec;
+  --color-on-surface-variant: #484455;
+  --color-primary: #3600a5;
+  --color-primary-container: #4d17d6;
+  --color-hot-pink-vibrant: #E60077;
+  --color-hot-pink-hover: #C7005F;
+  --color-hot-pink-deep: #b80058;
+  --color-surface-container-low: #f2f3f7;
+  --color-surface-container: #edeef2;
+  --color-clean-white: #FFFFFF;
+  --color-text-dark-primary: #0F172A;
+  --color-dark-violet: #2A0845;
+  --color-darkest-violet: #140224;
+  --color-deep-purple: #4d17d6;
+  --color-secondary-container: #00e3fd;
+  --color-mint-turquoise: #00D2B4;
+  --color-surface: #f8f9fd;
+  --color-surface-bright: #ffffff;
+  --color-on-surface: #191c1f;
+  --color-on-primary: #ffffff;
+  --color-primary-fixed: #eaddff;
+  --color-primary-fixed-dim: #cabeff;
+  --color-outline-variant: #cac4d0;
+
+  --color-background: #f8f9fd;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-section-y: 5rem;
+  --spacing-section-y-lg: 7rem;
+  --spacing-margin: 1.25rem;
+  --spacing-margin-md: 2rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-lg: 2rem;
+
   --font-rubik: "Rubik", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+  --font-headline-sm: "Plus Jakarta Sans", sans-serif;
+  --font-headline-md: "Plus Jakarta Sans", sans-serif;
+  --font-headline-lg: "Plus Jakarta Sans", sans-serif;
+  --font-headline-xl: "Plus Jakarta Sans", sans-serif;
+  --font-display-hero: "Plus Jakarta Sans", sans-serif;
+  --font-body-sm: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-xl: "Inter", sans-serif;
+  --font-label-code: "Inter", monospace;
+  --font-label-pill: "Plus Jakarta Sans", sans-serif;
 }
 
 /* Custom styles */

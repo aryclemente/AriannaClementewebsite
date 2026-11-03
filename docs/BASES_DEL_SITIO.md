@@ -169,3 +169,12 @@ No incluyamos esto ahora, pero me parece bien agendar para futuras mejoras, cone
 
 8. Ajustar los textos de las secciones CIDE, Beca a un estudiant y contacto para coincidir con el cliente y con menos palabras tecnicas. Vamos a enfocarnos en el Impacto.
 
+## 6. Cambios del portafolio de Wordpress
+
+1. Eliminar las 4 cards de Autogestión Total (100%),...
+2. Cambiar la descripcion de "De una estructura inicial " a el resultado directo que obtuvimos. 
+
+
+
+
+
