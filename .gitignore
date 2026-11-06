@@ -13,4 +13,5 @@ assets/videos/out/
 
 # Lighthouse local reports
 reports/
-
+scratch/
+scripts/
