@@ -36,6 +36,98 @@
     }
   }
 
+
+  /* PORTADAS DE CASOS DE ESTUDIO */
+  .case-portada-box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 2.75rem 1.5rem 2rem 1.5rem;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  @media (min-width: 640px) {
+    .case-portada-box {
+      padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+      min-height: 400px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .case-portada-box {
+      padding: 4rem 3rem 2.75rem 3rem;
+      min-height: 420px;
+    }
+  }
+  .case-portada-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem 0.75rem;
+  }
+  .case-portada-date-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    white-space: nowrap;
+  }
+  .case-portada-dot {
+    color: rgba(255, 255, 255, 0.45) !important;
+    font-weight: 700;
+  }
+  .case-portada-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 2, 28, 0.72) 0%, rgba(15, 2, 28, 0.88) 50%, rgba(15, 2, 28, 0.97) 100%) !important;
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    pointer-events: none;
+  }
+  .case-portada-title {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .case-portada-client {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  .case-portada-date {
+    color: #cbd5e1 !important;
+  }
+  .case-portada-desc {
+    color: #f1f5f9 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  .case-portada-btn-tech {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .case-portada-btn-tech:hover {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+  }
+  .case-portada-btn-live {
+    background-color: #FF2E93 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(255, 46, 147, 0.4) !important;
+  }
+  .case-portada-btn-live:hover {
+    background-color: #E00070 !important;
+  }
+  .material-symbols-outlined {
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
 </style>
 </head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-hot-pink-vibrant selection:text-on-primary overflow-x-hidden">
 <!-- HEADER / NAVBAR -->
@@ -299,48 +391,54 @@
 <section class="max-w-[1280px] mx-auto px-margin lg:px-margin-md py-space-xl flex flex-col gap-section-y">
 <!-- PROJECT 1: Colegio Gonzaga -->
 <article id="caso-gonzaga" class="bg-surface-container-lowest rounded-3xl shadow-xl shadow-slate-200/60 overflow-hidden flex flex-col transition-all hover:shadow-2xl border border-slate-100 scroll-mt-24 reveal-on-scroll">
-  <!-- 1. Header de Proyecto & Metadatos Principales -->
-  <div class="p-6 lg:p-10 border-b border-border-slate/70 bg-gradient-to-r from-surface-container-lowest via-surface-bright to-surface-container-low/50">
-    <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
-      <div>
-        <!-- Etiquetas Reestructuradas -->
-        <div class="flex flex-col gap-1.5 mb-3">
-          <!-- Línea 1: Caso de Éxito • Educación (tamaño reducido) -->
-          <div>
-            <span class="inline-flex items-center gap-1.5 font-label-pill text-[10px] sm:text-[11px] bg-primary-fixed text-primary px-3 py-1 rounded-full uppercase tracking-wider font-extrabold">
-              <span class="material-symbols-outlined text-[13px]">school</span>
-              Caso de Éxito • Educación
-            </span>
+  <!-- 1. PORTADA DEL CASO (Imagen de fondo + Overlay oscuro + Texto Blanco) -->
+  <div class="case-portada-box border-b border-border-slate/60">
+    <!-- Imagen de fondo -->
+    <img 
+      src="assets/images/portfolio/Gonzaga Web/gonzaga_portada_horizontal.jpg" 
+      alt="Portada oficial del sitio web Colegio Gonzaga" 
+      class="absolute inset-0 w-full h-full object-cover object-center transform scale-105 filter blur-[0.5px]"
+      loading="lazy"
+      width="1024"
+      height="721"
+    />
+    <!-- Overlay gradiente oscuro -->
+    <div class="case-portada-overlay"></div>
+
+    <!-- Contenido sobre la imagen -->
+    <div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+      <div class="flex-1 max-w-3xl">
+        <!-- Logo en blanco + Cliente + Fecha -->
+        <div class="case-portada-meta mb-3">
+          <div class="h-8 sm:h-9 w-auto flex items-center">
+            <img src="assets/images/marcas/logogonzaga.png" alt="Logo Colegio Gonzaga" style="height: 34px; max-height: 34px; width: auto; object-fit: contain; filter: brightness(0) invert(1);" class="opacity-95">
           </div>
-          <!-- Línea 2: U.E. Colegio Gonzaga Maracaibo -->
-          <div class="font-headline-sm text-sm sm:text-base font-bold text-text-dark-primary flex items-center gap-1.5">
-            <span class="text-mint-turquoise font-extrabold">•</span>
-            <span>U.E. Colegio Gonzaga Maracaibo</span>
-          </div>
-          <!-- Línea 3: Fechas (Sin Rol) -->
-          <div class="flex flex-wrap items-center gap-2 text-xs font-label-code text-text-dark-secondary">
-            <span>(Marzo – Junio 2026)</span>
-          </div>
+          <span class="case-portada-dot">•</span>
+          <span class="case-portada-client font-headline-sm text-sm sm:text-base font-bold tracking-wide">U.E. Colegio Gonzaga Maracaibo</span>
+          <span class="case-portada-date-wrap">
+            <span class="case-portada-dot">•</span>
+            <span class="case-portada-date font-label-code text-xs">(Marzo – Junio 2026)</span>
+          </span>
         </div>
-        
-        <!-- Título principal agrandado -->
-        <h2 class="font-headline-xl text-2xl sm:text-3xl lg:text-4xl font-extrabold text-text-dark-primary tracking-tight">
+
+        <!-- Título del Proyecto -->
+        <h2 class="case-portada-title font-headline-xl text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight mb-3">
           Rediseño de Sitio Web Colegio Gonzaga
         </h2>
-        
-        <!-- Descripción directa de lo que construí -->
-        <p class="font-body-md text-sm sm:text-base text-text-dark-secondary max-w-3xl mt-3 leading-relaxed">
+
+        <!-- Descripción -->
+        <p class="case-portada-desc font-body-md text-sm sm:text-base max-w-2xl leading-relaxed">
           Diseñé y construí la nueva plataforma web institucional del Colegio Gonzaga: transformé 12 páginas dispersas en 5 páginas maestras con WordPress, Elementor y tema a medida, integrando un embudo de recaudación con pasarela de pagos y telemetría GA4.
         </p>
       </div>
 
-      <!-- Quick Actions / Live Link & Modal -->
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 shrink-0">
-        <button id="openGonzagaDocBtn" class="inline-flex items-center justify-center gap-2 bg-primary-fixed/90 hover:bg-primary-fixed text-primary px-4 py-2.5 rounded-xl font-headline-sm text-xs font-bold transition-colors shadow-sm cursor-pointer">
+      <!-- Botones de Acción -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+        <button id="openGonzagaDocBtn" class="case-portada-btn-tech inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-headline-sm text-xs font-bold transition-all shadow-sm cursor-pointer">
           <span class="material-symbols-outlined text-[18px]">description</span>
           <span>Ver Ficha Técnica</span>
         </button>
-        <a href="https://colegiogonzaga.org.ve" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-deep-purple hover:bg-dark-violet text-on-primary px-4 py-2.5 rounded-xl font-headline-sm text-xs font-bold transition-all shadow-sm hover:shadow-md">
+        <a href="https://colegiogonzaga.org.ve" target="_blank" rel="noopener noreferrer" class="case-portada-btn-live inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-headline-sm text-xs font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
           <span class="material-symbols-outlined text-[18px]">open_in_new</span>
           <span>Ver sitio web que construí</span>
         </a>
@@ -348,102 +446,77 @@
     </div>
   </div>
 
-  <!-- 2. PRIMERO: Explicación con Carrusel de 3 Slides (Problema, Solución, Impacto) + Portada Limpia -->
-  <div class="p-6 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-container-lowest border-b border-border-slate/70">
-    <!-- Columna Izquierda: Carrusel Interactivo de 3 Slides (7 cols) -->
-    <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
-      
-      <div>
-        <!-- Pestañas del Carrusel -->
-        <div class="flex items-center gap-2 mb-4">
-          <button type="button" onclick="setCaseSlide('gonzaga', 0)" id="gonzagaTab0" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer">
-            <span class="w-2 h-2 rounded-full bg-rose-500"></span>
-            <span>Problema</span>
-          </button>
-          <button type="button" onclick="setCaseSlide('gonzaga', 1)" id="gonzagaTab1" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-            <span>Solución</span>
-          </button>
-          <button type="button" onclick="setCaseSlide('gonzaga', 2)" id="gonzagaTab2" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-            <span>Impacto</span>
-          </button>
-        </div>
+  <!-- 2. CARRUSEL DE 3 SLIDES CENTRADO (Problema, Solución, Impacto) -->
+  <div class="p-6 lg:p-10 bg-surface-container-lowest border-b border-border-slate/70">
+    <div class="max-w-3xl mx-auto flex flex-col items-center">
+      <!-- Pestañas del Carrusel -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-5">
+        <button type="button" onclick="setCaseSlide('gonzaga', 0)" id="gonzagaTab0" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer">
+          <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+          <span>01. Problema</span>
+        </button>
+        <button type="button" onclick="setCaseSlide('gonzaga', 1)" id="gonzagaTab1" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
+          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+          <span>02. Solución</span>
+        </button>
+        <button type="button" onclick="setCaseSlide('gonzaga', 2)" id="gonzagaTab2" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
+          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+          <span>03. Impacto</span>
+        </button>
+      </div>
 
-        <!-- Contenedor Grid Stack (Altura Fija sin Saltos de Layout) -->
-        <div class="relative min-h-[145px] sm:min-h-[130px] p-6 sm:p-7 rounded-2xl bg-surface-container-low border border-slate-200/80 shadow-xs flex flex-col justify-start overflow-hidden" id="gonzagaCarouselBox">
-          <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: start;">
-            <!-- Slide 0: Problema -->
-            <div class="gonzaga-slide transition-opacity duration-300 opacity-100 pointer-events-auto" id="gonzagaSlide0" style="grid-area: 1 / 1 / 2 / 2;">
-              <div class="flex items-center gap-2 text-xs font-label-code font-bold text-rose-500 uppercase tracking-wider mb-2">
-                <span class="material-symbols-outlined text-base">error_outline</span>
-                <span>01. El Problema</span>
-              </div>
-              <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
-                12 páginas desestructuradas y lentas sin embudo digital para captar donaciones escolares.
-              </p>
+      <!-- Contenedor Grid Stack Centrado -->
+      <div class="w-full relative min-h-[145px] sm:min-h-[130px] p-6 sm:p-7 rounded-2xl bg-surface-container-low border border-slate-200/80 shadow-xs flex flex-col justify-start overflow-hidden text-center sm:text-left" id="gonzagaCarouselBox">
+        <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: start;">
+          <!-- Slide 0: Problema -->
+          <div class="gonzaga-slide transition-opacity duration-300 opacity-100 pointer-events-auto" id="gonzagaSlide0" style="grid-area: 1 / 1 / 2 / 2;">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-rose-500 uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">error_outline</span>
+              <span>01. El Problema</span>
             </div>
-
-            <!-- Slide 1: Solución -->
-            <div class="gonzaga-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="gonzagaSlide1" style="grid-area: 1 / 1 / 2 / 2;">
-              <div class="flex items-center gap-2 text-xs font-label-code font-bold text-deep-purple uppercase tracking-wider mb-2">
-                <span class="material-symbols-outlined text-base">check_circle</span>
-                <span>02. La Solución</span>
-              </div>
-              <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
-                Consolidación en 5 páginas maestras en WordPress y Elementor con tema a medida y pasarela integrada.
-              </p>
-            </div>
-
-            <!-- Slide 2: Impacto -->
-            <div class="gonzaga-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="gonzagaSlide2" style="grid-area: 1 / 1 / 2 / 2;">
-              <div class="flex items-center gap-2 text-xs font-label-code font-bold text-[#006875] uppercase tracking-wider mb-2">
-                <span class="material-symbols-outlined text-base">trending_up</span>
-                <span>03. El Impacto</span>
-              </div>
-              <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
-                Navegación escolar ágil y canal continuo de recaudación con analítica GA4 en tiempo real.
-              </p>
-            </div>
+            <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
+              12 páginas desestructuradas y lentas sin embudo digital para captar donaciones escolares.
+            </p>
           </div>
-        </div>
 
-        <!-- Indicadores & Controles Prev/Next -->
-        <div class="flex items-center justify-between mt-4 px-1">
-          <div class="flex items-center gap-1.5">
-            <span class="w-6 h-1.5 rounded-full bg-deep-purple transition-all" id="gonzagaDot0"></span>
-            <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="gonzagaDot1"></span>
-            <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="gonzagaDot2"></span>
+          <!-- Slide 1: Solución -->
+          <div class="gonzaga-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="gonzagaSlide1" style="grid-area: 1 / 1 / 2 / 2;">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-deep-purple uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">check_circle</span>
+              <span>02. La Solución</span>
+            </div>
+            <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
+              Consolidación en 5 páginas maestras en WordPress y Elementor con tema a medida y pasarela integrada.
+            </p>
           </div>
-          <div class="flex items-center gap-2">
-            <button type="button" onclick="prevCaseSlide('gonzaga')" aria-label="Slide anterior" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer">
-              <span class="material-symbols-outlined text-base">chevron_left</span>
-            </button>
-            <button type="button" onclick="nextCaseSlide('gonzaga')" aria-label="Siguiente slide" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer">
-              <span class="material-symbols-outlined text-base">chevron_right</span>
-            </button>
+
+          <!-- Slide 2: Impacto -->
+          <div class="gonzaga-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="gonzagaSlide2" style="grid-area: 1 / 1 / 2 / 2;">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-[#006875] uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">trending_up</span>
+              <span>03. El Impacto</span>
+            </div>
+            <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
+              Navegación escolar ágil y canal continuo de recaudación con analítica GA4 en tiempo real.
+            </p>
           </div>
         </div>
       </div>
-  
-    </div>
-    <!-- Columna Derecha: Portada Limpia (Sin título 'Imagen de Portada' ni card 'Identidad Ignaciana') (5 cols) -->
-    <div class="lg:col-span-5 flex flex-col gap-4">
-      <div class="group relative rounded-2xl overflow-hidden shadow-xl bg-slate-900 border border-slate-200">
-        <img 
-          class="w-full h-auto max-h-[460px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out" 
-          src="assets/images/portfolio/Gonzaga Web/gonzaga_portada_horizontal.jpg" 
-          alt="Portada oficial del sitio web Colegio Gonzaga"
-          width="1024"
-          height="721"
-          loading="lazy"
-          decoding="async"
-        >
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
 
-        <div class="absolute top-3 left-3 bg-darkest-violet/85 backdrop-blur-md px-3.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-lg">
-          <span class="w-2.5 h-2.5 rounded-full bg-mint-turquoise animate-pulse"></span>
-          <span class="font-label-code-micro text-clean-white font-bold tracking-wide text-xs">Colegio Gonzaga • Diseño 2026</span>
+      <!-- Indicadores & Controles Prev/Next -->
+      <div class="flex items-center justify-between w-full mt-4 px-1">
+        <div class="flex items-center gap-1.5">
+          <span class="w-6 h-1.5 rounded-full bg-deep-purple transition-all" id="gonzagaDot0"></span>
+          <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="gonzagaDot1"></span>
+          <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="gonzagaDot2"></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button type="button" onclick="prevCaseSlide('gonzaga')" aria-label="Slide anterior" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
+            <span class="material-symbols-outlined text-base">chevron_left</span>
+          </button>
+          <button type="button" onclick="nextCaseSlide('gonzaga')" aria-label="Siguiente slide" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
+            <span class="material-symbols-outlined text-base">chevron_right</span>
+          </button>
         </div>
       </div>
     </div>
@@ -500,41 +573,54 @@
 
 <!-- PROJECT 2: Rediseño CEP (Design System Oasis + SVG Interactivo + Video Caso de Estudio) -->
 <article id="caso-cep" class="bg-surface-container-lowest rounded-3xl shadow-xl shadow-slate-200/60 overflow-hidden flex flex-col transition-all hover:shadow-2xl border border-slate-100 scroll-mt-24 reveal-on-scroll">
-  <!-- 1. Header de Proyecto & Metadatos Principales -->
-  <div class="p-6 lg:p-10 border-b border-border-slate/70 bg-gradient-to-r from-surface-container-lowest via-surface-bright to-surface-container-low/50">
-    <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
-      <div>
-        <div class="flex flex-col gap-1.5 mb-3">
-          <div>
-            <span class="inline-flex items-center gap-1.5 font-label-pill text-[10px] sm:text-[11px] bg-mint-turquoise/20 text-[#006875] px-3 py-1 rounded-full uppercase tracking-wider font-extrabold">
-              <span class="material-symbols-outlined text-[13px]">church</span>
-              Caso de Éxito • Pastoral &amp; Red Nacional
-            </span>
+  <!-- 1. PORTADA DEL CASO (Imagen de fondo + Overlay oscuro + Texto Blanco) -->
+  <div class="case-portada-box border-b border-border-slate/60">
+    <!-- Imagen de fondo -->
+    <img 
+      src="assets/images/portfolio/CEP Web/cep3.jpg" 
+      alt="Visualización del sitio web Centro de Espiritualidad y Pastoral CEP" 
+      class="absolute inset-0 w-full h-full object-cover object-center transform scale-105 filter blur-[0.5px]"
+      loading="lazy"
+      width="768"
+      height="1366"
+    />
+    <!-- Overlay gradiente oscuro -->
+    <div class="case-portada-overlay"></div>
+
+    <!-- Contenido sobre la imagen -->
+    <div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+      <div class="flex-1 max-w-3xl">
+        <!-- Logo en blanco + Cliente + Fecha -->
+        <div class="case-portada-meta mb-3">
+          <div class="h-8 sm:h-9 w-auto flex items-center">
+            <img src="assets/images/marcas/logoCIICEP2.webp" alt="Logo CEP" style="height: 34px; max-height: 34px; width: auto; object-fit: contain; filter: brightness(0) invert(1);" class="opacity-95">
           </div>
-          <div class="font-headline-sm text-sm sm:text-base font-bold text-text-dark-primary flex items-center gap-1.5">
-            <span class="text-mint-turquoise font-extrabold">•</span>
-            <span>Centro de Espiritualidad y Pastoral (CEP)</span>
-          </div>
-          <div class="flex flex-wrap items-center gap-2 text-xs font-label-code text-text-dark-secondary">
-            <span>(Marzo – Julio 2026)</span>
-          </div>
+          <span class="case-portada-dot">•</span>
+          <span class="case-portada-client font-headline-sm text-sm sm:text-base font-bold tracking-wide">Centro de Espiritualidad y Pastoral (CEP)</span>
+          <span class="case-portada-date-wrap">
+            <span class="case-portada-dot">•</span>
+            <span class="case-portada-date font-label-code text-xs">(Marzo – Julio 2026)</span>
+          </span>
         </div>
-        
-        <h2 class="font-headline-xl text-2xl sm:text-3xl lg:text-4xl font-extrabold text-text-dark-primary tracking-tight">
+
+        <!-- Título del Proyecto -->
+        <h2 class="case-portada-title font-headline-xl text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight mb-3">
           Rediseño de Ecosistema Web Institucional CEP
         </h2>
-        
-        <p class="font-body-md text-sm sm:text-base text-text-dark-secondary max-w-3xl mt-3 leading-relaxed">
+
+        <!-- Descripción -->
+        <p class="case-portada-desc font-body-md text-sm sm:text-base max-w-2xl leading-relaxed">
           Diseñé y desarrollé la nueva plataforma web del Centro de Espiritualidad y Pastoral (CEP): transformé un sitio estático de 7 páginas en un ecosistema modular de 11 páginas con mapa vectorial SVG interactivo para 6 redes apostólicas y autogestión de retiros.
         </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 shrink-0">
-        <button id="openCepDocBtn" class="inline-flex items-center justify-center gap-2 bg-[#006875]/15 hover:bg-[#006875]/25 text-[#006875] px-4 py-2.5 rounded-xl font-headline-sm text-xs font-bold transition-colors shadow-sm cursor-pointer">
+      <!-- Botones de Acción -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+        <button id="openCepDocBtn" class="case-portada-btn-tech inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-headline-sm text-xs font-bold transition-all shadow-sm cursor-pointer">
           <span class="material-symbols-outlined text-[18px]">description</span>
           <span>Ver Ficha Técnica</span>
         </button>
-        <a href="https://cepignaciano.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#006875] hover:bg-dark-violet text-on-primary px-4 py-2.5 rounded-xl font-headline-sm text-xs font-bold transition-all shadow-sm hover:shadow-md">
+        <a href="https://cepignaciano.org" target="_blank" rel="noopener noreferrer" class="case-portada-btn-live inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-headline-sm text-xs font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
           <span class="material-symbols-outlined text-[18px]">open_in_new</span>
           <span>Ver sitio web que construí</span>
         </a>
@@ -542,102 +628,77 @@
     </div>
   </div>
 
-  <!-- 2. PRIMERO: Explicación con Carrusel Interactivo de 3 Slides + Showcase cep3.jpg Limpio -->
-  <div class="p-6 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-container-lowest border-b border-border-slate/70">
-    <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
-      
-      <div>
-        <!-- Pestañas del Carrusel -->
-        <div class="flex items-center gap-2 mb-4">
-          <button type="button" onclick="setCaseSlide('cep', 0)" id="cepTab0" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer">
-            <span class="w-2 h-2 rounded-full bg-rose-500"></span>
-            <span>Problema</span>
-          </button>
-          <button type="button" onclick="setCaseSlide('cep', 1)" id="cepTab1" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-            <span>Solución</span>
-          </button>
-          <button type="button" onclick="setCaseSlide('cep', 2)" id="cepTab2" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-            <span>Impacto</span>
-          </button>
-        </div>
+  <!-- 2. CARRUSEL DE 3 SLIDES CENTRADO (Problema, Solución, Impacto) -->
+  <div class="p-6 lg:p-10 bg-surface-container-lowest border-b border-border-slate/70">
+    <div class="max-w-3xl mx-auto flex flex-col items-center">
+      <!-- Pestañas del Carrusel -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-5">
+        <button type="button" onclick="setCaseSlide('cep', 0)" id="cepTab0" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer">
+          <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+          <span>01. Problema</span>
+        </button>
+        <button type="button" onclick="setCaseSlide('cep', 1)" id="cepTab1" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
+          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+          <span>02. Solución</span>
+        </button>
+        <button type="button" onclick="setCaseSlide('cep', 2)" id="cepTab2" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
+          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+          <span>03. Impacto</span>
+        </button>
+      </div>
 
-        <!-- Contenedor Grid Stack (Altura Fija sin Saltos de Layout) -->
-        <div class="relative min-h-[145px] sm:min-h-[130px] p-6 sm:p-7 rounded-2xl bg-surface-container-low border border-slate-200/80 shadow-xs flex flex-col justify-start overflow-hidden" id="cepCarouselBox">
-          <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: start;">
-            <!-- Slide 0: Problema -->
-            <div class="cep-slide transition-opacity duration-300 opacity-100 pointer-events-auto" id="cepSlide0" style="grid-area: 1 / 1 / 2 / 2;">
-              <div class="flex items-center gap-2 text-xs font-label-code font-bold text-rose-500 uppercase tracking-wider mb-2">
-                <span class="material-symbols-outlined text-base">error_outline</span>
-                <span>01. El Problema</span>
-              </div>
-              <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
-                Sitio estático de 7 páginas desconectadas sin directorio dinámico ni mapa de redes pastorales.
-              </p>
+      <!-- Contenedor Grid Stack Centrado -->
+      <div class="w-full relative min-h-[145px] sm:min-h-[130px] p-6 sm:p-7 rounded-2xl bg-surface-container-low border border-slate-200/80 shadow-xs flex flex-col justify-start overflow-hidden text-center sm:text-left" id="cepCarouselBox">
+        <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: start;">
+          <!-- Slide 0: Problema -->
+          <div class="cep-slide transition-opacity duration-300 opacity-100 pointer-events-auto" id="cepSlide0" style="grid-area: 1 / 1 / 2 / 2;">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-rose-500 uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">error_outline</span>
+              <span>01. El Problema</span>
             </div>
-
-            <!-- Slide 1: Solución -->
-            <div class="cep-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="cepSlide1" style="grid-area: 1 / 1 / 2 / 2;">
-              <div class="flex items-center gap-2 text-xs font-label-code font-bold text-deep-purple uppercase tracking-wider mb-2">
-                <span class="material-symbols-outlined text-base">check_circle</span>
-                <span>02. La Solución</span>
-              </div>
-              <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
-                Arquitectura modular en WordPress con mapa vectorial SVG interactivo y sistema de diseño Oasis.
-              </p>
-            </div>
-
-            <!-- Slide 2: Impacto -->
-            <div class="cep-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="cepSlide2" style="grid-area: 1 / 1 / 2 / 2;">
-              <div class="flex items-center gap-2 text-xs font-label-code font-bold text-[#006875] uppercase tracking-wider mb-2">
-                <span class="material-symbols-outlined text-base">trending_up</span>
-                <span>03. El Impacto</span>
-              </div>
-              <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
-                Autogestión de retiros espirituales y geolocalización ágil para usuarios en todo el país.
-              </p>
-            </div>
+            <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
+              Sitio estático de 7 páginas desconectadas sin directorio dinámico ni mapa de redes pastorales.
+            </p>
           </div>
-        </div>
 
-        <!-- Indicadores & Controles Prev/Next -->
-        <div class="flex items-center justify-between mt-4 px-1">
-          <div class="flex items-center gap-1.5">
-            <span class="w-6 h-1.5 rounded-full bg-deep-purple transition-all" id="cepDot0"></span>
-            <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="cepDot1"></span>
-            <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="cepDot2"></span>
+          <!-- Slide 1: Solución -->
+          <div class="cep-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="cepSlide1" style="grid-area: 1 / 1 / 2 / 2;">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-deep-purple uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">check_circle</span>
+              <span>02. La Solución</span>
+            </div>
+            <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
+              Arquitectura modular en WordPress con mapa vectorial SVG interactivo y sistema de diseño Oasis.
+            </p>
           </div>
-          <div class="flex items-center gap-2">
-            <button type="button" onclick="prevCaseSlide('cep')" aria-label="Slide anterior" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer">
-              <span class="material-symbols-outlined text-base">chevron_left</span>
-            </button>
-            <button type="button" onclick="nextCaseSlide('cep')" aria-label="Siguiente slide" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer">
-              <span class="material-symbols-outlined text-base">chevron_right</span>
-            </button>
+
+          <!-- Slide 2: Impacto -->
+          <div class="cep-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="cepSlide2" style="grid-area: 1 / 1 / 2 / 2;">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-[#006875] uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">trending_up</span>
+              <span>03. El Impacto</span>
+            </div>
+            <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
+              Autogestión de retiros espirituales y geolocalización ágil para usuarios en todo el país.
+            </p>
           </div>
         </div>
       </div>
-  
-    </div>
 
-    <!-- Columna Derecha: Imagen Limpia cep3.jpg (5 cols) -->
-    <div class="lg:col-span-5 flex flex-col gap-4">
-      <div class="group relative rounded-2xl overflow-hidden shadow-xl bg-slate-900 border border-slate-200">
-        <img 
-          class="w-full h-auto max-h-[460px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out" 
-          src="assets/images/portfolio/CEP Web/cep3.jpg" 
-          alt="Visualización del sitio web Centro de Espiritualidad y Pastoral CEP"
-          width="768"
-          height="1366"
-          loading="lazy"
-          decoding="async"
-        >
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
-
-        <div class="absolute top-3 left-3 bg-darkest-violet/85 backdrop-blur-md px-3.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-lg">
-          <span class="w-2.5 h-2.5 rounded-full bg-mint-turquoise animate-pulse"></span>
-          <span class="font-label-code-micro text-clean-white font-bold tracking-wide text-xs">CEP Venezuela • 2026</span>
+      <!-- Indicadores & Controles Prev/Next -->
+      <div class="flex items-center justify-between w-full mt-4 px-1">
+        <div class="flex items-center gap-1.5">
+          <span class="w-6 h-1.5 rounded-full bg-deep-purple transition-all" id="cepDot0"></span>
+          <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="cepDot1"></span>
+          <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="cepDot2"></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button type="button" onclick="prevCaseSlide('cep')" aria-label="Slide anterior" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
+            <span class="material-symbols-outlined text-base">chevron_left</span>
+          </button>
+          <button type="button" onclick="nextCaseSlide('cep')" aria-label="Siguiente slide" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
+            <span class="material-symbols-outlined text-base">chevron_right</span>
+          </button>
         </div>
       </div>
     </div>
@@ -694,41 +755,52 @@
 
 <!-- PROJECT 3: Beca a un Estudiante - Fe y Alegría -->
 <article id="caso-beca" class="bg-surface-container-lowest rounded-3xl shadow-xl shadow-slate-200/60 overflow-hidden flex flex-col transition-all hover:shadow-2xl border border-slate-100 scroll-mt-24 reveal-on-scroll">
-  <!-- 1. Header de Proyecto & Metadatos Principales (Sin Roles, Sin Cards Tecnológicas) -->
-  <div class="p-6 lg:p-10 border-b border-border-slate/70 bg-gradient-to-r from-surface-container-lowest via-surface-bright to-surface-container-low/50">
-    <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
-      <div>
-        <div class="flex flex-col gap-1.5 mb-3">
-          <div>
-            <span class="inline-flex items-center gap-1.5 font-label-pill text-[10px] sm:text-[11px] bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-full uppercase tracking-wider font-extrabold">
-              <span class="material-symbols-outlined text-[13px]">volunteer_activism</span>
-              Caso de Éxito • Recaudación &amp; Impacto Social
-            </span>
+  <!-- 1. PORTADA DEL CASO (Imagen de fondo + Overlay oscuro + Texto Blanco) -->
+  <div class="case-portada-box border-b border-border-slate/60">
+    <!-- Imagen de fondo -->
+    <img 
+      src="assets/images/portfolio/Beca.jpg" 
+      alt="Visualización de la plataforma Beca a un Estudiante de Fe y Alegría" 
+      class="absolute inset-0 w-full h-full object-cover object-center transform scale-105 filter blur-[0.5px]"
+      loading="lazy"
+    />
+    <!-- Overlay gradiente oscuro -->
+    <div class="case-portada-overlay"></div>
+
+    <!-- Contenido sobre la imagen -->
+    <div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+      <div class="flex-1 max-w-3xl">
+        <!-- Logo en blanco + Cliente + Fecha -->
+        <div class="case-portada-meta mb-3">
+          <div class="h-8 sm:h-9 w-auto flex items-center">
+            <img src="assets/images/marcas/logo_beca_white.png" alt="Logo Beca Fe y Alegría" style="height: 36px; max-height: 36px; width: auto; object-fit: contain;" class="opacity-95">
           </div>
-          <div class="font-headline-sm text-sm sm:text-base font-bold text-text-dark-primary flex items-center gap-1.5">
-            <span class="text-hot-pink-vibrant font-extrabold">•</span>
-            <span>Beca a un Estudiante — Fe y Alegría Venezuela</span>
-          </div>
-          <div class="flex flex-wrap items-center gap-2 text-xs font-label-code text-text-dark-secondary">
-            <span>(2025 – 2026)</span>
-          </div>
+          <span class="case-portada-dot">•</span>
+          <span class="case-portada-client font-headline-sm text-sm sm:text-base font-bold tracking-wide">Fe y Alegría Venezuela</span>
+          <span class="case-portada-date-wrap">
+            <span class="case-portada-dot">•</span>
+            <span class="case-portada-date font-label-code text-xs">(2025 – 2026)</span>
+          </span>
         </div>
-        
-        <h2 class="font-headline-xl text-2xl sm:text-3xl lg:text-4xl font-extrabold text-text-dark-primary tracking-tight">
+
+        <!-- Título del Proyecto -->
+        <h2 class="case-portada-title font-headline-xl text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight mb-3">
           Landing Page de Recaudación “Beca a un Estudiante”
         </h2>
-        
-        <p class="font-body-md text-sm sm:text-base text-text-dark-secondary max-w-3xl mt-3 leading-relaxed">
+
+        <!-- Descripción -->
+        <p class="case-portada-desc font-body-md text-sm sm:text-base max-w-2xl leading-relaxed">
           Diseñé y construí la plataforma oficial de captación y donaciones para Fe y Alegría Venezuela: una landing page de alta conversión móvil con catálogo interactivo por modalidad formativa y telemetría analítica con Google Analytics 4.
         </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 shrink-0">
-        <button id="openBecaDocBtn" class="inline-flex items-center justify-center gap-2 bg-dark-violet/10 hover:bg-dark-violet/20 text-dark-violet px-4 py-2.5 rounded-xl font-headline-sm text-xs font-bold transition-colors shadow-sm cursor-pointer">
+      <!-- Botones de Acción -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+        <button id="openBecaDocBtn" class="case-portada-btn-tech inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-headline-sm text-xs font-bold transition-all shadow-sm cursor-pointer">
           <span class="material-symbols-outlined text-[18px]">description</span>
           <span>Ver Ficha Técnica</span>
         </button>
-        <a href="https://donarfeyalegriavzla.org/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-hot-pink-vibrant hover:bg-hot-pink-hover text-on-primary px-4 py-2.5 rounded-xl font-headline-sm text-xs font-bold transition-all shadow-sm hover:shadow-md">
+        <a href="https://donarfeyalegriavzla.org/" target="_blank" rel="noopener noreferrer" class="case-portada-btn-live inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-headline-sm text-xs font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
           <span class="material-symbols-outlined text-[18px]">open_in_new</span>
           <span>Ver sitio web que construí</span>
         </a>
@@ -736,103 +808,77 @@
     </div>
   </div>
 
-  <!-- 2. PRIMERO: Explicación con Carrusel Interactivo de 3 Slides + Showcase Beca.jpg Limpio -->
-  <div class="p-6 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-container-lowest border-b border-border-slate/70">
-    <!-- Columna Izquierda: Carrusel Interactivo de 3 Slides (7 cols) -->
-    <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
-      
-      <div>
-        <!-- Pestañas del Carrusel -->
-        <div class="flex items-center gap-2 mb-4">
-          <button type="button" onclick="setCaseSlide('beca', 0)" id="becaTab0" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer">
-            <span class="w-2 h-2 rounded-full bg-rose-500"></span>
-            <span>Problema</span>
-          </button>
-          <button type="button" onclick="setCaseSlide('beca', 1)" id="becaTab1" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-            <span>Solución</span>
-          </button>
-          <button type="button" onclick="setCaseSlide('beca', 2)" id="becaTab2" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-            <span>Impacto</span>
-          </button>
-        </div>
+  <!-- 2. CARRUSEL DE 3 SLIDES CENTRADO (Problema, Solución, Impacto) -->
+  <div class="p-6 lg:p-10 bg-surface-container-lowest border-b border-border-slate/70">
+    <div class="max-w-3xl mx-auto flex flex-col items-center">
+      <!-- Pestañas del Carrusel -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-5">
+        <button type="button" onclick="setCaseSlide('beca', 0)" id="becaTab0" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer">
+          <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+          <span>01. Problema</span>
+        </button>
+        <button type="button" onclick="setCaseSlide('beca', 1)" id="becaTab1" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
+          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+          <span>02. Solución</span>
+        </button>
+        <button type="button" onclick="setCaseSlide('beca', 2)" id="becaTab2" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
+          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+          <span>03. Impacto</span>
+        </button>
+      </div>
 
-        <!-- Contenedor Grid Stack (Altura Fija sin Saltos de Layout) -->
-        <div class="relative min-h-[145px] sm:min-h-[130px] p-6 sm:p-7 rounded-2xl bg-surface-container-low border border-slate-200/80 shadow-xs flex flex-col justify-start overflow-hidden" id="becaCarouselBox">
-          <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: start;">
-            <!-- Slide 0: Problema -->
-            <div class="beca-slide transition-opacity duration-300 opacity-100 pointer-events-auto" id="becaSlide0" style="grid-area: 1 / 1 / 2 / 2;">
-              <div class="flex items-center gap-2 text-xs font-label-code font-bold text-rose-500 uppercase tracking-wider mb-2">
-                <span class="material-symbols-outlined text-base">error_outline</span>
-                <span>01. El Problema</span>
-              </div>
-              <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
-                Campaña dependiente de un botón genérico en WordPress sin detalle de programas ni confianza para donar.
-              </p>
+      <!-- Contenedor Grid Stack Centrado -->
+      <div class="w-full relative min-h-[145px] sm:min-h-[130px] p-6 sm:p-7 rounded-2xl bg-surface-container-low border border-slate-200/80 shadow-xs flex flex-col justify-start overflow-hidden text-center sm:text-left" id="becaCarouselBox">
+        <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: start;">
+          <!-- Slide 0: Problema -->
+          <div class="beca-slide transition-opacity duration-300 opacity-100 pointer-events-auto" id="becaSlide0" style="grid-area: 1 / 1 / 2 / 2;">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-rose-500 uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">error_outline</span>
+              <span>01. El Problema</span>
             </div>
-
-            <!-- Slide 1: Solución -->
-            <div class="beca-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="becaSlide1" style="grid-area: 1 / 1 / 2 / 2;">
-              <div class="flex items-center gap-2 text-xs font-label-code font-bold text-deep-purple uppercase tracking-wider mb-2">
-                <span class="material-symbols-outlined text-base">check_circle</span>
-                <span>02. La Solución</span>
-              </div>
-              <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
-                Landing page dedicada con catálogo de becas por niveles y donación móvil fluida en menos de 3 pasos.
-              </p>
-            </div>
-
-            <!-- Slide 2: Impacto -->
-            <div class="beca-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="becaSlide2" style="grid-area: 1 / 1 / 2 / 2;">
-              <div class="flex items-center gap-2 text-xs font-label-code font-bold text-hot-pink-vibrant uppercase tracking-wider mb-2">
-                <span class="material-symbols-outlined text-base">trending_up</span>
-                <span>03. El Impacto</span>
-              </div>
-              <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
-                Primera landing oficial de captación para la campaña con trazabilidad analítica en Google Analytics 4.
-              </p>
-            </div>
+            <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
+              Campaña dependiente de un botón genérico en WordPress sin detalle de programas ni confianza para donar.
+            </p>
           </div>
-        </div>
 
-        <!-- Indicadores & Controles Prev/Next -->
-        <div class="flex items-center justify-between mt-4 px-1">
-          <div class="flex items-center gap-1.5">
-            <span class="w-6 h-1.5 rounded-full bg-deep-purple transition-all" id="becaDot0"></span>
-            <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="becaDot1"></span>
-            <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="becaDot2"></span>
+          <!-- Slide 1: Solución -->
+          <div class="beca-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="becaSlide1" style="grid-area: 1 / 1 / 2 / 2;">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-deep-purple uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">check_circle</span>
+              <span>02. La Solución</span>
+            </div>
+            <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
+              Landing page dedicada con catálogo de becas por niveles y donación móvil fluida en menos de 3 pasos.
+            </p>
           </div>
-          <div class="flex items-center gap-2">
-            <button type="button" onclick="prevCaseSlide('beca')" aria-label="Slide anterior" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer">
-              <span class="material-symbols-outlined text-base">chevron_left</span>
-            </button>
-            <button type="button" onclick="nextCaseSlide('beca')" aria-label="Siguiente slide" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer">
-              <span class="material-symbols-outlined text-base">chevron_right</span>
-            </button>
+
+          <!-- Slide 2: Impacto -->
+          <div class="beca-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="becaSlide2" style="grid-area: 1 / 1 / 2 / 2;">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-hot-pink-vibrant uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">trending_up</span>
+              <span>03. El Impacto</span>
+            </div>
+            <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
+              Canal de captación directo optimizado para donaciones móviles y telemetría analítica GA4 en tiempo real.
+            </p>
           </div>
         </div>
       </div>
-  
-    </div>
 
-    <!-- Columna Derecha: Portada Limpia Beca.jpg (5 cols) -->
-    <div class="lg:col-span-5 flex flex-col gap-4">
-      <div class="group relative rounded-2xl overflow-hidden shadow-xl bg-slate-900 border border-slate-200">
-        <img 
-          class="w-full h-auto max-h-[460px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out" 
-          src="assets/images/portfolio/Beca.jpg" 
-          alt="Visualización de la landing page Beca a un Estudiante Fe y Alegría en laptop y móvil"
-          width="1380"
-          height="752"
-          loading="lazy"
-          decoding="async"
-        >
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
-
-        <div class="absolute top-3 left-3 bg-darkest-violet/85 backdrop-blur-md px-3.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-lg">
-          <span class="w-2.5 h-2.5 rounded-full bg-mint-turquoise animate-pulse"></span>
-          <span class="font-label-code-micro text-clean-white font-bold tracking-wide text-xs">Fe y Alegría • Campaña 2025</span>
+      <!-- Indicadores & Controles Prev/Next -->
+      <div class="flex items-center justify-between w-full mt-4 px-1">
+        <div class="flex items-center gap-1.5">
+          <span class="w-6 h-1.5 rounded-full bg-deep-purple transition-all" id="becaDot0"></span>
+          <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="becaDot1"></span>
+          <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="becaDot2"></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button type="button" onclick="prevCaseSlide('beca')" aria-label="Slide anterior" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
+            <span class="material-symbols-outlined text-base">chevron_left</span>
+          </button>
+          <button type="button" onclick="nextCaseSlide('beca')" aria-label="Siguiente slide" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
+            <span class="material-symbols-outlined text-base">chevron_right</span>
+          </button>
         </div>
       </div>
     </div>
@@ -888,41 +934,52 @@
 </article>
 
 <article id="caso-cide" class="bg-surface-container-lowest rounded-3xl shadow-xl shadow-slate-200/60 overflow-hidden flex flex-col transition-all hover:shadow-2xl border border-slate-100 scroll-mt-24 reveal-on-scroll">
-  <!-- 1. Header de Proyecto & Metadatos Principales (Sin Roles, Sin Cards Tecnológicas) -->
-  <div class="p-6 lg:p-10 border-b border-border-slate/70 bg-gradient-to-r from-surface-container-lowest via-surface-bright to-surface-container-low/50">
-    <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
-      <div>
-        <div class="flex flex-col gap-1.5 mb-3">
-          <div>
-            <span class="inline-flex items-center gap-1.5 font-label-pill text-[10px] sm:text-[11px] bg-primary-container/20 text-deep-purple px-3 py-1 rounded-full uppercase tracking-wider font-extrabold">
-              <span class="material-symbols-outlined text-[13px]">terminal</span>
-              Caso de Éxito • Plugins &amp; Backend
-            </span>
+  <!-- 1. PORTADA DEL CASO (Imagen de fondo + Overlay oscuro + Texto Blanco) -->
+  <div class="case-portada-box border-b border-border-slate/60">
+    <!-- Imagen de fondo -->
+    <img 
+      src="assets/images/portfolio/CIDELaptop.jpg" 
+      alt="Demostración técnica del plugin de consulta de certificados CIDE" 
+      class="absolute inset-0 w-full h-full object-cover object-center transform scale-105 filter blur-[0.5px]"
+      loading="lazy"
+    />
+    <!-- Overlay gradiente oscuro -->
+    <div class="case-portada-overlay"></div>
+
+    <!-- Contenido sobre la imagen -->
+    <div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+      <div class="flex-1 max-w-3xl">
+        <!-- Logo en blanco + Cliente + Fecha -->
+        <div class="case-portada-meta mb-3">
+          <div class="h-8 sm:h-9 w-auto flex items-center">
+            <img src="assets/images/marcas/cide-eventos.png" alt="Logo CIDE Latam" style="height: 34px; max-height: 34px; width: auto; object-fit: contain; filter: brightness(0) invert(1);" class="opacity-95">
           </div>
-          <div class="font-headline-sm text-sm sm:text-base font-bold text-text-dark-primary flex items-center gap-1.5">
-            <span class="text-deep-purple font-extrabold">•</span>
-            <span>Sistema de Validación de Certificados — CIDE Latam</span>
-          </div>
-          <div class="flex flex-wrap items-center gap-2 text-xs font-label-code text-text-dark-secondary">
-            <span>(2024 – 2026)</span>
-          </div>
+          <span class="case-portada-dot">•</span>
+          <span class="case-portada-client font-headline-sm text-sm sm:text-base font-bold tracking-wide">Sistema de Validación de Certificados — CIDE Latam</span>
+          <span class="case-portada-date-wrap">
+            <span class="case-portada-dot">•</span>
+            <span class="case-portada-date font-label-code text-xs">(2024 – 2026)</span>
+          </span>
         </div>
-        
-        <h2 class="font-headline-xl text-2xl sm:text-3xl lg:text-4xl font-extrabold text-text-dark-primary tracking-tight">
+
+        <!-- Título del Proyecto -->
+        <h2 class="case-portada-title font-headline-xl text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight mb-3">
           Plugin de Validación de Certificados CIDE Latam
         </h2>
-        
-        <p class="font-body-md text-sm sm:text-base text-text-dark-secondary max-w-3xl mt-3 leading-relaxed">
+
+        <!-- Descripción -->
+        <p class="case-portada-desc font-body-md text-sm sm:text-base max-w-2xl leading-relaxed">
           Desarrollé un plugin personalizado en WordPress para el portal principal de CIDE Latam: implementé un motor de validación pública de certificados con búsqueda dual (DNI y código), autoservicio 24/7 y eliminación total de los cuellos de botella del servidor.
         </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 shrink-0">
-        <button id="openCideDocBtn" class="inline-flex items-center justify-center gap-2 bg-deep-purple/10 hover:bg-deep-purple/20 text-deep-purple px-4 py-2.5 rounded-xl font-headline-sm text-xs font-bold transition-colors shadow-sm cursor-pointer">
+      <!-- Botones de Acción -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+        <button id="openCideDocBtn" class="case-portada-btn-tech inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-headline-sm text-xs font-bold transition-all shadow-sm cursor-pointer">
           <span class="material-symbols-outlined text-[18px]">description</span>
           <span>Ver Ficha Técnica</span>
         </button>
-        <a href="https://cidelatam.org/sistema-de-validacion-de-resultados-2025/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#0369a1] hover:bg-[#075985] text-on-primary px-4 py-2.5 rounded-xl font-headline-sm text-xs font-bold transition-all shadow-sm hover:shadow-md">
+        <a href="https://cidelatam.org/sistema-de-validacion-de-resultados-2025/" target="_blank" rel="noopener noreferrer" class="case-portada-btn-live inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-headline-sm text-xs font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
           <span class="material-symbols-outlined text-[18px]">open_in_new</span>
           <span>Ver plugin en producción</span>
         </a>
@@ -930,103 +987,77 @@
     </div>
   </div>
 
-  <!-- 2. PRIMERO: Explicación con Carrusel Interactivo de 3 Slides + Showcase CIDELaptop.jpg Limpio -->
-  <div class="p-6 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-container-lowest border-b border-border-slate/70">
-    <!-- Columna Izquierda: Carrusel Interactivo de 3 Slides (7 cols) -->
-    <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
-      
-      <div>
-        <!-- Pestañas del Carrusel -->
-        <div class="flex items-center gap-2 mb-4">
-          <button type="button" onclick="setCaseSlide('cide', 0)" id="cideTab0" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer">
-            <span class="w-2 h-2 rounded-full bg-rose-500"></span>
-            <span>Problema</span>
-          </button>
-          <button type="button" onclick="setCaseSlide('cide', 1)" id="cideTab1" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-            <span>Solución</span>
-          </button>
-          <button type="button" onclick="setCaseSlide('cide', 2)" id="cideTab2" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-            <span>Impacto</span>
-          </button>
-        </div>
+  <!-- 2. CARRUSEL DE 3 SLIDES CENTRADO (Problema, Solución, Impacto) -->
+  <div class="p-6 lg:p-10 bg-surface-container-lowest border-b border-border-slate/70">
+    <div class="max-w-3xl mx-auto flex flex-col items-center">
+      <!-- Pestañas del Carrusel -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-5">
+        <button type="button" onclick="setCaseSlide('cide', 0)" id="cideTab0" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer">
+          <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+          <span>01. Problema</span>
+        </button>
+        <button type="button" onclick="setCaseSlide('cide', 1)" id="cideTab1" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
+          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+          <span>02. Solución</span>
+        </button>
+        <button type="button" onclick="setCaseSlide('cide', 2)" id="cideTab2" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
+          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+          <span>03. Impacto</span>
+        </button>
+      </div>
 
-        <!-- Contenedor Grid Stack (Altura Fija sin Saltos de Layout) -->
-        <div class="relative min-h-[145px] sm:min-h-[130px] p-6 sm:p-7 rounded-2xl bg-surface-container-low border border-slate-200/80 shadow-xs flex flex-col justify-start overflow-hidden" id="cideCarouselBox">
-          <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: start;">
-            <!-- Slide 0: Problema -->
-            <div class="cide-slide transition-opacity duration-300 opacity-100 pointer-events-auto" id="cideSlide0" style="grid-area: 1 / 1 / 2 / 2;">
-              <div class="flex items-center gap-2 text-xs font-label-code font-bold text-rose-500 uppercase tracking-wider mb-2">
-                <span class="material-symbols-outlined text-base">error_outline</span>
-                <span>01. El Problema</span>
-              </div>
-              <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
-                Servidor secundario colapsado por acumulación de PDFs y soporte saturado por rebotes de correo.
-              </p>
+      <!-- Contenedor Grid Stack Centrado -->
+      <div class="w-full relative min-h-[145px] sm:min-h-[130px] p-6 sm:p-7 rounded-2xl bg-surface-container-low border border-slate-200/80 shadow-xs flex flex-col justify-start overflow-hidden text-center sm:text-left" id="cideCarouselBox">
+        <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: start;">
+          <!-- Slide 0: Problema -->
+          <div class="cide-slide transition-opacity duration-300 opacity-100 pointer-events-auto" id="cideSlide0" style="grid-area: 1 / 1 / 2 / 2;">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-rose-500 uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">error_outline</span>
+              <span>01. El Problema</span>
             </div>
-
-            <!-- Slide 1: Solución -->
-            <div class="cide-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="cideSlide1" style="grid-area: 1 / 1 / 2 / 2;">
-              <div class="flex items-center gap-2 text-xs font-label-code font-bold text-deep-purple uppercase tracking-wider mb-2">
-                <span class="material-symbols-outlined text-base">check_circle</span>
-                <span>02. La Solución</span>
-              </div>
-              <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
-                Plugin en WordPress con motor de consulta dual por cédula o código y renderizado dinámico 24/7.
-              </p>
-            </div>
-
-            <!-- Slide 2: Impacto -->
-            <div class="cide-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="cideSlide2" style="grid-area: 1 / 1 / 2 / 2;">
-              <div class="flex items-center gap-2 text-xs font-label-code font-bold text-[#0284c7] uppercase tracking-wider mb-2">
-                <span class="material-symbols-outlined text-base">trending_up</span>
-                <span>03. El Impacto</span>
-              </div>
-              <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
-                Autoservicio 24/7 para egresados: incidencias por correo reducidas de ~30 a menos de 5 por cada 100 participantes.
-              </p>
-            </div>
+            <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
+              Servidor secundario colapsado por acumulación de PDFs y soporte saturado por rebotes de correo.
+            </p>
           </div>
-        </div>
 
-        <!-- Indicadores & Controles Prev/Next -->
-        <div class="flex items-center justify-between mt-4 px-1">
-          <div class="flex items-center gap-1.5">
-            <span class="w-6 h-1.5 rounded-full bg-deep-purple transition-all" id="cideDot0"></span>
-            <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="cideDot1"></span>
-            <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="cideDot2"></span>
+          <!-- Slide 1: Solución -->
+          <div class="cide-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="cideSlide1" style="grid-area: 1 / 1 / 2 / 2;">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-deep-purple uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">check_circle</span>
+              <span>02. La Solución</span>
+            </div>
+            <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
+              Plugin en WordPress con endpoint AJAX seguro, lectura dinámica en MySQL y búsqueda por DNI o código.
+            </p>
           </div>
-          <div class="flex items-center gap-2">
-            <button type="button" onclick="prevCaseSlide('cide')" aria-label="Slide anterior" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer">
-              <span class="material-symbols-outlined text-base">chevron_left</span>
-            </button>
-            <button type="button" onclick="nextCaseSlide('cide')" aria-label="Siguiente slide" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer">
-              <span class="material-symbols-outlined text-base">chevron_right</span>
-            </button>
+
+          <!-- Slide 2: Impacto -->
+          <div class="cide-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="cideSlide2" style="grid-area: 1 / 1 / 2 / 2;">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-[#006875] uppercase tracking-wider mb-2">
+              <span class="material-symbols-outlined text-base">trending_up</span>
+              <span>03. El Impacto</span>
+            </div>
+            <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
+              Validación en menos de 1 segundo, 100% autogestionable y reducción drástica de consultas por soporte.
+            </p>
           </div>
         </div>
       </div>
-  
-    </div>
 
-    <!-- Columna Derecha: Portada Limpia CIDELaptop.jpg (5 cols) -->
-    <div class="lg:col-span-5 flex flex-col gap-4">
-      <div class="group relative rounded-2xl overflow-hidden shadow-xl bg-slate-900 border border-slate-200">
-        <img 
-          class="w-full h-auto max-h-[460px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out" 
-          src="assets/images/portfolio/CIDELaptop.jpg" 
-          alt="Visualización del sistema de validación de certificados CIDE Latam en laptop"
-          width="1392"
-          height="752"
-          loading="lazy"
-          decoding="async"
-        >
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
-
-        <div class="absolute top-3 left-3 bg-darkest-violet/85 backdrop-blur-md px-3.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 shadow-lg">
-          <span class="w-2.5 h-2.5 rounded-full bg-mint-turquoise animate-pulse"></span>
-          <span class="font-label-code-micro text-clean-white font-bold tracking-wide text-xs">CIDE Latam • Validación 2025</span>
+      <!-- Indicadores & Controles Prev/Next -->
+      <div class="flex items-center justify-between w-full mt-4 px-1">
+        <div class="flex items-center gap-1.5">
+          <span class="w-6 h-1.5 rounded-full bg-deep-purple transition-all" id="cideDot0"></span>
+          <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="cideDot1"></span>
+          <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="cideDot2"></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button type="button" onclick="prevCaseSlide('cide')" aria-label="Slide anterior" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
+            <span class="material-symbols-outlined text-base">chevron_left</span>
+          </button>
+          <button type="button" onclick="nextCaseSlide('cide')" aria-label="Siguiente slide" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
+            <span class="material-symbols-outlined text-base">chevron_right</span>
+          </button>
         </div>
       </div>
     </div>
