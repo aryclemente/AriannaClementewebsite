@@ -128,6 +128,214 @@
     flex-shrink: 0;
   }
 
+  /* CARRUSELES SIN FONDO GRIS & PESTAÑAS DE COLOR */
+  .case-tab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    background-color: transparent !important;
+    border: 1.5px solid transparent;
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+  @media (min-width: 640px) {
+    .case-tab-btn {
+      font-size: 1.0625rem;
+      padding: 0.55rem 1.2rem;
+    }
+  }
+  .case-tab-rosa {
+    color: rgba(225, 29, 116, 0.7) !important;
+    border-color: rgba(255, 46, 147, 0.25);
+  }
+  .case-tab-rosa:hover,
+  .case-tab-rosa.is-active {
+    color: #e11d74 !important;
+    border-color: #FF2E93;
+    box-shadow: 0 3px 14px rgba(255, 46, 147, 0.16);
+  }
+  .case-tab-dot-rosa { background-color: #FF2E93 !important; }
+
+  .case-tab-morado {
+    color: rgba(77, 23, 214, 0.7) !important;
+    border-color: rgba(77, 23, 214, 0.25);
+  }
+  .case-tab-morado:hover,
+  .case-tab-morado.is-active {
+    color: #4d17d6 !important;
+    border-color: #4d17d6;
+    box-shadow: 0 3px 14px rgba(77, 23, 214, 0.16);
+  }
+  .case-tab-dot-morado { background-color: #4d17d6 !important; }
+
+  .case-tab-turquesa {
+    color: rgba(0, 121, 136, 0.72) !important;
+    border-color: rgba(0, 180, 162, 0.3);
+  }
+  .case-tab-turquesa:hover,
+  .case-tab-turquesa.is-active {
+    color: #006875 !important;
+    border-color: #00b4a2;
+    box-shadow: 0 3px 14px rgba(0, 180, 162, 0.18);
+  }
+  .case-tab-dot-turquesa { background-color: #00b4a2 !important; }
+
+  .case-carousel-section {
+    padding: 2rem 1.5rem 1.25rem 1.5rem;
+    background-color: #ffffff;
+  }
+  @media (min-width: 1024px) {
+    .case-carousel-section {
+      padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+    }
+  }
+  .case-video-section {
+    padding: 0.25rem 1.5rem 1.75rem 1.5rem;
+    background-color: #ffffff;
+  }
+  @media (min-width: 1024px) {
+    .case-video-section {
+      padding: 0.5rem 2.5rem 2.5rem 2.5rem;
+    }
+  }
+  .case-carousel-card {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0.75rem 0.25rem !important;
+    min-height: 92px;
+  }
+  .case-arrow-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    background-color: transparent !important;
+    border: 1px solid rgba(15, 23, 42, 0.16) !important;
+    color: #0F172A !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    overflow: hidden;
+    user-select: none;
+  }
+  .case-arrow-btn:hover {
+    border-color: #4d17d6 !important;
+    color: #4d17d6 !important;
+  }
+
+  /* SECCIÓN DE VIDEO CON OVERLAY TINTADO POR PROYECTO */
+  .case-video-frame {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #050814;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.22);
+  }
+  .case-video-frame-gonzaga { border-color: rgba(2, 106, 167, 0.85); }
+  .case-video-frame-cep { border-color: rgba(0, 148, 152, 0.85); }
+  .case-video-frame-beca { border-color: rgba(200, 16, 46, 0.85); }
+  .case-video-frame-cide { border-color: rgba(37, 99, 235, 0.85); }
+
+  .case-video-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.65rem 0.75rem;
+    cursor: pointer;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+  }
+  @media (min-width: 640px) {
+    .case-video-overlay {
+      padding: 1.25rem 1.5rem;
+    }
+  }
+  .case-video-overlay.is-playing {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .case-video-tint-gonzaga {
+    background: linear-gradient(135deg, rgba(0, 22, 42, 0.86) 0%, rgba(0, 43, 73, 0.72) 50%, rgba(2, 132, 199, 0.50) 100%);
+  }
+  .case-video-tint-cep {
+    background: linear-gradient(135deg, rgba(4, 32, 38, 0.86) 0%, rgba(0, 104, 117, 0.72) 55%, rgba(13, 148, 136, 0.50) 100%);
+  }
+  .case-video-tint-beca {
+    background: linear-gradient(135deg, rgba(42, 6, 18, 0.86) 0%, rgba(153, 27, 27, 0.72) 55%, rgba(225, 29, 72, 0.48) 100%);
+  }
+  .case-video-tint-cide {
+    background: linear-gradient(135deg, rgba(10, 15, 36, 0.88) 0%, rgba(30, 58, 138, 0.74) 55%, rgba(37, 99, 235, 0.50) 100%);
+  }
+
+  .case-video-top-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.3rem 0.7rem;
+    border-radius: 9999px;
+    background: rgba(5, 10, 20, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff !important;
+    font-size: 0.6875rem;
+    line-height: 1.25;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  }
+  @media (min-width: 640px) {
+    .case-video-top-pill {
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  .case-video-play-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.2rem;
+    border-radius: 9999px;
+    color: #ffffff !important;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    transition: transform 0.25s ease, filter 0.25s ease;
+    cursor: pointer;
+  }
+  @media (min-width: 640px) {
+    .case-video-play-btn {
+      font-size: 1.0625rem;
+      padding: 0.95rem 2rem;
+    }
+  }
+  .case-video-overlay:hover .case-video-play-btn {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  .case-video-play-gonzaga { background-color: rgba(2, 106, 167, 0.92); }
+  .case-video-play-cep { background-color: rgba(0, 128, 138, 0.92); }
+  .case-video-play-beca { background-color: rgba(200, 16, 46, 0.92); }
+  .case-video-play-cide { background-color: rgba(29, 78, 216, 0.92); }
+
 </style>
 </head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-hot-pink-vibrant selection:text-on-primary overflow-x-hidden">
 <!-- HEADER / NAVBAR -->
@@ -447,33 +655,29 @@
   </div>
 
   <!-- 2. CARRUSEL DE 3 SLIDES CENTRADO (Problema, Solución, Impacto) -->
-  <div class="p-6 lg:p-10 bg-surface-container-lowest border-b border-border-slate/70">
+  <div class="case-carousel-section">
     <div class="max-w-3xl mx-auto flex flex-col items-center">
       <!-- Pestañas del Carrusel -->
-      <div class="flex flex-wrap items-center justify-center gap-2 mb-5">
-        <button type="button" onclick="setCaseSlide('gonzaga', 0)" id="gonzagaTab0" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-5">
+        <button type="button" onclick="setCaseSlide('gonzaga', 0)" id="gonzagaTab0" class="case-tab-btn case-tab-rosa is-active">
+          <span class="w-2.5 h-2.5 rounded-full case-tab-dot-rosa"></span>
           <span>01. Problema</span>
         </button>
-        <button type="button" onclick="setCaseSlide('gonzaga', 1)" id="gonzagaTab1" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+        <button type="button" onclick="setCaseSlide('gonzaga', 1)" id="gonzagaTab1" class="case-tab-btn case-tab-morado">
+          <span class="w-2.5 h-2.5 rounded-full case-tab-dot-morado"></span>
           <span>02. Solución</span>
         </button>
-        <button type="button" onclick="setCaseSlide('gonzaga', 2)" id="gonzagaTab2" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+        <button type="button" onclick="setCaseSlide('gonzaga', 2)" id="gonzagaTab2" class="case-tab-btn case-tab-turquesa">
+          <span class="w-2.5 h-2.5 rounded-full case-tab-dot-turquesa"></span>
           <span>03. Impacto</span>
         </button>
       </div>
 
-      <!-- Contenedor Grid Stack Centrado -->
-      <div class="w-full relative min-h-[145px] sm:min-h-[130px] p-6 sm:p-7 rounded-2xl bg-surface-container-low border border-slate-200/80 shadow-xs flex flex-col justify-start overflow-hidden text-center sm:text-left" id="gonzagaCarouselBox">
-        <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: start;">
+      <!-- Contenedor Grid Stack Centrado (Sin fondo gris ni título repetido) -->
+      <div class="w-full relative case-carousel-card flex flex-col justify-center overflow-hidden text-center" id="gonzagaCarouselBox">
+        <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: center;">
           <!-- Slide 0: Problema -->
           <div class="gonzaga-slide transition-opacity duration-300 opacity-100 pointer-events-auto" id="gonzagaSlide0" style="grid-area: 1 / 1 / 2 / 2;">
-            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-rose-500 uppercase tracking-wider mb-2">
-              <span class="material-symbols-outlined text-base">error_outline</span>
-              <span>01. El Problema</span>
-            </div>
             <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
               12 páginas desestructuradas y lentas sin embudo digital para captar donaciones escolares.
             </p>
@@ -481,10 +685,6 @@
 
           <!-- Slide 1: Solución -->
           <div class="gonzaga-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="gonzagaSlide1" style="grid-area: 1 / 1 / 2 / 2;">
-            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-deep-purple uppercase tracking-wider mb-2">
-              <span class="material-symbols-outlined text-base">check_circle</span>
-              <span>02. La Solución</span>
-            </div>
             <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
               Consolidación en 5 páginas maestras en WordPress y Elementor con tema a medida y pasarela integrada.
             </p>
@@ -492,10 +692,6 @@
 
           <!-- Slide 2: Impacto -->
           <div class="gonzaga-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="gonzagaSlide2" style="grid-area: 1 / 1 / 2 / 2;">
-            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-[#006875] uppercase tracking-wider mb-2">
-              <span class="material-symbols-outlined text-base">trending_up</span>
-              <span>03. El Impacto</span>
-            </div>
             <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
               Navegación escolar ágil y canal continuo de recaudación con analítica GA4 en tiempo real.
             </p>
@@ -504,69 +700,61 @@
       </div>
 
       <!-- Indicadores & Controles Prev/Next -->
-      <div class="flex items-center justify-between w-full mt-4 px-1">
+      <div class="flex items-center justify-between w-full mt-3 px-1">
         <div class="flex items-center gap-1.5">
-          <span class="w-6 h-1.5 rounded-full bg-deep-purple transition-all" id="gonzagaDot0"></span>
+          <span class="w-6 h-1.5 rounded-full transition-all" style="background-color: #FF2E93;" id="gonzagaDot0"></span>
           <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="gonzagaDot1"></span>
           <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="gonzagaDot2"></span>
         </div>
         <div class="flex items-center gap-2">
-          <button type="button" onclick="prevCaseSlide('gonzaga')" aria-label="Slide anterior" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
-            <span class="material-symbols-outlined text-base">chevron_left</span>
+          <button type="button" onclick="prevCaseSlide('gonzaga')" aria-label="Slide anterior" class="case-arrow-btn">
+            <span class="material-symbols-outlined text-lg">chevron_left</span>
           </button>
-          <button type="button" onclick="nextCaseSlide('gonzaga')" aria-label="Siguiente slide" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
-            <span class="material-symbols-outlined text-base">chevron_right</span>
+          <button type="button" onclick="nextCaseSlide('gonzaga')" aria-label="Siguiente slide" class="case-arrow-btn">
+            <span class="material-symbols-outlined text-lg">chevron_right</span>
           </button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 3. LUEGO: Video Completo Showcase (Full Width) -->
-  <div class="p-6 lg:p-10 bg-slate-950 text-on-primary">
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
-      <div class="flex items-center gap-2.5">
-        <span class="w-3 h-3 rounded-full bg-hot-pink-vibrant animate-ping"></span>
-        <h3 class="font-headline-sm text-base sm:text-lg font-bold text-clean-white flex items-center gap-2">
-          <span class="material-symbols-outlined text-[22px] text-hot-pink-vibrant">smart_display</span>
-          Caso de Estudio Completo: Diagnóstico, Arquitectura &amp; Recorrido Web
-        </h3>
-      </div>
-      <div class="flex items-center gap-2">
-        <button id="restartVideoBtn" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-primary font-label-code text-xs font-semibold flex items-center gap-1 transition-colors" title="Reiniciar video">
-          <span class="material-symbols-outlined text-[16px]">replay</span>
-          <span>Reiniciar</span>
-        </button>
-        <button id="fullscreenVideoBtn" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-primary font-label-code text-xs font-semibold flex items-center gap-1 transition-colors" title="Pantalla completa">
-          <span class="material-symbols-outlined text-[16px]">fullscreen</span>
-          <span>Pantalla Completa</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Contenedor del Video -->
-    <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-black border border-white/10">
+  <!-- 3. LUEGO: Video Demo Showcase (Overlay oscuro con color del proyecto) -->
+  <div class="case-video-section">
+    <div class="case-video-frame case-video-frame-gonzaga">
       <video 
         id="gonzagaVideoPlayer" playsinline
-        class="w-full aspect-video object-contain bg-black mx-auto max-h-[580px]"
+        class="w-full aspect-video object-contain bg-black mx-auto max-h-[580px] block"
         src="assets/images/portfolio/Gonzaga Web/gonzaga_caso_estudio.mp4"
         poster="assets/images/portfolio/Gonzaga Web/gonzaga_portada_horizontal.jpg"
-        controls
         preload="metadata"
       >
         <source src="assets/images/portfolio/Gonzaga Web/gonzaga_caso_estudio.mp4" type="video/mp4">
         Tu navegador no soporta reproducción de video HTML5.
       </video>
-    </div>
 
-    <div class="mt-3 flex flex-wrap items-center justify-between text-xs font-label-code text-surface-container gap-2">
-      <span class="flex items-center gap-1.5">
-        <span class="material-symbols-outlined text-[16px] text-mint-turquoise">graphic_eq</span>
-        Edición interactiva con voz en off IA, efectos sonoros y música de fondo
-      </span>
-      <span class="text-white/60">
-        Actos: Diagnóstico Inicial • Arquitectura 5 Páginas • Tour Técnico • Analítica GA4
-      </span>
+      <!-- Overlay Oscuro Tintado con Color Gonzaga -->
+      <div id="gonzagaVideoOverlay" onclick="playCaseVideo('gonzaga')" class="case-video-overlay case-video-tint-gonzaga">
+        <!-- Parte Superior: Título + Duración -->
+        <div class="flex items-center justify-between gap-2">
+          <div class="case-video-top-pill">
+            <span class="material-symbols-outlined text-[18px]" style="color: #38bdf8;">videocam</span>
+            <span>Diagnóstico, Arquitectura &amp; Recorrido Web • 2:29 min</span>
+          </div>
+        </div>
+
+        <!-- Centro: Botón Ver demo en vivo -->
+        <div class="flex items-center justify-center my-auto">
+          <button type="button" class="case-video-play-btn case-video-play-gonzaga">
+            <span class="material-symbols-outlined text-[22px]">play_arrow</span>
+            <span>Ver demo en vivo</span>
+          </button>
+        </div>
+
+        <!-- Barra inferior decorativa -->
+        <div class="w-full h-1.5 rounded-full overflow-hidden" style="background: rgba(255, 255, 255, 0.16);">
+          <div class="h-full rounded-full" style="width: 38%; background: #38bdf8;"></div>
+        </div>
+      </div>
     </div>
   </div>
 </article>
@@ -629,33 +817,29 @@
   </div>
 
   <!-- 2. CARRUSEL DE 3 SLIDES CENTRADO (Problema, Solución, Impacto) -->
-  <div class="p-6 lg:p-10 bg-surface-container-lowest border-b border-border-slate/70">
+  <div class="case-carousel-section">
     <div class="max-w-3xl mx-auto flex flex-col items-center">
       <!-- Pestañas del Carrusel -->
-      <div class="flex flex-wrap items-center justify-center gap-2 mb-5">
-        <button type="button" onclick="setCaseSlide('cep', 0)" id="cepTab0" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-5">
+        <button type="button" onclick="setCaseSlide('cep', 0)" id="cepTab0" class="case-tab-btn case-tab-rosa is-active">
+          <span class="w-2.5 h-2.5 rounded-full case-tab-dot-rosa"></span>
           <span>01. Problema</span>
         </button>
-        <button type="button" onclick="setCaseSlide('cep', 1)" id="cepTab1" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+        <button type="button" onclick="setCaseSlide('cep', 1)" id="cepTab1" class="case-tab-btn case-tab-morado">
+          <span class="w-2.5 h-2.5 rounded-full case-tab-dot-morado"></span>
           <span>02. Solución</span>
         </button>
-        <button type="button" onclick="setCaseSlide('cep', 2)" id="cepTab2" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+        <button type="button" onclick="setCaseSlide('cep', 2)" id="cepTab2" class="case-tab-btn case-tab-turquesa">
+          <span class="w-2.5 h-2.5 rounded-full case-tab-dot-turquesa"></span>
           <span>03. Impacto</span>
         </button>
       </div>
 
-      <!-- Contenedor Grid Stack Centrado -->
-      <div class="w-full relative min-h-[145px] sm:min-h-[130px] p-6 sm:p-7 rounded-2xl bg-surface-container-low border border-slate-200/80 shadow-xs flex flex-col justify-start overflow-hidden text-center sm:text-left" id="cepCarouselBox">
-        <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: start;">
+      <!-- Contenedor Grid Stack Centrado (Sin fondo gris ni título repetido) -->
+      <div class="w-full relative case-carousel-card flex flex-col justify-center overflow-hidden text-center" id="cepCarouselBox">
+        <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: center;">
           <!-- Slide 0: Problema -->
           <div class="cep-slide transition-opacity duration-300 opacity-100 pointer-events-auto" id="cepSlide0" style="grid-area: 1 / 1 / 2 / 2;">
-            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-rose-500 uppercase tracking-wider mb-2">
-              <span class="material-symbols-outlined text-base">error_outline</span>
-              <span>01. El Problema</span>
-            </div>
             <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
               Sitio estático de 7 páginas desconectadas sin directorio dinámico ni mapa de redes pastorales.
             </p>
@@ -663,10 +847,6 @@
 
           <!-- Slide 1: Solución -->
           <div class="cep-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="cepSlide1" style="grid-area: 1 / 1 / 2 / 2;">
-            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-deep-purple uppercase tracking-wider mb-2">
-              <span class="material-symbols-outlined text-base">check_circle</span>
-              <span>02. La Solución</span>
-            </div>
             <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
               Arquitectura modular en WordPress con mapa vectorial SVG interactivo y sistema de diseño Oasis.
             </p>
@@ -674,10 +854,6 @@
 
           <!-- Slide 2: Impacto -->
           <div class="cep-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="cepSlide2" style="grid-area: 1 / 1 / 2 / 2;">
-            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-[#006875] uppercase tracking-wider mb-2">
-              <span class="material-symbols-outlined text-base">trending_up</span>
-              <span>03. El Impacto</span>
-            </div>
             <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
               Autogestión de retiros espirituales y geolocalización ágil para usuarios en todo el país.
             </p>
@@ -686,69 +862,62 @@
       </div>
 
       <!-- Indicadores & Controles Prev/Next -->
-      <div class="flex items-center justify-between w-full mt-4 px-1">
+      <div class="flex items-center justify-between w-full mt-3 px-1">
         <div class="flex items-center gap-1.5">
-          <span class="w-6 h-1.5 rounded-full bg-deep-purple transition-all" id="cepDot0"></span>
+          <span class="w-6 h-1.5 rounded-full transition-all" style="background-color: #FF2E93;" id="cepDot0"></span>
           <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="cepDot1"></span>
           <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="cepDot2"></span>
         </div>
         <div class="flex items-center gap-2">
-          <button type="button" onclick="prevCaseSlide('cep')" aria-label="Slide anterior" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
-            <span class="material-symbols-outlined text-base">chevron_left</span>
+          <button type="button" onclick="prevCaseSlide('cep')" aria-label="Slide anterior" class="case-arrow-btn">
+            <span class="material-symbols-outlined text-lg">chevron_left</span>
           </button>
-          <button type="button" onclick="nextCaseSlide('cep')" aria-label="Siguiente slide" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
-            <span class="material-symbols-outlined text-base">chevron_right</span>
+          <button type="button" onclick="nextCaseSlide('cep')" aria-label="Siguiente slide" class="case-arrow-btn">
+            <span class="material-symbols-outlined text-lg">chevron_right</span>
           </button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 3. LUEGO: Video Completo Showcase (Full Width) -->
-  <div class="p-6 lg:p-10 bg-slate-950 text-on-primary">
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
-      <div class="flex items-center gap-2.5">
-        <span class="w-3 h-3 rounded-full bg-mint-turquoise animate-ping"></span>
-        <h3 class="font-headline-sm text-base sm:text-lg font-bold text-clean-white flex items-center gap-2">
-          <span class="material-symbols-outlined text-[22px] text-mint-turquoise">smart_display</span>
-          Caso de Estudio Completo: Diagnóstico, Arquitectura &amp; Recorrido Web CEP
-        </h3>
-      </div>
-      <div class="flex items-center gap-2">
-        <button id="restartCepVideoBtn" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-primary font-label-code text-xs font-semibold flex items-center gap-1 transition-colors" title="Reiniciar video">
-          <span class="material-symbols-outlined text-[16px]">replay</span>
-          <span>Reiniciar</span>
-        </button>
-        <button id="fullscreenCepVideoBtn" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-primary font-label-code text-xs font-semibold flex items-center gap-1 transition-colors" title="Pantalla completa">
-          <span class="material-symbols-outlined text-[16px]">fullscreen</span>
-          <span>Pantalla Completa</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-black border border-white/10">
+  <!-- 3. LUEGO: Video Demo Showcase (Overlay oscuro con color del proyecto) -->
+  <div class="case-video-section">
+    <div class="case-video-frame case-video-frame-cep">
       <video 
         id="cepVideoPlayer" playsinline 
-        class="w-full aspect-video object-contain bg-black mx-auto max-h-[580px]" 
+        class="w-full aspect-video object-contain bg-black mx-auto max-h-[580px] block" 
         src="assets/images/portfolio/cep_caso_estudio.mp4" 
         poster="assets/images/portfolio/CEP Web/cep.jpg" 
-        controls 
         preload="metadata"
       >
         <source src="assets/images/portfolio/cep_caso_estudio.mp4" type="video/mp4">
         <source src="assets/videos/out/cep_caso_estudio.mp4" type="video/mp4">
         Tu navegador no soporta reproducción de video HTML5.
       </video>
-    </div>
 
-    <div class="mt-3 flex flex-wrap items-center justify-between text-xs font-label-code text-surface-container gap-2">
-      <span class="flex items-center gap-1.5">
-        <span class="material-symbols-outlined text-[16px] text-mint-turquoise">graphic_eq</span>
-        Edición Remotion en español con voz en off neural, textos ampliados y cierre AryCode
-      </span>
-      <span class="text-white/60">
-        Actos: Concepto &amp; Oasis • Recorrido Interactivo • Resultados y Logros
-      </span>
+      <!-- Overlay Oscuro Tintado con Color CEP Oasis -->
+      <div id="cepVideoOverlay" onclick="playCaseVideo('cep')" class="case-video-overlay case-video-tint-cep">
+        <!-- Parte Superior: Título + Duración -->
+        <div class="flex items-center justify-between gap-2">
+          <div class="case-video-top-pill">
+            <span class="material-symbols-outlined text-[18px]" style="color: #2dd4bf;">videocam</span>
+            <span>Diagnóstico, Arquitectura &amp; Recorrido Web CEP • 1:49 min</span>
+          </div>
+        </div>
+
+        <!-- Centro: Botón Ver demo en vivo -->
+        <div class="flex items-center justify-center my-auto">
+          <button type="button" class="case-video-play-btn case-video-play-cep">
+            <span class="material-symbols-outlined text-[22px]">play_arrow</span>
+            <span>Ver demo en vivo</span>
+          </button>
+        </div>
+
+        <!-- Barra inferior decorativa -->
+        <div class="w-full h-1.5 rounded-full overflow-hidden" style="background: rgba(255, 255, 255, 0.16);">
+          <div class="h-full rounded-full" style="width: 38%; background: #2dd4bf;"></div>
+        </div>
+      </div>
     </div>
   </div>
 </article>
@@ -809,33 +978,29 @@
   </div>
 
   <!-- 2. CARRUSEL DE 3 SLIDES CENTRADO (Problema, Solución, Impacto) -->
-  <div class="p-6 lg:p-10 bg-surface-container-lowest border-b border-border-slate/70">
+  <div class="case-carousel-section">
     <div class="max-w-3xl mx-auto flex flex-col items-center">
       <!-- Pestañas del Carrusel -->
-      <div class="flex flex-wrap items-center justify-center gap-2 mb-5">
-        <button type="button" onclick="setCaseSlide('beca', 0)" id="becaTab0" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-5">
+        <button type="button" onclick="setCaseSlide('beca', 0)" id="becaTab0" class="case-tab-btn case-tab-rosa is-active">
+          <span class="w-2.5 h-2.5 rounded-full case-tab-dot-rosa"></span>
           <span>01. Problema</span>
         </button>
-        <button type="button" onclick="setCaseSlide('beca', 1)" id="becaTab1" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+        <button type="button" onclick="setCaseSlide('beca', 1)" id="becaTab1" class="case-tab-btn case-tab-morado">
+          <span class="w-2.5 h-2.5 rounded-full case-tab-dot-morado"></span>
           <span>02. Solución</span>
         </button>
-        <button type="button" onclick="setCaseSlide('beca', 2)" id="becaTab2" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+        <button type="button" onclick="setCaseSlide('beca', 2)" id="becaTab2" class="case-tab-btn case-tab-turquesa">
+          <span class="w-2.5 h-2.5 rounded-full case-tab-dot-turquesa"></span>
           <span>03. Impacto</span>
         </button>
       </div>
 
-      <!-- Contenedor Grid Stack Centrado -->
-      <div class="w-full relative min-h-[145px] sm:min-h-[130px] p-6 sm:p-7 rounded-2xl bg-surface-container-low border border-slate-200/80 shadow-xs flex flex-col justify-start overflow-hidden text-center sm:text-left" id="becaCarouselBox">
-        <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: start;">
+      <!-- Contenedor Grid Stack Centrado (Sin fondo gris ni título repetido) -->
+      <div class="w-full relative case-carousel-card flex flex-col justify-center overflow-hidden text-center" id="becaCarouselBox">
+        <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: center;">
           <!-- Slide 0: Problema -->
           <div class="beca-slide transition-opacity duration-300 opacity-100 pointer-events-auto" id="becaSlide0" style="grid-area: 1 / 1 / 2 / 2;">
-            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-rose-500 uppercase tracking-wider mb-2">
-              <span class="material-symbols-outlined text-base">error_outline</span>
-              <span>01. El Problema</span>
-            </div>
             <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
               Campaña dependiente de un botón genérico en WordPress sin detalle de programas ni confianza para donar.
             </p>
@@ -843,10 +1008,6 @@
 
           <!-- Slide 1: Solución -->
           <div class="beca-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="becaSlide1" style="grid-area: 1 / 1 / 2 / 2;">
-            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-deep-purple uppercase tracking-wider mb-2">
-              <span class="material-symbols-outlined text-base">check_circle</span>
-              <span>02. La Solución</span>
-            </div>
             <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
               Landing page dedicada con catálogo de becas por niveles y donación móvil fluida en menos de 3 pasos.
             </p>
@@ -854,10 +1015,6 @@
 
           <!-- Slide 2: Impacto -->
           <div class="beca-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="becaSlide2" style="grid-area: 1 / 1 / 2 / 2;">
-            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-hot-pink-vibrant uppercase tracking-wider mb-2">
-              <span class="material-symbols-outlined text-base">trending_up</span>
-              <span>03. El Impacto</span>
-            </div>
             <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
               Canal de captación directo optimizado para donaciones móviles y telemetría analítica GA4 en tiempo real.
             </p>
@@ -866,69 +1023,61 @@
       </div>
 
       <!-- Indicadores & Controles Prev/Next -->
-      <div class="flex items-center justify-between w-full mt-4 px-1">
+      <div class="flex items-center justify-between w-full mt-3 px-1">
         <div class="flex items-center gap-1.5">
-          <span class="w-6 h-1.5 rounded-full bg-deep-purple transition-all" id="becaDot0"></span>
+          <span class="w-6 h-1.5 rounded-full transition-all" style="background-color: #FF2E93;" id="becaDot0"></span>
           <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="becaDot1"></span>
           <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="becaDot2"></span>
         </div>
         <div class="flex items-center gap-2">
-          <button type="button" onclick="prevCaseSlide('beca')" aria-label="Slide anterior" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
-            <span class="material-symbols-outlined text-base">chevron_left</span>
+          <button type="button" onclick="prevCaseSlide('beca')" aria-label="Slide anterior" class="case-arrow-btn">
+            <span class="material-symbols-outlined text-lg">chevron_left</span>
           </button>
-          <button type="button" onclick="nextCaseSlide('beca')" aria-label="Siguiente slide" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
-            <span class="material-symbols-outlined text-base">chevron_right</span>
+          <button type="button" onclick="nextCaseSlide('beca')" aria-label="Siguiente slide" class="case-arrow-btn">
+            <span class="material-symbols-outlined text-lg">chevron_right</span>
           </button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 3. LUEGO: Video Completo Showcase (Full Width) -->
-  <div class="p-6 lg:p-10 bg-slate-950 text-on-primary">
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
-      <div class="flex items-center gap-2.5">
-        <span class="w-3 h-3 rounded-full bg-hot-pink-vibrant animate-ping"></span>
-        <h3 class="font-headline-sm text-base sm:text-lg font-bold text-clean-white flex items-center gap-2">
-          <span class="material-symbols-outlined text-[22px] text-hot-pink-vibrant">smart_display</span>
-          Caso de Estudio Completo: Diagnóstico, Identidad Gráfica &amp; Analítica GA4
-        </h3>
-      </div>
-      <div class="flex items-center gap-2">
-        <button id="restartBecaVideoBtn" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-primary font-label-code text-xs font-semibold flex items-center gap-1 transition-colors" title="Reiniciar video">
-          <span class="material-symbols-outlined text-[16px]">replay</span>
-          <span>Reiniciar</span>
-        </button>
-        <button id="fullscreenBecaVideoBtn" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-primary font-label-code text-xs font-semibold flex items-center gap-1 transition-colors" title="Pantalla completa">
-          <span class="material-symbols-outlined text-[16px]">fullscreen</span>
-          <span>Pantalla Completa</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Contenedor del Video -->
-    <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-black border border-white/10">
+  <!-- 3. LUEGO: Video Demo Showcase (Overlay oscuro con color del proyecto) -->
+  <div class="case-video-section">
+    <div class="case-video-frame case-video-frame-beca">
       <video 
         id="becaVideoPlayer" playsinline
-        class="w-full aspect-video object-contain bg-black mx-auto max-h-[580px]"
+        class="w-full aspect-video object-contain bg-black mx-auto max-h-[580px] block"
         src="assets/images/portfolio/beca_caso_estudio.mp4"
         poster="assets/images/portfolio/Beca.jpg"
-        controls
         preload="none"
       >
         <source src="assets/images/portfolio/beca_caso_estudio.mp4" type="video/mp4">
         Tu navegador no soporta reproducción de video HTML5.
       </video>
-    </div>
 
-    <div class="mt-3 flex flex-wrap items-center justify-between text-xs font-label-code text-surface-container gap-2">
-      <span class="flex items-center gap-1.5">
-        <span class="material-symbols-outlined text-[16px] text-mint-turquoise">graphic_eq</span>
-        Edición interactiva con voz en off IA, efectos sonoros y música de fondo
-      </span>
-      <span class="text-white/60">
-        Actos: Diagnóstico Inicial • Identidad Gráfica Oficial • Tour Técnico • Analítica GA4
-      </span>
+      <!-- Overlay Oscuro Tintado con Color Beca Fe y Alegría -->
+      <div id="becaVideoOverlay" onclick="playCaseVideo('beca')" class="case-video-overlay case-video-tint-beca">
+        <!-- Parte Superior: Título + Duración -->
+        <div class="flex items-center justify-between gap-2">
+          <div class="case-video-top-pill">
+            <span class="material-symbols-outlined text-[18px]" style="color: #fb7185;">videocam</span>
+            <span>Diagnóstico, Identidad Gráfica &amp; Analítica GA4 • 1:44 min</span>
+          </div>
+        </div>
+
+        <!-- Centro: Botón Ver demo en vivo -->
+        <div class="flex items-center justify-center my-auto">
+          <button type="button" class="case-video-play-btn case-video-play-beca">
+            <span class="material-symbols-outlined text-[22px]">play_arrow</span>
+            <span>Ver demo en vivo</span>
+          </button>
+        </div>
+
+        <!-- Barra inferior decorativa -->
+        <div class="w-full h-1.5 rounded-full overflow-hidden" style="background: rgba(255, 255, 255, 0.16);">
+          <div class="h-full rounded-full" style="width: 38%; background: #fb7185;"></div>
+        </div>
+      </div>
     </div>
   </div>
 </article>
@@ -988,33 +1137,29 @@
   </div>
 
   <!-- 2. CARRUSEL DE 3 SLIDES CENTRADO (Problema, Solución, Impacto) -->
-  <div class="p-6 lg:p-10 bg-surface-container-lowest border-b border-border-slate/70">
+  <div class="case-carousel-section">
     <div class="max-w-3xl mx-auto flex flex-col items-center">
       <!-- Pestañas del Carrusel -->
-      <div class="flex flex-wrap items-center justify-center gap-2 mb-5">
-        <button type="button" onclick="setCaseSlide('cide', 0)" id="cideTab0" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-5">
+        <button type="button" onclick="setCaseSlide('cide', 0)" id="cideTab0" class="case-tab-btn case-tab-rosa is-active">
+          <span class="w-2.5 h-2.5 rounded-full case-tab-dot-rosa"></span>
           <span>01. Problema</span>
         </button>
-        <button type="button" onclick="setCaseSlide('cide', 1)" id="cideTab1" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+        <button type="button" onclick="setCaseSlide('cide', 1)" id="cideTab1" class="case-tab-btn case-tab-morado">
+          <span class="w-2.5 h-2.5 rounded-full case-tab-dot-morado"></span>
           <span>02. Solución</span>
         </button>
-        <button type="button" onclick="setCaseSlide('cide', 2)" id="cideTab2" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+        <button type="button" onclick="setCaseSlide('cide', 2)" id="cideTab2" class="case-tab-btn case-tab-turquesa">
+          <span class="w-2.5 h-2.5 rounded-full case-tab-dot-turquesa"></span>
           <span>03. Impacto</span>
         </button>
       </div>
 
-      <!-- Contenedor Grid Stack Centrado -->
-      <div class="w-full relative min-h-[145px] sm:min-h-[130px] p-6 sm:p-7 rounded-2xl bg-surface-container-low border border-slate-200/80 shadow-xs flex flex-col justify-start overflow-hidden text-center sm:text-left" id="cideCarouselBox">
-        <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: start;">
+      <!-- Contenedor Grid Stack Centrado (Sin fondo gris ni título repetido) -->
+      <div class="w-full relative case-carousel-card flex flex-col justify-center overflow-hidden text-center" id="cideCarouselBox">
+        <div class="w-full" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; align-items: center;">
           <!-- Slide 0: Problema -->
           <div class="cide-slide transition-opacity duration-300 opacity-100 pointer-events-auto" id="cideSlide0" style="grid-area: 1 / 1 / 2 / 2;">
-            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-rose-500 uppercase tracking-wider mb-2">
-              <span class="material-symbols-outlined text-base">error_outline</span>
-              <span>01. El Problema</span>
-            </div>
             <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
               Servidor secundario colapsado por acumulación de PDFs y soporte saturado por rebotes de correo.
             </p>
@@ -1022,10 +1167,6 @@
 
           <!-- Slide 1: Solución -->
           <div class="cide-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="cideSlide1" style="grid-area: 1 / 1 / 2 / 2;">
-            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-deep-purple uppercase tracking-wider mb-2">
-              <span class="material-symbols-outlined text-base">check_circle</span>
-              <span>02. La Solución</span>
-            </div>
             <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
               Plugin en WordPress con endpoint AJAX seguro, lectura dinámica en MySQL y búsqueda por DNI o código.
             </p>
@@ -1033,10 +1174,6 @@
 
           <!-- Slide 2: Impacto -->
           <div class="cide-slide transition-opacity duration-300 opacity-0 pointer-events-none" id="cideSlide2" style="grid-area: 1 / 1 / 2 / 2;">
-            <div class="flex items-center justify-center sm:justify-start gap-2 text-xs font-label-code font-bold text-[#006875] uppercase tracking-wider mb-2">
-              <span class="material-symbols-outlined text-base">trending_up</span>
-              <span>03. El Impacto</span>
-            </div>
             <p class="text-lg sm:text-xl lg:text-2xl font-black text-text-dark-primary tracking-tight leading-snug">
               Validación en menos de 1 segundo, 100% autogestionable y reducción drástica de consultas por soporte.
             </p>
@@ -1045,69 +1182,61 @@
       </div>
 
       <!-- Indicadores & Controles Prev/Next -->
-      <div class="flex items-center justify-between w-full mt-4 px-1">
+      <div class="flex items-center justify-between w-full mt-3 px-1">
         <div class="flex items-center gap-1.5">
-          <span class="w-6 h-1.5 rounded-full bg-deep-purple transition-all" id="cideDot0"></span>
+          <span class="w-6 h-1.5 rounded-full transition-all" style="background-color: #FF2E93;" id="cideDot0"></span>
           <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="cideDot1"></span>
           <span class="w-2 h-1.5 rounded-full bg-slate-300 transition-all" id="cideDot2"></span>
         </div>
         <div class="flex items-center gap-2">
-          <button type="button" onclick="prevCaseSlide('cide')" aria-label="Slide anterior" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
-            <span class="material-symbols-outlined text-base">chevron_left</span>
+          <button type="button" onclick="prevCaseSlide('cide')" aria-label="Slide anterior" class="case-arrow-btn">
+            <span class="material-symbols-outlined text-lg">chevron_left</span>
           </button>
-          <button type="button" onclick="nextCaseSlide('cide')" aria-label="Siguiente slide" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-text-dark-primary transition cursor-pointer overflow-hidden select-none">
-            <span class="material-symbols-outlined text-base">chevron_right</span>
+          <button type="button" onclick="nextCaseSlide('cide')" aria-label="Siguiente slide" class="case-arrow-btn">
+            <span class="material-symbols-outlined text-lg">chevron_right</span>
           </button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 3. LUEGO: Video Completo Showcase (Full Width) -->
-  <div class="p-6 lg:p-10 bg-slate-950 text-on-primary">
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
-      <div class="flex items-center gap-2.5">
-        <span class="w-3 h-3 rounded-full bg-hot-pink-vibrant animate-ping"></span>
-        <h3 class="font-headline-sm text-base sm:text-lg font-bold text-clean-white flex items-center gap-2">
-          <span class="material-symbols-outlined text-[22px] text-hot-pink-vibrant">smart_display</span>
-          Caso de Estudio Completo: Diagnóstico, Arquitectura del Plugin &amp; Autoservicio
-        </h3>
-      </div>
-      <div class="flex items-center gap-2">
-        <button id="restartCideVideoBtn" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-primary font-label-code text-xs font-semibold flex items-center gap-1 transition-colors" title="Reiniciar video">
-          <span class="material-symbols-outlined text-[16px]">replay</span>
-          <span>Reiniciar</span>
-        </button>
-        <button id="fullscreenCideVideoBtn" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-primary font-label-code text-xs font-semibold flex items-center gap-1 transition-colors" title="Pantalla completa">
-          <span class="material-symbols-outlined text-[16px]">fullscreen</span>
-          <span>Pantalla Completa</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Contenedor del Video -->
-    <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-black border border-white/10">
+  <!-- 3. LUEGO: Video Demo Showcase (Overlay oscuro con color del proyecto) -->
+  <div class="case-video-section">
+    <div class="case-video-frame case-video-frame-cide">
       <video 
         id="cideVideoPlayer" playsinline
-        class="w-full aspect-video object-contain bg-black mx-auto max-h-[580px]"
+        class="w-full aspect-video object-contain bg-black mx-auto max-h-[580px] block"
         src="assets/images/portfolio/cide_caso_estudio.mp4"
         poster="assets/images/portfolio/CIDELaptop.jpg"
-        controls
         preload="none"
       >
         <source src="assets/images/portfolio/cide_caso_estudio.mp4" type="video/mp4">
         Tu navegador no soporta reproducción de video HTML5.
       </video>
-    </div>
 
-    <div class="mt-3 flex flex-wrap items-center justify-between text-xs font-label-code text-surface-container gap-2">
-      <span class="flex items-center gap-1.5">
-        <span class="material-symbols-outlined text-[16px] text-[#34d399]">graphic_eq</span>
-        Edición interactiva con voz en off IA, efectos sonoros y música de fondo
-      </span>
-      <span class="text-white/60">
-        Actos: Diagnóstico Inicial • Arquitectura del Plugin • Tour Técnico • Resultados &amp; Soporte
-      </span>
+      <!-- Overlay Oscuro Tintado con Color CIDE Tech -->
+      <div id="cideVideoOverlay" onclick="playCaseVideo('cide')" class="case-video-overlay case-video-tint-cide">
+        <!-- Parte Superior: Título + Duración -->
+        <div class="flex items-center justify-between gap-2">
+          <div class="case-video-top-pill">
+            <span class="material-symbols-outlined text-[18px]" style="color: #60a5fa;">videocam</span>
+            <span>Diagnóstico, Arquitectura del Plugin &amp; Autoservicio • 2:12 min</span>
+          </div>
+        </div>
+
+        <!-- Centro: Botón Ver demo en vivo -->
+        <div class="flex items-center justify-center my-auto">
+          <button type="button" class="case-video-play-btn case-video-play-cide">
+            <span class="material-symbols-outlined text-[22px]">play_arrow</span>
+            <span>Ver demo en vivo</span>
+          </button>
+        </div>
+
+        <!-- Barra inferior decorativa -->
+        <div class="w-full h-1.5 rounded-full overflow-hidden" style="background: rgba(255, 255, 255, 0.16);">
+          <div class="h-full rounded-full" style="width: 38%; background: #60a5fa;"></div>
+        </div>
+      </div>
     </div>
   </div>
 </article>
@@ -1940,25 +2069,19 @@
 
       if (tab) {
         if (i === index) {
-          tab.className = i === 0 
-            ? 'px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-rose-500/10 text-rose-600 border border-rose-500/30 shadow-xs flex items-center gap-1.5 cursor-pointer'
-            : (i === 1 
-              ? 'px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-deep-purple/10 text-deep-purple border border-deep-purple/30 shadow-xs flex items-center gap-1.5 cursor-pointer'
-              : 'px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-mint-turquoise/15 text-[#006875] border border-mint-turquoise/30 shadow-xs flex items-center gap-1.5 cursor-pointer');
-          const circle = tab.querySelector('span:first-child');
-          if (circle) circle.className = i === 0 ? 'w-2 h-2 rounded-full bg-rose-500' : (i === 1 ? 'w-2 h-2 rounded-full bg-deep-purple' : 'w-2 h-2 rounded-full bg-[#006875]');
+          tab.classList.add('is-active');
         } else {
-          tab.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold font-label-code transition-all bg-surface-container-low text-text-dark-secondary hover:text-text-dark-primary border border-slate-200 flex items-center gap-1.5 cursor-pointer';
-          const circle = tab.querySelector('span:first-child');
-          if (circle) circle.className = 'w-2 h-2 rounded-full bg-slate-400';
+          tab.classList.remove('is-active');
         }
       }
 
       if (dot) {
         if (i === index) {
-          dot.className = 'w-6 h-1.5 rounded-full bg-deep-purple transition-all';
+          dot.className = 'w-6 h-1.5 rounded-full transition-all';
+          dot.style.backgroundColor = i === 0 ? '#FF2E93' : (i === 1 ? '#4d17d6' : '#00b4a2');
         } else {
           dot.className = 'w-2 h-1.5 rounded-full bg-slate-300 transition-all';
+          dot.style.backgroundColor = '';
         }
       }
     }
@@ -1977,7 +2100,7 @@
   function startCaseAutoPlay(caseId) {
     if (!caseStates[caseId]) caseStates[caseId] = { current: 0, interval: null };
     if (!caseStates[caseId].interval) {
-      caseStates[caseId].interval = setInterval(() => nextCaseSlide(caseId, false), 6000);
+      caseStates[caseId].interval = setInterval(() => nextCaseSlide(caseId, false), 9500);
     }
   }
 
@@ -1985,6 +2108,16 @@
     if (caseStates[caseId] && caseStates[caseId].interval) {
       clearInterval(caseStates[caseId].interval);
       caseStates[caseId].interval = null;
+    }
+  }
+
+  function playCaseVideo(caseId) {
+    const video = document.getElementById(caseId + 'VideoPlayer');
+    const overlay = document.getElementById(caseId + 'VideoOverlay');
+    if (overlay) overlay.classList.add('is-playing');
+    if (video) {
+      video.controls = true;
+      video.play().catch(() => {});
     }
   }
 
@@ -2189,21 +2322,20 @@
     setupDocModal('openBecaDocBtn', 'closeBecaDocBtn', 'closeBecaDocBtnFooter', 'becaDocModal');
     setupDocModal('openCideDocBtn', 'closeCideDocBtn', 'closeCideDocBtnFooter', 'cideDocModal');
 
-    // 4. Video Player Controls (Fullscreen & Restart)
-    [
-      { vid: 'gonzagaVideoPlayer', rst: 'restartVideoBtn', fs: 'fullscreenVideoBtn' },
-      { vid: 'cepVideoPlayer', rst: 'restartCepVideoBtn', fs: 'fullscreenCepVideoBtn' },
-      { vid: 'becaVideoPlayer', rst: 'restartBecaVideoBtn', fs: 'fullscreenBecaVideoBtn' },
-      { vid: 'cideVideoPlayer', rst: 'restartCideVideoBtn', fs: 'fullscreenCideVideoBtn' }
-    ].forEach(({ vid, rst, fs: fsBtn }) => {
-      const v = document.getElementById(vid);
-      const r = document.getElementById(rst);
-      const f = document.getElementById(fsBtn);
-      if (v && r) r.addEventListener('click', () => { v.currentTime = 0; v.play(); });
-      if (v && f) f.addEventListener('click', () => {
-        if (v.requestFullscreen) v.requestFullscreen();
-        else if (v.webkitRequestFullscreen) v.webkitRequestFullscreen();
-      });
+    // 4. Video Player Overlays (Hide on Play, Restore on Ended)
+    ['gonzaga', 'cep', 'beca', 'cide'].forEach(caseId => {
+      const v = document.getElementById(caseId + 'VideoPlayer');
+      const o = document.getElementById(caseId + 'VideoOverlay');
+      if (v && o) {
+        v.addEventListener('play', () => {
+          v.controls = true;
+          o.classList.add('is-playing');
+        });
+        v.addEventListener('ended', () => {
+          v.controls = false;
+          o.classList.remove('is-playing');
+        });
+      }
     });
 
     // 5. Initialize All 4 Project Carousels with Hover Pause
@@ -2221,6 +2353,7 @@
   window.setCaseSlide = setCaseSlide;
   window.prevCaseSlide = prevCaseSlide;
   window.nextCaseSlide = nextCaseSlide;
+  window.playCaseVideo = playCaseVideo;
   window.openBookingModal = openBookingModal;
   window.closeBookingModal = closeBookingModal;
   window.openLegalModal = openLegalModal;
